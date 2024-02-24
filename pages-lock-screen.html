@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                            </form>
+                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#navbarSupportedContent"
+                                                aria-controls="navbarSupportedContent" aria-expanded="false"
+                                                aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                        </div>
+                                        <div class="collapse navbar-collapse justify-content-end"
+                                            id="navbarSupportedContent">
+                                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Dropdown
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="page-breadcrumb-box">
+                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Account Locked</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="ilearning-dashboard-body-content">
+                            <!-- Account Lock Section Start -->
+                            <div id="account-lock" class="account-lock section">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <div class="account-lock-area">
+                                            <div class="account-lock-top">
+                                                <img src="assets/images/icons/ilearning-logo.svg" alt="logo">
+                                                <h3>Account Locked</h3>
+                                            </div>
+                                            <div class="account-lock-content">
+                                                <div class="">
+                                                    <label for="account-lock-input" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="account-lock-input"
+                                                        placeholder="**********">
+                                                </div>
+                                                <div class="alc-btn">
+                                                    <button class="btn btn-orange w-100 mt-5"><span><i
+                                                                class="fa-solid fa-lock-open"></i></span>Unlock</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Account Lock Section End -->
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!-- Waypoint -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/js/aos.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

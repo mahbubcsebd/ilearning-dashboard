@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="single-dashboard-content">
+                            <div class="dashboard-content-header">
+                                <div class="dashboard-content-header-title">
+                                    <h4>Filter</h4>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-body">
+                                <div class="user-filter-box row align-items-center">
+                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                        <input id="filter-email" type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                        <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
+                                    </div>
+                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                        <input id="filter-group" type="text" class="form-control"
+                                            placeholder="Select Group">
+                                    </div>
+                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                        <div class="dashboard-content-action">
+                                            <button type="button" class="btn btn-purple"><span><i
+                                                        class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
+                                            <button type="button" class="btn btn-orange">Clear</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-dashboard-content">
+                            <div class="dashboard-content-header">
+                                <div class="dashboard-content-header-title">
+                                    <h4>Users</h4>
+                                </div>
+                                <div class="dashboard-content-action">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
+                                        class="btn btn-orange">Delete</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#createUserModal"
+                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
+                                        User</button>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-body">
+                                <div class="user-data-table">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Phone </th>
+                                                    <th scope="col">DOB</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-1.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Leslie Alexander</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-2.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Esther Howard</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Moderator</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-3.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Brooklyn Simmons</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Moderator</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-4.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Eleanor Pena</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Manager</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status offline"><span></span>Offline</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-5.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Albert Flores</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-6.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Bessie Coope</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-1.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>John Doe</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Create User Modal Start -->
+    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="bc-instructor-header">
+                        <div class="bcih-content">
+                            <h2>New User Form</h2>
+                        </div>
+                        <div class="new-user-profile-pic">
+                            <img src="assets/images/new-user.png" alt="new user">
+                            <label class="upload-area">
+                                <input type="file">
+                                <span class="upload-button">
+                                    <i class="fas fa-arrow-up"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <form id="create-user-form" class="dashboard-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-fname">First Name</label>
+                                    <input type="text" class="form-control" id="instructor-fname"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-lname">Last Name</label>
+                                    <input type="text" class="form-control" id="instructor-lname"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Username</label>
+                                    <input type="text" class="form-control" id="instructor-username"
+                                        placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <select class="form-select">
+                                        <option selected>Moderator</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Manager</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Date of Birth</label>
+                                    <input type="date" class="form-control" id="instructor-dob">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <h2 class="inst-social">
+                                Social Media
+                            </h2>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="mb-3">
+                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-linkedin"
+                                        placeholder="www.Linkedin.com/">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <label for="instructor-facebook" class="form-label">Facebook URL<span>
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-facebook"
+                                        placeholder="www.facebook.com/">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-msg">Additional Information</label>
+                                    <textarea rows="5" class="form-control" id="instructor-msg"
+                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
+                                    <small>Maximum 500 characters</small>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-password">New Password</label>
+                                    <input type="password" class="form-control" id="instructor-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-confirm-password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="instructor-confirm-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Discard</button>
+                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
+                                Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Create User Modal End -->
+
+
+
+
+    <!-- Create User Modal Start -->
+    <div class="modal fade dashboard-modal" id="deleteUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-body delete-user-body">
+                    <div class="delete-user-confirmation-box">
+                        <div class="duc-icon">
+                            <img src="assets/images/icons/delete-info.svg" alt="info">
+                        </div>
+                        <h2 class="duc-title">Are you sure?</h2>
+                        <h2 class="duc-text">You won't be able to revert this!</h2>
+                        <div class="duc-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Delete</button>
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-gray">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Create User Modal End -->
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!-- Waypoint -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/js/aos.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

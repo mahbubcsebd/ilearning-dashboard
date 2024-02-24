@@ -1,0 +1,117 @@
+@media screen and (max-width: 1600px) {
+    .hero-1 .hero-content {
+        margin-top: 50px;
+    }
+
+    .hero-content .navigate {
+        margin-top: 65px;
+    }
+
+    .hero-1 .hero-content h1 {
+        font-size: 70px;
+        line-height: 90px;
+    }
+}
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 1366px) {
+    .hero-1 .hero-content h1 {
+        font-size: 62px;
+        line-height: 80px;
+    }
+
+    .navigate img {
+        height: 50px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header-logo {
+        width: 140px;
+    }
+
+    .footer-logo {
+        width: 140px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .hero-content .navigate {
+        display: none;
+    }
+
+    .hero-1 .hero-content h1 {
+        font-size: 55px;
+        line-height: 75px;
+    }
+
+    .hero-1 .hero-content {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .header-1 {
+        background: #0b2031;
+    }
+
+    .header .navbar-collapse {
+        padding-top: 30px;
+    }
+
+    .header .navbar-expand-lg .navbar-nav {
+        gap: 0;
+    }
+
+    .header .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 24px 0;
+        border-bottom: 1px solid #3c4d5a;
+    }
+
+    .header .navbar-expand-lg .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-1 .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-1 .hero-content h1 {
+        font-size: 45px;
+        line-height: 65px;
+    }
+
+    .hero-1 .hero-content p {
+        font-size: 18px;
+        width: 85%;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .hero-1 .hero-content h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .hero-1 .hero-content p {
+        font-size: 16px;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero-1 .hero-content {
+        margin-top: 16px;
+    }
+}
+@media screen and (max-width: 360px) {
+}

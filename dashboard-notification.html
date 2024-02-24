@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area dashboard-basic-info-area">
+            <div class="container-fluid">
+                <!-- Notification Setting Section Start -->
+                <div class="row">
+                    <h2 class="dashboard-info-title">Notification Settings</h2>
+                    <div class="single-dashboard-notification">
+                        <div class="dashboard-notification-content-box">
+                            <h3>Comments</h3>
+                            <p>These are notifications for comments on your posts and replies to your comments.</p>
+                        </div>
+                        <div class="dashboard-notification-switch">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="comment-notification-push">
+                                <label for="">Push</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="comment-notification-push">
+                                <label for="">Email</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="comment-notification-push">
+                                <label for="">SMS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="single-dashboard-notification">
+                        <div class="dashboard-notification-content-box">
+                            <h3>Tags</h3>
+                            <p>These are notifications for when someone tags you in a comment, post or story.</p>
+                        </div>
+                        <div class="dashboard-notification-switch">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="tag-notification-push">
+                                <label for="">Push</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="tag-notification-push">
+                                <label for="">Email</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="tag-notification-push">
+                                <label for="">SMS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="single-dashboard-notification">
+                        <div class="dashboard-notification-content-box">
+                            <h3>Reminders</h3>
+                            <p>These are notifications to remind you of updates you might have missed.</p>
+                        </div>
+                        <div class="dashboard-notification-switch">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="reminder-notification-push">
+                                <label for="">Push</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="reminder-notification-push">
+                                <label for="">Email</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="reminder-notification-push">
+                                <label for="">SMS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="dashboard-notification-content-box">
+                            <h3>More activity about you</h3>
+                            <p>These are notifications for posts on your profile, likes and other reactions to your
+                                posts, and more.</p>
+                        </div>
+                        <div class="dashboard-notification-switch">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="more-notification-push">
+                                <label for="">Push</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="more-notification-push">
+                                <label for="">Email</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="more-notification-push">
+                                <label for="">SMS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="checkbox" value="" id="news-notification-push"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="flexCheckDefault">News and updates</label>
+                                <p>News about product and feature updates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="checkbox" value="" id="tips-notification-push"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="flexCheckDefault">Tips and tutorials</label>
+                                <p>Tips on getting more out of Untitled.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="checkbox" value="" id="research-notification-push">
+                            </p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="flexCheckDefault">User research</label>
+                                <p>Get involved in our beta testing program or participate in paid product user
+                                    research.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="sdn-title-box">
+                        <h3>Comments</h3>
+                        <p>These are notifications for comments on your posts and replies to your comments.</p>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="radio" name="notify" id="do-not-notify"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="do-not-notify">Do not notifiy me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="radio" name="notify" id="mention-only"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="mention-only">Mentions only</label>
+                                <p>Only notify me if I’m mentioned in a comment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="radio" name="notify" id="all-comment"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="all-comment">All comments</label>
+                                <p>Notify me for all comments on my posts. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="sdn-title-box">
+                        <h3>More activity about you</h3>
+                        <p>These are notifications for posts on your profile, likes and other reactions to your posts.
+                        </p>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="radio" name="reminder" id="activity-1"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="activity-1">Do not notifiy me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-dashboard-notification mb-4">
+                        <div class="sdn-box">
+                            <p><input class="form-check-input" type="radio" name="reminder" id="activity-2"></p>
+                            <div class="dashboard-notification-content-box">
+                                <label for="activity-2">All reminders</label>
+                                <p>Notify me for all other activity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification Setting Section End -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!-- Waypoint -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/select2.full.min.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
