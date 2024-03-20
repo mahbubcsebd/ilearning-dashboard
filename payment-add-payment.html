@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="page-breadcrumb-box">
+                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Add Payment Method</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <!-- Payment Profile Section Start -->
+                        <div class="payment-section mb-5">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-12">
+                                    <div class="single-payment-balance">
+                                        <h3 class="spb-title">Payment method</h3>
+                                        <p class="spb-text">Update your billing details and address.</p>
+                                        <form class="payment-method-form">
+                                            <div class="row payment-method-wrapper">
+                                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                                                    <div class="single-payment-method">
+                                                        <label class="payment-method-box">
+                                                            <input type="checkbox" name="payment-method" />
+                                                            <img class="img-responsive"
+                                                                src="assets/images/icons/payoneer.svg" alt="payoneer">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                                                    <div class="single-payment-method">
+                                                        <label class="payment-method-box">
+                                                            <input type="checkbox" name="payment-method" />
+                                                            <img class="img-responsive"
+                                                                src="assets/images/icons/paypal.svg" alt="paypal">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                                                    <div class="single-payment-method">
+                                                        <label class="payment-method-box">
+                                                            <input type="checkbox" name="payment-method" />
+                                                            <img class="img-responsive"
+                                                                src="assets/images/icons/stripe.svg" alt="stripe">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                                                    <div class="single-payment-method">
+                                                        <label class="payment-method-box">
+                                                            <input type="checkbox" name="payment-method" value="visa">
+                                                            <img class="img-responsive"
+                                                                src="assets/images/icons/visa.svg" alt="visa">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-card-add-info">
+                                                <h2 class="scai-title">Card details</h2>
+                                                <div class="scai-input-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group
+                                                                mb-3">
+                                                                <label for="scai-card-name" class="form-label">Name on
+                                                                    card</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="scai-card-name" placeholder="Olivia Rhye">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group
+                                                                mb-3">
+                                                                <label for="scai-card-name"
+                                                                    class="form-label">Expiry</label>
+                                                                <div class="exp-wrapper">
+                                                                    <input autocomplete="off" class="exp" id="month"
+                                                                        maxlength="2" pattern="[0-9]*"
+                                                                        inputmode="numerical" placeholder="MM"
+                                                                        type="text" data-pattern-validate="" />
+                                                                    <input autocomplete="off" class="exp" id="year"
+                                                                        maxlength="2" pattern="[0-9]*"
+                                                                        inputmode="numerical" placeholder="YY"
+                                                                        type="text" data-pattern-validate="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <button class="btn btn-purple">save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Payment Profile Section End -->
+
+
+                        <!-- Payment Status Table Start -->
+                        <div class="single-dashboard-content">
+                            <div class="dashboard-content-header">
+                                <div class="dashboard-content-header-title">
+                                    <h4>Pages</h4>
+                                </div>
+                                <div class="dashboard-content-action">
+                                    <button type="button" class="btn btn-orange">Delete</button>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-body">
+                                <div class="user-data-table">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Invoice No</th>
+                                                    <th scope="col">Instructor Name</th>
+                                                    <th scope="col">Payment Method</th>
+                                                    <th scope="col">Account Number</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility pending ">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft ">Cancel</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Success</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility pending ">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility pending ">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility pending ">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IN894521</td>
+                                                    <td>Jenny Wilson</td>
+                                                    <td>Mastercard</td>
+                                                    <td>4217 8791 2147 2547</td>
+                                                    <td>$450</td>
+                                                    <td>
+                                                        <p class="cms-visibility pending ">Pending</p>
+                                                    </td>
+                                                    <td>
+                                                        <button class="ellipsis-btn">
+                                                            ...
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Payment Status Table End -->
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!-- Waypoint -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/js/aos.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        const monthInput = document.querySelector('#month');
+        const yearInput = document.querySelector('#year');
+
+        const focusSibling = function (target, direction, callback) {
+            const nextTarget = target[direction];
+            nextTarget && nextTarget.focus();
+            // if callback is supplied we return the sibling target which has focus
+            callback && callback(nextTarget);
+        }
+
+        // input event only fires if there is space in the input for entry.
+        // If an input of x length has x characters, keyboard press will not fire this input event.
+        monthInput.addEventListener('input', (event) => {
+
+            const value = event.target.value.toString();
+            // adds 0 to month user input like 9 -> 09
+            if (value.length === 1 && value > 1) {
+                event.target.value = "0" + value;
+            }
+            // bounds
+            if (value === "00") {
+                event.target.value = "01";
+            } else if (value > 12) {
+                event.target.value = "12";
+            }
+            // if we have a filled input we jump to the year input
+            2 <= event.target.value.length && focusSibling(event.target, "nextElementSibling");
+            event.stopImmediatePropagation();
+        });
+
+        yearInput.addEventListener('keydown', (event) => {
+            // if the year is empty jump to the month input
+            if (event.key === "Backspace" && event.target.selectionStart === 0) {
+                focusSibling(event.target, "previousElementSibling");
+                event.stopImmediatePropagation();
+            }
+        });
+
+        const inputMatchesPattern = function (e) {
+            const {
+                value,
+                selectionStart,
+                selectionEnd,
+                pattern
+            } = e.target;
+
+            const character = String.fromCharCode(e.which);
+            const proposedEntry = value.slice(0, selectionStart) + character + value.slice(selectionEnd);
+            const match = proposedEntry.match(pattern);
+
+            return e.metaKey || // cmd/ctrl
+                e.which <= 0 || // arrow keys
+                e.which == 8 || // delete key
+                match && match["0"] === match.input; // pattern regex isMatch - workaround for passing [0-9]* into RegExp
+        };
+
+        document.querySelectorAll('input[data-pattern-validate]').forEach(el => el.addEventListener('keypress', e => {
+            if (!inputMatchesPattern(e)) {
+                return e.preventDefault();
+            }
+        }));
+    </script>
+</body>
+
+</html>

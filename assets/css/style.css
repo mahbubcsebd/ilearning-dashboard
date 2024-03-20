@@ -394,7 +394,7 @@ td {
     color: #fd1b1b !important;
 }
 
-.testimonial-table-ellipsis-box {
+.ellipsis-box {
     position: relative;
     display: inline-block;
 }
@@ -408,6 +408,10 @@ td {
     padding: 8px 16px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 1;
+}
+
+tr:last-child .tteb-popup-content {
+    top: -70px;
 }
 
 .tteb-popup-content ul li button {
@@ -858,6 +862,9 @@ label {
     -o-transition: 0.3s ease all;
     transition: 0.3s ease all;
     border: 1px solid var(--purple);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .btn-purple:hover {
@@ -1237,6 +1244,7 @@ label {
 
 .progress-bar {
     background-color: #ff6652;
+    border-radius: var(--bs-progress-border-radius);
 }
 
 .progress,
@@ -1339,7 +1347,7 @@ th {
     line-height: 32px;
     color: var(--gray-colors-600, #6c688a) !important;
 }
-/* Baisc Information End */
+/* Basic Information End */
 
 /* Connected Account Start */
 .security-warning {
@@ -1531,99 +1539,6 @@ th {
     margin-top: 5px;
 }
 /* Notification Setting End */
-
-/* Dashboard Area Section Start */
-.dashboard-single-card {
-    border-radius: 12px;
-    background: #fff;
-    padding: 24px;
-}
-
-.dsc-top {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.dsc-top-icon {
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.dsc-orange .dsc-top-icon {
-    background: #fff0ee;
-}
-
-.dsc-purple .dsc-top-icon {
-    background: #f5edfe;
-}
-
-.dsc-top-content p {
-    color: var(--Gray-colors-700, #3b3563);
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    margin-bottom: 8px;
-}
-
-.dsc-top-content h3 {
-    color: var(--Gray-colors-900, #0a033c);
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-}
-
-.dsc-bottom p {
-    color: #6c688a;
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.dsc-purple .dsc-bottom p span {
-    color: #00c566;
-}
-
-.dsc-orange .dsc-bottom p span {
-    color: #fd1b1b;
-}
-
-.dsc-purple .progress-bar {
-    background-color: #7f56d9;
-}
-
-.dsc-purple .progress,
-.dsc-purple .progress-stacked {
-    --bs-progress-height: 6px;
-    --bs-progress-bg: #f5edfe;
-}
-
-.dsc-orange .progress-bar {
-    background-color: #ff6652;
-}
-
-.dsc-orange .progress,
-.dsc-orange .progress-stacked {
-    --bs-progress-height: 6px;
-    --bs-progress-bg: #fff0ee;
-}
-/* Dashboard Area Section End */
-/* Dashboard Section End */
 
 /*=========================================================================================
     22.0 - 404 Page Start
@@ -2448,6 +2363,1278 @@ th {
     height: 68px;
 }
 
+.pay-now-btn {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+    border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    -ms-border-radius: 16px !important;
+    -o-border-radius: 16px !important;
+}
+
+.exp-wrapper {
+    position: relative;
+    border: 1px solid #aaa;
+    display: flex;
+    /* width: 300px; */
+    justify-content: space-around;
+    /* height: 36px; */
+    line-height: 36px;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300, #d0d5dd);
+    background: var(--Base-White, #fff);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    display: flex;
+    padding: 10px 14px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.exp-wrapper:after {
+    content: '/';
+    position: absolute;
+    left: 50%;
+    margin-left: -4px;
+    color: #aaa;
+}
+
+.exp {
+    border: 0;
+    width: 50px;
+    font-size: 14px;
+    color: var(--Gray-900, #101828);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
 /*=========================================================================================
     Payment Section End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    My Courses Page Start
+ ==========================================================================================*/
+.my-courses-title h2 {
+    color: var(--text-active, #11142d);
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+}
+
+.my-courses-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 24px;
+}
+
+.single-my-courses {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.my-courses-wrapper {
+    padding: 30px 24px;
+}
+
+.smc-card-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.smc-course {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.smc-img {
+    width: 156px;
+    height: 156px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.smc-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12%;
+}
+
+.smc-card {
+    border-radius: 12px;
+    padding: 33px 24px;
+}
+
+.smc-card-1 {
+    background: #f5edfe;
+}
+
+.smc-card-2 {
+    background: #fff0ee;
+}
+
+.smc-card-3 {
+    background: #edf2ff;
+}
+
+.smcd-title {
+    color: var(--Gray-colors-700, #3b3563);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-bottom: 8px;
+}
+
+.smcd-number {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.smc-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.smc-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.smcd-number svg {
+    color: #ff6652;
+    font-size: 16px;
+}
+
+.single-my-courses .ellipsis-btn {
+    transform: rotate(90deg);
+}
+/*=========================================================================================
+    My Courses Page End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    Product List Page End
+ ==========================================================================================*/
+.spl-img {
+    width: 100%;
+    height: 185px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.spl-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.single-product-list {
+    padding: 24px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.spl-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.spl-title {
+    color: #0a033c;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.spl-rating {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.spl-price {
+    color: var(--Primary-colors-900, #7f56d9);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.splc-rating-num {
+    color: var(--Secondary-colors-900, #ff6652);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.splc-rating-person {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.spl-rating-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/*=========================================================================================
+    Product List Page End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    Product Details Page Start
+ ==========================================================================================*/
+.product-details-title {
+    color: #0a033c;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+    margin-bottom: 12px;
+}
+
+.pdc-top {
+    margin-bottom: 80px;
+}
+
+.pdc-book-writter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.pdcbw-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pdcbw-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.pdcbw-text h2 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.pdcbw-text p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.book-description-text {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.bdt-span {
+    color: #0a033c;
+    font-weight: 600;
+}
+
+.pdc-offer-price {
+    color: var(--Secondary-colors-900, #ff6652);
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54px;
+}
+
+.pdc-price-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pdc-price {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-decoration: line-through;
+}
+
+.pdc-bottom-price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.preview-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff0ee;
+    border-radius: 50%;
+    border: 1px solid #ffe0dc;
+}
+
+.preview-btn img {
+    width: 20px;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.order-status-wrap h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+    margin-bottom: 4px;
+}
+
+.order-status-wrap p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+/*=========================================================================================
+    Product Details Page End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    Widget Page Start
+ ==========================================================================================*/
+/* Radial Circle  Progress Bar Styles Start */
+.round {
+    position: relative;
+    width: 85px;
+    height: 85px;
+}
+
+.radial-percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+    color: #000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+/* Radial Circle  Progress Bar Styles End */
+
+.single-widget-progress {
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.widget-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.widget-progress-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget-progress-info-text {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* Notification Section Start */
+.dashboard-notification-box {
+    border-radius: 12px;
+    background: #fff;
+    padding: 24px;
+}
+
+.single-dashboard-notification-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-colors-300, #e7e6ec);
+    background: var(--Primary-colors-200, #faf6fe);
+    padding: 16px;
+}
+
+.single-dashboard-notification-2:last-child {
+    margin-bottom: 0;
+}
+
+.sdn-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sdn-content h3 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+
+.sdn-content p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.sdn-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sdn-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/* Notification Section End */
+
+/* Message Section Start */
+.sdm-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 157.143% */
+}
+
+.sdm-title-box span {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+    display: inline-block;
+}
+
+.sdm-message-text {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 183.333% */
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+}
+
+.msg-btn {
+    width: 52px;
+    height: 52px;
+    /* background: #fff; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f3f2f5;
+}
+
+.sdm-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sdm-title-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.single-dashboard-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 24px;
+}
+
+.single-dashboard-message:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sdm-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-message-box {
+    border-radius: 12px;
+    background: #fff;
+    padding: 24px;
+}
+/* Message Section End */
+
+/* Message Overview Start */
+.single-dashboard-message.sdm-overview {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+
+.sdm-overview .sdm-left {
+    gap: 24px;
+}
+
+.sdm-overview-date {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+/* Message Overview End */
+
+/* Progress Section Start */
+.yearly-progress-chart {
+    background: #fff;
+    position: relative;
+    padding-top: 110px;
+}
+
+.chart-title-box {
+    position: absolute;
+    content: '';
+    top: 24px;
+    left: 56px;
+}
+
+.chart-title-box h2 {
+    color: var(--text-active, #11142d);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 4px;
+}
+
+.chart-title-rev {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rev-text {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.rev-green {
+    color: #0ad172;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.yearly-progress-filter {
+    position: absolute;
+    content: '';
+    top: 24px;
+    right: 24px;
+    width: 140px;
+}
+
+.doughnut-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.doughnut-title h2 {
+    color: var(--text-active, #11142d);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.course-name-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.course-name-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.course-name-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-name-box h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px; /* 100% */
+}
+
+.co-title {
+    color: var(--text-active, #11142d);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.chart-title-box.ctb-sales {
+    top: 30px !important;
+}
+/* Progress Section End */
+
+/* Social Follower Section Start */
+.single-social-follower {
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.ssf-top-content {
+    text-align: center;
+}
+
+.ssf-top-content h3 {
+    color: var(--Gray-colors-900, #0a033c);
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.ssf-top-icon {
+    margin-bottom: 12px;
+}
+
+.ssf-top-content p {
+    color: var(--Gray-colors-600, #6c688a);
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+/* Social Follower Section End */
+
+/*=========================================================================================
+    Widget Page End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    Dashboard Page Start
+ ==========================================================================================*/
+/* Dashboard Area Section Start */
+.dashboard-single-card {
+    border-radius: 12px;
+    background: #fff;
+    padding: 24px;
+}
+
+.dsc-top {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dsc-top-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.dsc-orange .dsc-top-icon {
+    background: #fff0ee;
+}
+
+.dsc-purple .dsc-top-icon {
+    background: #f5edfe;
+}
+
+.dsc-top-content p {
+    color: var(--Gray-colors-700, #3b3563);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-bottom: 8px;
+}
+
+.dsc-top-content h3 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.dsc-bottom p {
+    color: #6c688a;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dsc-purple .dsc-bottom p span {
+    color: #00c566;
+}
+
+.dsc-orange .dsc-bottom p span {
+    color: #fd1b1b;
+}
+
+.dsc-purple .progress-bar {
+    background-color: #7f56d9;
+}
+
+.dsc-purple .progress,
+.dsc-purple .progress-stacked {
+    --bs-progress-height: 6px;
+    --bs-progress-bg: #f5edfe;
+}
+
+.dsc-orange .progress-bar {
+    background-color: #ff6652;
+}
+
+.dsc-orange .progress,
+.dsc-orange .progress-stacked {
+    --bs-progress-height: 6px;
+    --bs-progress-bg: #fff0ee;
+}
+/* Dashboard Area Section End */
+
+/* Popular Courses End */
+.single-popular-course {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.single-popular-course:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.spc-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spc-left-content h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 12px;
+}
+
+.spc-left-content p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+}
+
+.spc-price {
+    color: var(--Gray-colors-900, #0a033c);
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 100% */
+    margin-bottom: 8px;
+}
+
+.rattings {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 12px;
+    color: #ff6652;
+}
+
+.spc-left-img {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.spc-left-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.sm-title {
+    color: var(--text-active, #11142d);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+/* Popular Courses End */
+
+/* Student Overview Start */
+.sto-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sto-title span {
+    font-size: 16px;
+    color: #ff6652;
+}
+
+.sto-percent {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.sto-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.single-student-overview {
+    margin-bottom: 23px;
+}
+
+.single-st-overview .progress,
+.single-st-overview .progress-stacked {
+    --bs-progress-height: 8px;
+}
+
+.single-student-overview:last-child {
+    margin-bottom: 0;
+}
+/* Student Overview End */
+
+/* Top Instructor Start */
+.sti-left-content h4aa {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    margin-bottom: 12px;
+}
+
+.sti-left-content p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.sti-left-content h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+    margin-bottom: 12px;
+}
+
+.sti-time {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+
+.single-top-instructor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.single-top-instructor:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.sti-left-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sti-left-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Top Instructor End */
+/*=========================================================================================
+    Dashboard Page End
+ ==========================================================================================*/
+
+/*=========================================================================================
+    Dashboard Activity Page Start
+ ==========================================================================================*/
+.activity-top-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-time {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+    margin-right: 12px;
+}
+
+.activity-person-demo {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    background: #f5edfe;
+    border-radius: 50%;
+    color: var(--Gray-600, #475467);
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.activity-text {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.activity-top-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px;
+    margin-bottom: 24px;
+}
+
+.single-activity-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.activity-text span {
+    color: #6c688a;
+}
+
+.sac-right {
+    display: flex;
+    gap: 12px;
+}
+
+.single-module {
+    border-radius: 12px;
+    border: 1px solid var(--Gray-colors-300, #e7e6ec);
+    background: var(--white, #fff);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.module-content h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 100% */
+    margin-bottom: 8px;
+}
+
+.module-content p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 8px; /* 100% */
+}
+
+.module-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4ebff;
+    border-radius: 50%;
+}
+
+.rounded-dot {
+    border-radius: 50%;
+    background: var(--Gray-colors-400, #cecdd8);
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+}
+
+.stright-line {
+    width: 1px;
+    height: 82px;
+    background: var(--Gray-colors-400, #cecdd8);
+}
+
+.activity-content {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.sac-left {
+    gap: 8px;
+    min-width: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.activity-wrapper {
+    margin-bottom: 36px;
+}
+
+.stright-line-sm {
+    height: 20px;
+}
+
+/* Chart */
+.storage-info p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+
+.storage-info h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.storage-info {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+
+.storage-details-box {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--Primary-colors-400, #ebdbfd);
+    background: var(--Primary-colors-200, #faf6fe);
+    padding: 30px;
+}
+
+/*=========================================================================================
+    Dashboard Activity Page End
  ==========================================================================================*/

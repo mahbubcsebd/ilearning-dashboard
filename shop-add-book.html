@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | User Dashboard</title>
+    <title>iLearning | CMS Testimonial</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -25,14 +25,15 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- File Upload With Preview -->
+    <link rel="stylesheet" href="assets/css/file-upload-with-preview.min.css">
     <!-- Chosen CSS -->
     <link rel="stylesheet" href="assets/css/chosen.min.css">
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                             </a>
                         </div>
                         <!-- Sidebar Navigation -->
-                        <ul class="sidebar-nav" id="sidebar">
+                        <ul class="sidebar-nav" id="sidebar-menu">
                             <li class="sidebar-header">
                                 Supper Admin Panel
                             </li>
@@ -220,7 +221,6 @@
                                             <form class="d-flex">
                                                 <input class="form-control me-2" type="search" placeholder="Search"
                                                     aria-label="Search">
-                                                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
                                             </form>
                                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#navbarSupportedContent"
@@ -254,110 +254,108 @@
                             </nav>
                         </div>
                     </div>
-                    <!--  -->
                     <div class="dashboard-content-box">
                         <div class="page-breadcrumb-box">
                             <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Add Blog</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Product Details</li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>Add Blog Content</h4>
-                                        </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Address</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Full address here">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label>Additional Information</label>
-                                                <textarea rows="6" type="text" class="form-control"
-                                                    id="add-blog-address"
-                                                    placeholder="Write blog details..."></textarea>
-                                                <small>Maximum 5000 characters </small>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="single-dashboard-content">
+                            <div class="dashboard-content-header">
+                                <div class="dashboard-content-header-title">
+                                    <h4>Add New Product</h4>
                                 </div>
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>Author</h4>
+                            </div>
+                            <div class="dashboard-content-body">
+                                <form id="add-product-form">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-name" class="form-label">Product Name</label>
+                                            <input type="text" class="form-control" id="add-product-name"
+                                                placeholder="Type here...">
                                         </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-sub-title" class="form-label">Sub Title</label>
+                                            <input type="text" class="form-control" id="add-product-sub-title"
+                                                placeholder="Type here...">
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-author" class="form-label">Author Name</label>
+                                            <input type="text" class="form-control" id="add-product-author"
+                                                placeholder="Type here...">
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-cat" class="form-label">Category</label>
+                                            <input type="text" class="form-control" id="add-product-cat"
+                                                placeholder="Type here...">
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-price" class="form-label">Price</label>
+                                            <input type="text" class="form-control" id="add-product-price"
+                                                placeholder="0000">
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-discount" class="form-label">Discount</label>
+                                            <input type="text" class="form-control" id="add-product-discount"
+                                                placeholder="0000">
+                                        </div>
+                                        <div class="col-lg-6 mb-4">
                                             <div class="form-group">
-                                                <label for="add-blog-address">Author</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Author Name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>SEO Content</h4>
-                                        </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Blog Title</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Title type here...">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Meta Keyword</label>
-                                                <select class="chzn-select-meta form-select" multiple
-                                                    data-placeholder="Choose Meta Keyword...">
-                                                    <option value=""></option>
-                                                    <option value="Data Science">Data Science</option>
-                                                    <option value="Digital Marketing">Digital Marketing</option>
-                                                    <option value="Web Developer">Web Developer</option>
-                                                    <option value="UX/UI Designer">UX/UI Designer</option>
-                                                    <option value="React JS">React JS</option>
-                                                    <option value="Angular">Angular</option>
+                                                <label for="add-keyword">Keyword</label>
+                                                <select class="chzn-select-keyword form-select" multiple
+                                                    data-placeholder="Keyword">
+                                                    <option value="keyword-1">keyword 1</option>
+                                                    <option value="keyword-2">keyword 2</option>
+                                                    <option value="keyword-3">keyword 3</option>
+                                                    <option value="keyword-4">keyword 4</option>
+                                                    <option value="keyword-5">keyword 5</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label>Meta Descriptions</label>
-                                                <textarea rows="6" type="text" class="form-control"
-                                                    id="add-blog-address"
-                                                    placeholder="Write descriptions here..."></textarea>
-                                                <small>Maximum 5000 characters </small>
+                                        <div class="col-lg-6 mb-4">
+                                            <label for="add-product-meta" class="form-label">Meta Title</label>
+                                            <input type="text" class="form-control" id="add-product-meta"
+                                                placeholder="Type meta title...">
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <label for="add-product-meta" class="form-label">Product Description</label>
+                                            <textarea rows="5" type="text" class="form-control" id="add-product-meta"
+                                                placeholder="Write descriptions here..."></textarea>
+                                        </div>
+                                        <div class="mb-4">
+                                            <h2 class="preview-title">Upload Image</h2>
+                                            <div class="preview-box">
+                                                <span><img src="assets/images/icons/eye.svg" alt="eye"></span>Preview
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4">
+                                                <label class="btn-up btn btn-orange">
+                                                    <input type="file" hidden>
+                                                    <span><img src="assets/images/icons/upload.svg"
+                                                            alt="upload"></span>Choose File
+                                                </label>
+                                                <button class="preview-btn" type="button"><img
+                                                        src="assets/images/icons/edit-orange.svg" alt="edit"></button>
+                                                <button class="preview-btn" type="button"><img
+                                                        src="assets/images/icons/delete-orange.svg"
+                                                        alt="delete"></button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="d-flex justify-content-end pt-5">
+                                        <button class="btn btn-purple">Upload Product</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="col-lg-4"></div>
                         </div>
                     </div>
-                    <!--  -->
                 </div>
             </div>
         </div>
     </div>
-
 
 
 
@@ -379,8 +377,12 @@
     <script src="assets/js/aos.js"></script>
     <!-- Chosen for Multiselect -->
     <script src="assets/js/chosen.jquery.min.js"></script>
+    <!-- File Upload With Preview -->
+    <script src="assets/js/file-upload-with-preview.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
 </body>
 
 </html>

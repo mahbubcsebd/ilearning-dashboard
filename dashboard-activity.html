@@ -25,14 +25,12 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
-    <!-- Chosen CSS -->
-    <link rel="stylesheet" href="assets/css/chosen.min.css">
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
@@ -48,7 +46,7 @@
                             </a>
                         </div>
                         <!-- Sidebar Navigation -->
-                        <ul class="sidebar-nav" id="sidebar">
+                        <ul class="sidebar-nav" id="sidebar-menu">
                             <li class="sidebar-header">
                                 Supper Admin Panel
                             </li>
@@ -220,7 +218,6 @@
                                             <form class="d-flex">
                                                 <input class="form-control me-2" type="search" placeholder="Search"
                                                     aria-label="Search">
-                                                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
                                             </form>
                                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#navbarSupportedContent"
@@ -261,95 +258,239 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Add Blog</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Activity</li>
                                 </ol>
                             </nav>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>Add Blog Content</h4>
-                                        </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Address</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Full address here">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label>Additional Information</label>
-                                                <textarea rows="6" type="text" class="form-control"
-                                                    id="add-blog-address"
-                                                    placeholder="Write blog details..."></textarea>
-                                                <small>Maximum 5000 characters </small>
-                                            </div>
-                                        </div>
+                        <div class="dashboard-content-wrapper single-dashboard-content">
+                            <div class="activity-top-box">
+                                <h2 class="activity-top-title">Today</h2>
+                                <div class="ellipsis-box">
+                                    <button class="ellipsis-btn">
+                                        ...
+                                    </button>
+                                    <div class="tteb-popup-content">
+                                        <ul>
+                                            <li>
+                                                <button type="button">Demo</button>
+                                            </li>
+                                            <li>
+                                                <button type="button">Demo</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>Author</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-8">
+                                    <!-- Activity Section Start -->
+                                    <div class="">
+
+                                        <div class="activity-wrapper">
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="sac-left">
+                                                        <p class="rounded-dot"></p>
+                                                        <p class="stright-line stright-line-sm"></p>
+                                                        <p class="rounded-dot"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="sac-left">
+                                                        <p class="rounded-dot"></p>
+                                                        <p class="stright-line"></p>
+                                                        <p class="rounded-dot"></p>
+                                                    </div>
+                                                    <div class="sac-right">
+                                                        <a href="#" class="single-module">
+                                                            <div class="module-icon">
+                                                                <img src="assets/images/icons/file.svg" alt="file">
+                                                            </div>
+                                                            <div class="module-content">
+                                                                <h4>Module2_design.doc</h4>
+                                                                <p>1.5 MB</p>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="single-module">
+                                                            <div class="module-icon">
+                                                                <img src="assets/images/icons/file.svg" alt="file">
+                                                            </div>
+                                                            <div class="module-content">
+                                                                <h4>Module2_design.doc</h4>
+                                                                <p>1.5 MB</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="sac-left">
+                                                        <p class="rounded-dot"></p>
+                                                        <p class="stright-line stright-line-sm"></p>
+                                                        <p class="rounded-dot"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Author</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Author Name">
+                                        <h2 class="activity-top-title">Yesterday</h2>
+
+                                        <div class="activity-wrapper">
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="sac-left">
+                                                        <p class="rounded-dot"></p>
+                                                        <p class="stright-line stright-line-sm"></p>
+                                                        <p class="rounded-dot"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">
+                                                        <img class="w-100 h-100 object-fit-cover"
+                                                            src="assets/images/user-1.png" alt="user" />
+                                                    </div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
+                                                <div class="activity-content">
+                                                    <div class="sac-left">
+                                                        <p class="rounded-dot"></p>
+                                                        <p class="stright-line stright-line-sm"></p>
+                                                        <p class="rounded-dot"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-activity-wrapper">
+                                                <div class="single-activity-top">
+                                                    <p class="activity-time">10:15 AM</p>
+                                                    <div class="activity-person-demo">AJ</div>
+                                                    <h4 class="activity-text">Arlene McCoy <span>has invited you
+                                                            to</span> UX UI
+                                                        design <span>Group Chat</span></h4>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Activity Section End -->
                                 </div>
-                                <div class="single-dashboard-content">
-                                    <div class="dashboard-content-header">
-                                        <div class="dashboard-content-header-title">
-                                            <h4>SEO Content</h4>
-                                        </div>
-                                    </div>
-                                    <div class="dashboard-content-body">
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Blog Title</label>
-                                                <input type="text" class="form-control" id="add-blog-address"
-                                                    placeholder="Title type here...">
+                                <div class="col-xl-4">
+                                    <div class="storage-details-box">
+                                        <div class="course-progress-doughnut">
+                                            <div class="doughnut-title">
+                                                <h2>Storage Details</h2>
                                             </div>
-                                        </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label for="add-blog-address">Meta Keyword</label>
-                                                <select class="chzn-select-meta form-select" multiple
-                                                    data-placeholder="Choose Meta Keyword...">
-                                                    <option value=""></option>
-                                                    <option value="Data Science">Data Science</option>
-                                                    <option value="Digital Marketing">Digital Marketing</option>
-                                                    <option value="Web Developer">Web Developer</option>
-                                                    <option value="UX/UI Designer">UX/UI Designer</option>
-                                                    <option value="React JS">React JS</option>
-                                                    <option value="Angular">Angular</option>
-                                                </select>
+                                            <div class="storage-info">
+                                                <p>Available Space</p>
+                                                <h4>54GB/128GB</h4>
                                             </div>
+                                            <canvas id="storage-chart" class="course-progress-chart"></canvas>
                                         </div>
-                                        <div class="col-md-12 mb-4">
-                                            <div class="form-group">
-                                                <label>Meta Descriptions</label>
-                                                <textarea rows="6" type="text" class="form-control"
-                                                    id="add-blog-address"
-                                                    placeholder="Write descriptions here..."></textarea>
-                                                <small>Maximum 5000 characters </small>
+                                        <div class="files-type-box">
+                                            <div class="single-file-type">
+                                                <div>
+                                                    <div class="files-">
+                                                        <img src="assets/images/icons/file-purple.svg" alt="files">
+                                                    </div>
+                                                    <div class="files-content">
+                                                        <div class="files-top">
+                                                            <h4>Documents</h4>
+                                                            <p>5,674</p>
+                                                        </div>
+                                                        <div class="files-bottom">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 44%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-file-type">
+                                                <div>
+                                                    <div class="files-">
+                                                        <img src="assets/images/icons/video.svg" alt="video">
+                                                    </div>
+                                                    <div class="files-content">
+                                                        <div class="files-top">
+                                                            <h4>Videos</h4>
+                                                            <p>1,624</p>
+                                                        </div>
+                                                        <div class="files-bottom">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 44%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single-file-type">
+                                                <div>
+                                                    <div class="files-">
+                                                        <img src="assets/images/icons/gallary.svg" alt="gallary">
+                                                    </div>
+                                                    <div class="files-content">
+                                                        <div class="files-top">
+                                                            <h4>Image</h4>
+                                                            <p>5,515</p>
+                                                        </div>
+                                                        <div class="files-bottom">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    style="width: 44%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4"></div>
+
                         </div>
                     </div>
                     <!--  -->
@@ -357,7 +498,6 @@
             </div>
         </div>
     </div>
-
 
 
 
@@ -377,8 +517,10 @@
     <script src="assets/js/fontawesome.min.js"></script>
     <!-- AOS -->
     <script src="assets/js/aos.js"></script>
-    <!-- Chosen for Multiselect -->
-    <script src="assets/js/chosen.jquery.min.js"></script>
+    <!-- Radial Progress -->
+    <script src="assets/js/circle-progress.min.js" type="module"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/chart.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>

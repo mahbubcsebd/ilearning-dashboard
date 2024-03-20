@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="page-breadcrumb-box">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Widget</li>
+                                </ol>
+                            </nav>
+                        </div>
+
+                        <!-- Widget Progress Section Start -->
+                        <div class="widget-progress-wrapper row">
+                            <div class="col-lg-3 mb-4">
+                                <div class="single-widget-progress">
+                                    <div class="widget-progress-header">
+                                        <p class="widget-progress-title">Total Revenue</p>
+                                        <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                    </div>
+                                    <div class="widget-progress-body">
+                                        <div class="radial-box">
+                                            <div class="round revenue-bar" data-value="0.8" data-size="85"
+                                                data-thickness="20" data-start-angle="80">
+                                                <span class="radial-percent"></span>
+                                            </div>
+                                        </div>
+                                        <div class="widget-progress-info">
+                                            <p class="widget-progress-title">Total Revenue</p>
+                                            <p class="widget-progress-info-text"><span>$</span>350K</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-4">
+                                <div class="single-widget-progress">
+                                    <div class="widget-progress-header">
+                                        <p class="widget-progress-title">Statistics</p>
+                                        <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                    </div>
+                                    <div class="widget-progress-body">
+                                        <div class="radial-box">
+                                            <div class="round statistics-bar" data-value="0.7" data-size="85"
+                                                data-thickness="20" data-start-angle="80">
+                                                <span class="radial-percent"></span>
+                                            </div>
+                                        </div>
+                                        <div class="widget-progress-info">
+                                            <p class="widget-progress-title">Total Revenue</p>
+                                            <p class="widget-progress-info-text">6870</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-4">
+                                <div class="single-widget-progress">
+                                    <div class="widget-progress-header">
+                                        <p class="widget-progress-title">Sales Analytics</p>
+                                        <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                    </div>
+                                    <div class="widget-progress-body">
+                                        <div class="radial-box">
+                                            <div class="round analytics-bar" data-value="0.9" data-size="85"
+                                                data-thickness="20" data-start-angle="80">
+                                                <span class="radial-percent"></span>
+                                            </div>
+                                        </div>
+                                        <div class="widget-progress-info">
+                                            <p class="widget-progress-title">Total Revenue</p>
+                                            <p class="widget-progress-info-text">9800</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-4">
+                                <div class="single-widget-progress">
+                                    <div class="widget-progress-header">
+                                        <p class="widget-progress-title">Daily Sales</p>
+                                        <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                    </div>
+                                    <div class="widget-progress-body">
+                                        <div class="radial-box">
+                                            <div class="round sales-bar" data-value="0.8" data-size="85"
+                                                data-thickness="20" data-start-angle="80">
+                                                <span class="radial-percent"></span>
+                                            </div>
+                                        </div>
+                                        <div class="widget-progress-info">
+                                            <p class="widget-progress-title">Total Revenue</p>
+                                            <p class="widget-progress-info-text"><span>$</span>350K</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Widget Progress Section End -->
+
+                        <!-- Student Statistics Section Start -->
+                        <div class="dashboard-card-wrapper">
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="dashboard-single-card dsc-purple">
+                                        <div class="dsc-top">
+                                            <div class="dsc-top-icon">
+                                                <img src="assets/images/icons/user.svg" alt="user">
+                                            </div>
+                                            <div class="dsc-top-content">
+                                                <p>Total Students</p>
+                                                <h3>10580</h3>
+                                            </div>
+                                        </div>
+                                        <div class="dsc-bottom">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 44%"></div>
+                                            </div>
+                                            <p><img src="assets/images/icons/curve-arrow-green.svg"
+                                                    alt="curve-arrow"><span>2.6%</span> than
+                                                last week</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="dashboard-single-card dsc-orange">
+                                        <div class="dsc-top">
+                                            <div class="dsc-top-icon">
+                                                <img src="assets/images/icons/user-orange.svg" alt="user">
+                                            </div>
+                                            <div class="dsc-top-content">
+                                                <p>Total Instructors</p>
+                                                <h3>350</h3>
+                                            </div>
+                                        </div>
+                                        <div class="dsc-bottom">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 44%"></div>
+                                            </div>
+                                            <p><img src="assets/images/icons/curve-arrow-orange.svg"
+                                                    alt="curve-arrow"><span>2.6%</span> than
+                                                last week</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="dashboard-single-card dsc-purple">
+                                        <div class="dsc-top">
+                                            <div class="dsc-top-icon">
+                                                <img src="assets/images/icons/courses.svg" alt="courses">
+                                            </div>
+                                            <div class="dsc-top-content">
+                                                <p>Total Courses</p>
+                                                <h3>455</h3>
+                                            </div>
+                                        </div>
+                                        <div class="dsc-bottom">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 44%"></div>
+                                            </div>
+                                            <p><img src="assets/images/icons/curve-arrow-green.svg"
+                                                    alt="curve-arrow"><span>2.6%</span> than
+                                                last week</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="dashboard-single-card dsc-orange">
+                                        <div class="dsc-top">
+                                            <div class="dsc-top-icon">
+                                                <img src="assets/images/icons/book.svg" alt="book">
+                                            </div>
+                                            <div class="dsc-top-content">
+                                                <p>Total Book Sales</p>
+                                                <h3>95</h3>
+                                            </div>
+                                        </div>
+                                        <div class="dsc-bottom">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 44%"></div>
+                                            </div>
+                                            <p><img src="assets/images/icons/curve-arrow-orange.svg"
+                                                    alt="curve-arrow"><span>2.6%</span> than
+                                                last week</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Student Statistics Section End -->
+
+                        <!-- Notification Section Start -->
+                        <div class="dashboard-notification-wrapper row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="dashboard-notification-box">
+                                    <h2 class="spd-title">Notification</h2>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-1.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-2.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-1.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="dashboard-notification-box">
+                                    <h2 class="spd-title">Notification</h2>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-1.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-2.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-notification-2">
+                                        <div class="sdn-left">
+                                            <div class="sdn-img">
+                                                <img src="assets/images/notification-img-1.png" alt="notification">
+                                            </div>
+                                            <div class="sdn-content">
+                                                <h3>Congratulation you made a sale -
+                                                    UX/UI Course</h3>
+                                                <p>Dec 12, 2023 at 10:13 AM</p>
+                                            </div>
+                                        </div>
+                                        <div class="sdn-right">
+                                            <button type="button" class="ellipsis-btn rotate-90">...</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Notification Section End -->
+
+                        <!-- Message Section Start -->
+                        <div class="dashboard-message-wrapper row">
+                            <div class="col-lg-6 mb-4">
+                                <div class="dashboard-message-box">
+                                    <h2 class="spd-title">Message</h2>
+                                    <div class="single-dashboard-message">
+                                        <div class="sdm-left">
+                                            <div class="sdm-img">
+                                                <img src="assets/images/message-1.png" alt="message img">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Cody Fisher</p>
+                                                    <span>17 April, 2023</span>
+                                                </div>
+                                                <h3 class="sdm-message-text">The Java game tutorial is a very ambitious
+                                                    of work.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/msg-icon.svg" alt="message icon">
+                                            </button>
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/del-icon.svg" alt="delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message">
+                                        <div class="sdm-left">
+                                            <div class="sdm-img">
+                                                <img src="assets/images/message-1.png" alt="message img">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Cody Fisher</p>
+                                                    <span>17 April, 2023</span>
+                                                </div>
+                                                <h3 class="sdm-message-text">The Java game tutorial is a very ambitious
+                                                    of work.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/msg-icon.svg" alt="message icon">
+                                            </button>
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/del-icon.svg" alt="delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message">
+                                        <div class="sdm-left">
+                                            <div class="sdm-img">
+                                                <img src="assets/images/message-1.png" alt="message img">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Cody Fisher</p>
+                                                    <span>17 April, 2023</span>
+                                                </div>
+                                                <h3 class="sdm-message-text">The Java game tutorial is a very ambitious
+                                                    of work.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/msg-icon.svg" alt="message icon">
+                                            </button>
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/del-icon.svg" alt="delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message">
+                                        <div class="sdm-left">
+                                            <div class="sdm-img">
+                                                <img src="assets/images/message-1.png" alt="message img">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Cody Fisher</p>
+                                                    <span>17 April, 2023</span>
+                                                </div>
+                                                <h3 class="sdm-message-text">The Java game tutorial is a very ambitious
+                                                    of work.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/msg-icon.svg" alt="message icon">
+                                            </button>
+                                            <button type="button" class="msg-btn">
+                                                <img src="assets/images/icons/del-icon.svg" alt="delete icon">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <div class="dashboard-message-box">
+                                    <h2 class="spd-title">Update Overview</h2>
+                                    <div class="single-dashboard-message sdm-overview">
+                                        <div class="sdm-left">
+                                            <div class="user-data-table-info">
+                                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                                    aria-label="">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Stand Up</p>
+                                                </div>
+                                                <h3 class="sdm-overview-date">Mar 27, 2023 8:16 am</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message sdm-overview">
+                                        <div class="sdm-left">
+                                            <div class="user-data-table-info">
+                                                <input class="form-check-input mt-0" type="checkbox">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Don’t give up the fight</p>
+                                                </div>
+                                                <h3 class="sdm-overview-date">Mar 27, 2023 8:16 am</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message sdm-overview">
+                                        <div class="sdm-left">
+                                            <div class="user-data-table-info">
+                                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                                    aria-label="">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Do something else</p>
+                                                </div>
+                                                <h3 class="sdm-overview-date">Mar 27, 2023 8:16 am</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message sdm-overview">
+                                        <div class="sdm-left">
+                                            <div class="user-data-table-info">
+                                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                                    aria-label="">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Do something else</p>
+                                                </div>
+                                                <h3 class="sdm-overview-date">Mar 27, 2023 8:16 am</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-dashboard-message sdm-overview">
+                                        <div class="sdm-left">
+                                            <div class="user-data-table-info">
+                                                <input class="form-check-input mt-0" type="checkbox" value=""
+                                                    aria-label="">
+                                            </div>
+                                            <div class="sdm-content">
+                                                <div class="sdm-title-box">
+                                                    <p class="sdm-title">Get up</p>
+                                                </div>
+                                                <h3 class="sdm-overview-date">Mar 27, 2023 8:16 am</h3>
+                                            </div>
+                                        </div>
+                                        <div class="sdm-right">
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message Section End -->
+
+
+                        <!-- Progress Section Start -->
+                        <div id="progress-area" class="progress-area mb-4">
+                            <div class="row align-items-stretch">
+                                <div class="col-lg-9 mb-4 mb-lg-0">
+                                    <div class="yearly-progress-chart single-dashboard-content h-100">
+                                        <canvas id="yearly-progress-canvas" class="yearly-progress-canvas"></canvas>
+                                        <div class="chart-title-box">
+                                            <h2>Yearly Progress</h2>
+                                            <div class="chart-title-rev">
+                                                <p class="rev-text">Revenue:</p>
+                                                <p class="rev-green"><img
+                                                        src="assets/images/icons/curve-arrow-green.svg" alt="curve">
+                                                    +0.5%</p>
+                                            </div>
+                                        </div>
+                                        <div class="yearly-progress-filter">
+                                            <select class="form-select" aria-label="">
+                                                <option selected>This Year</option>
+                                                <option value="active">2024</option>
+                                                <option value="deactive">2023</option>
+                                                <option value="deactive">2022</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="course-progress-doughnut single-dashboard-content h-100">
+                                        <div class="doughnut-title">
+                                            <h2>Course Progress</h2>
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn rotate-90">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <canvas id="course-progress-chart" class="course-progress-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Progress Section End -->
+
+
+                        <!-- Course Overview Section Start -->
+                        <div class="course-overview-area mb-4">
+                            <div class="single-dashboard-content">
+                                <h2 class="co-title">Course Overview</h2>
+                                <div class="user-data-table">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Course Name</th>
+                                                    <th scope="col">Instructors</th>
+                                                    <th scope="col">Category</th>
+                                                    <th scope="col">Duration</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Course Type</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-1.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-2.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-3.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-3.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-4.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-5.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-6.png" alt="course">
+                                                            </div>
+                                                            <h4>Introduction of UI/UX</h4>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        Esther Howard
+                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>3 Month</td>
+                                                    <td>$450</td>
+                                                    <td>Online</td>
+                                                    <td>
+                                                        <p class="cms-visibility success ">Active</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course Overview Section End -->
+
+
+                        <!-- Social Follower Section Start -->
+                        <div class="social-follower-area">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                    <div class="single-social-follower">
+                                        <div class="ssf-top">
+                                            <div class="ssf-top-icon">
+                                                <img src="assets/images/icons/fb-lg.svg" alt="facebook">
+                                            </div>
+                                            <div class="ssf-top-content">
+                                                <h3>86K</h3>
+                                                <p>Followers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                    <div class="single-social-follower">
+                                        <div class="ssf-top">
+                                            <div class="ssf-top-icon">
+                                                <img src="assets/images/icons/linkedin-lg.svg" alt="linkedin">
+                                            </div>
+                                            <div class="ssf-top-content">
+                                                <h3>101K</h3>
+                                                <p>Followers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                    <div class="single-social-follower">
+                                        <div class="ssf-top">
+                                            <div class="ssf-top-icon">
+                                                <img src="assets/images/icons/insta-lg.svg" alt="instagram">
+                                            </div>
+                                            <div class="ssf-top-content">
+                                                <h3>210K</h3>
+                                                <p>Followers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                                    <div class="single-social-follower">
+                                        <div class="ssf-top">
+                                            <div class="ssf-top-icon">
+                                                <img src="assets/images/icons/x-lg.svg" alt="x icon">
+                                            </div>
+                                            <div class="ssf-top-content">
+                                                <h3>63K</h3>
+                                                <p>Followers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Social Follower Section End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
