@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
@@ -408,137 +410,316 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="my-courses-top">
-                        <div class="my-courses-title">
-                            <h2>My Courses</h2>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="courses-breadcrumb-top">
+                            <div class="page-breadcrumb-box">
+                                <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <button type="button" class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>
+                                Add New Course</button>
                         </div>
-                        <button class="upload-courses-btn btn-purple"><span><img
-                                    src="assets/images/icons/course-upload.svg" alt="upload icon"></span> New
-                            Upload</button>
-                    </div>
-                    <div class="my-courses-wrapper">
-                        <div class="single-my-courses">
-                            <div class="smc-course">
-                                <div class="smc-img">
-                                    <img src="assets/images/my-courses-1.png" alt="course image">
-                                </div>
-                                <div class="smc-content">
-                                    <div class="smc-progress">
-                                        <p class="cms-visibility draft">Draft</p>
-                                        <p class="cms-visibility success">Live</p>
+                        <!-- Course Page Start -->
+                        <div id="courses-page" class="courses-page">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-1.jpg" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Dewey Stephens</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">Web Development with PHP &
+                                                    Laravel</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 class="smc-title">Introduction of UI/UX</h3>
-                                    <p class="smc-description">Darlene Robertson</p>
                                 </div>
-                            </div>
-                            <div class="smc-card-wrapper">
-                                <div class="smc-card smc-card-1">
-                                    <p class="smcd-title">Total Earning</p>
-                                    <h3 class="smcd-number">$7,500</h3>
-                                </div>
-                                <div class="smc-card smc-card-2">
-                                    <p class="smcd-title">Total Enrollment</p>
-                                    <h3 class="smcd-number">3,265</h3>
-                                </div>
-                                <div class="smc-card smc-card-3">
-                                    <p class="smcd-title">Course Ratting</p>
-                                    <h3 class="smcd-number">4.5 <i class="fa-solid fa-star"></i></h3>
-                                </div>
-                            </div>
-                            <button class="ellipsis-btn">
-                                ...
-                            </button>
-                        </div>
-                        <div class="single-my-courses">
-                            <div class="smc-course">
-                                <div class="smc-img">
-                                    <img src="assets/images/my-courses-2.png" alt="course image">
-                                </div>
-                                <div class="smc-content">
-                                    <div class="smc-progress">
-                                        <p class="cms-visibility draft">Draft</p>
-                                        <p class="cms-visibility success">Live</p>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-2.jpg" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Wade Warren</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">AWS Solutions Architect Program</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 class="smc-title">Introduction of UI/UX</h3>
-                                    <p class="smc-description">Darlene Robertson</p>
                                 </div>
-                            </div>
-                            <div class="smc-card-wrapper">
-                                <div class="smc-card smc-card-1">
-                                    <p class="smcd-title">Total Earning</p>
-                                    <h3 class="smcd-number">$7,500</h3>
-                                </div>
-                                <div class="smc-card smc-card-2">
-                                    <p class="smcd-title">Total Enrollment</p>
-                                    <h3 class="smcd-number">3,265</h3>
-                                </div>
-                                <div class="smc-card smc-card-3">
-                                    <p class="smcd-title">Course Ratting</p>
-                                    <h3 class="smcd-number">4.5 <i class="fa-solid fa-star"></i></h3>
-                                </div>
-                            </div>
-                            <button class="ellipsis-btn">
-                                ...
-                            </button>
-                        </div>
-                        <div class="single-my-courses">
-                            <div class="smc-course">
-                                <div class="smc-img">
-                                    <img src="assets/images/my-courses-3.png" alt="course image">
-                                </div>
-                                <div class="smc-content">
-                                    <div class="smc-progress">
-                                        <p class="cms-visibility draft">Draft</p>
-                                        <p class="cms-visibility success">Live</p>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-3.jpg" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Bessie Cooper</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">AWS Solutions Architect Program</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 class="smc-title">Introduction of UI/UX</h3>
-                                    <p class="smc-description">Darlene Robertson</p>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-7.png" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Darlene Robertson</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">Master Your Personal Brand Like a Marketing</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-5.png" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Kathryn Murphy</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">Data Science Real-Life Exervises Included</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="single-course">
+                                        <a href="course-details.html" class="course-img-box">
+                                            <img src="assets/images/course/course-6.png" alt="course-img">
+                                        </a>
+                                        <div class="course-content-box">
+                                            <div class="course-content-top">
+                                                <div class="course-rating-box">
+                                                    <h3 class="course-instructor-name">Theresa Webb</h3>
+                                                    <div class="course-circle"></div>
+                                                    <div class="course-rating">5.0 <span><i
+                                                                class="fa-solid fa-star"></i></span></div>
+                                                </div>
+                                                <a class="course-title">Build Responsive Websites with HTML and CSS</a>
+                                                <div class="course-short-desc">
+                                                    <p><span><img src="assets/images/icons/user-circle.svg"
+                                                                alt="user"></span>Enroll 26
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/lesson.svg"
+                                                                alt="lesson"></span>12
+                                                        Lesson
+                                                    </p>
+                                                    <p><span><img src="assets/images/icons/clock.svg"
+                                                                alt="clock"></span>Start
+                                                        01-01-23</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="course-content-bottom">
+                                                <a href="#" class="btn btn-purple">View all</a>
+                                                <h4 class="course-price">$49.00</h4>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="smc-card-wrapper">
-                                <div class="smc-card smc-card-1">
-                                    <p class="smcd-title">Total Earning</p>
-                                    <h3 class="smcd-number">$7,500</h3>
-                                </div>
-                                <div class="smc-card smc-card-2">
-                                    <p class="smcd-title">Total Enrollment</p>
-                                    <h3 class="smcd-number">3,265</h3>
-                                </div>
-                                <div class="smc-card smc-card-3">
-                                    <p class="smcd-title">Course Ratting</p>
-                                    <h3 class="smcd-number">4.5 <i class="fa-solid fa-star"></i></h3>
-                                </div>
-                            </div>
-                            <button class="ellipsis-btn">
-                                ...
-                            </button>
                         </div>
+
+                        <!-- Pagination Start -->
+                        <div class="pagination-box">
+                            <div class="pagination-show">
+                                <p>Show result:</p>
+                                <select class="form-select" aria-label="">
+                                    <option selected>1</option>
+                                    <option value="1">20</option>
+                                    <option value="2">30</option>
+                                    <option value="3">40</option>
+                                </select>
+                            </div>
+                            <ul class="pagination-list">
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item active">
+                                        1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        3
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        ...
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        50
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Pagination End -->
+                        <!-- Course Page Start -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.6.4.min.js"></script>
-    <!-- Waypoint -->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Slick Slider -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
-    <!-- AOS -->
-    <script src="assets/js/aos.js"></script>
-    <!-- Main Script -->
-    <script src="assets/js/main.js"></script>
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>

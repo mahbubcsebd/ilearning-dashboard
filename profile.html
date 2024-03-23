@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="page-breadcrumb-box">
+                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <!-- Profile Section Start -->
+                        <div class="dashboard-profile-section mb-5">
+                            <h2 class="dashboard-info-title">Profile Settings</h2>
+                            <div class="product-details-tab">
+                                <ul class="nav nav-tabs" id="learning-tab">
+                                    <li class="nav-item">
+                                        <button class="nav-link active" id="profile" data-bs-toggle="tab"
+                                            data-bs-target="#profile-pane" type="button">Profile</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="basic-info" data-bs-toggle="tab"
+                                            data-bs-target="#basic-info-pane" type="button"
+                                            aria-controls="basic-info-pane">Basic Information</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="payent-method" data-bs-toggle="tab"
+                                            data-bs-target="#payent-method-pane" type="button"
+                                            aria-controls="payent-method-pane">Payment Method</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="conn-account" data-bs-toggle="tab"
+                                            data-bs-target="#conn-account-pane" type="button"
+                                            aria-controls="conn-account-pane">Connected account</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="notification" data-bs-toggle="tab"
+                                            data-bs-target="#notification-pane" type="button"
+                                            aria-controls="notification-pane">Notifications</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="deactivate" data-bs-toggle="tab"
+                                            data-bs-target="#deactivate-pane" type="button"
+                                            aria-controls="deactivate-pane">Deactivate Account</button>
+                                    </li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="tab-content" id="productTabContent">
+                                    <div class="tab-pane fade show active" id="profile-pane" aria-labelledby="profile"
+                                        tabindex="0">
+                                        <!-- Profile Box Start -->
+                                        <div class="profile-setting-box">
+                                            <div class="profile-setting-profile">
+                                                <div>
+                                                    <div class="ps-profile-img">
+                                                        <img src="assets/images/user-1.png" alt="profile" />
+                                                    </div>
+                                                </div>
+                                                <div class="ps-profile-content">
+                                                    <h3>John Doe <span>Pro</span></h3>
+                                                    <p>example@email.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Profile Box End -->
+                                        <div class="divider"></div>
+
+                                        <!--  Personal Information Start -->
+                                        <div class="profile-setting-info mb-4">
+                                            <div class="sp-profile-info">
+                                                <h3 class="spi-title">Company</h3>
+                                                <div class="spi-right">
+                                                    <img src="assets/images/icons/ilearning-sm.svg" alt="ileaning" />
+                                                </div>
+                                            </div>
+                                            <div class="sp-profile-info">
+                                                <h3 class="spi-title">Contact phone</h3>
+                                                <div class="spi-right">
+                                                    +8801553388714
+                                                </div>
+                                            </div>
+                                            <div class="sp-profile-info">
+                                                <h3 class="spi-title">Country</h3>
+                                                <div class="spi-right">
+                                                    Bangladesh
+                                                </div>
+                                            </div>
+                                            <div class="sp-profile-info">
+                                                <h3 class="spi-title">Time Zone</h3>
+                                                <div class="spi-right">
+                                                    Jakarta (GMT+7)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  Personal Information Start -->
+
+
+                                        <!--  Sing in method Start -->
+                                        <div class="signing-section">
+                                            <h3 class="signing-title">Sing in method</h3>
+
+                                            <div class="single-signing-box">
+                                                <div class="signing-left">
+                                                    <h3>Email Address</h3>
+                                                    <p>example@email.com</p>
+                                                </div>
+                                                <div class="signing-right">
+                                                    <a href="#" class="btn btn-outline-purple">Change email</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-signing-box">
+                                                <div class="signing-left">
+                                                    <h3>Password</h3>
+                                                    <p>************</p>
+                                                </div>
+                                                <div class="signing-right">
+                                                    <a href="#" class="btn btn-outline-purple">Change password</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  Sing in method End -->
+
+                                        <!-- Warning Box Start -->
+                                        <div class="warning-box">
+                                            <div class="warning-box-content">
+                                                <div class="warning-box-left">
+                                                    <img src="assets/images/icons/waring.svg" alt="warning" />
+                                                </div>
+                                                <div class="warning-box-right">
+                                                    <h3>Secure Your Account</h3>
+                                                    <p>Two-factor authentication adds an extra layer of security to your
+                                                        account. To log in, in addition you'll need to provide
+                                                        a 6 digit code. <a href="#">Learn more</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Warning Box End -->
+                                    </div>
+                                    <div class="tab-pane fade" id="basic-info-pane" aria-labelledby="basic-info"
+                                        tabindex="0">
+                                        <div class="courses-products-box">
+                                            Basic Information
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="payent-method-pane" aria-labelledby="payent-method"
+                                        tabindex="0">
+                                        <div class="payment-method">
+                                            Payment Method
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="conn-account-pane" aria-labelledby="conn-account"
+                                        tabindex="0">
+                                        <div class="payment-method">
+                                            Connect
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="notification-pane" aria-labelledby="notification"
+                                        tabindex="0">
+                                        <div class="payment-method">
+                                            notification
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="deactivate-pane" aria-labelledby="deactivate"
+                                        tabindex="0">
+                                        <div class="payment-method">
+                                            Deactivate
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Profile Section Start -->
+
+
+                        <!-- Billing & Payment Section Start -->
+                        <div class="billing-and-payment-section">
+                            <div class="row align-items-stretch">
+                                <div class="col-xl-6 mb-4">
+                                    <div class="billing-section">
+                                        <div class="billing-top">
+                                            <h2 class="billing-top-title">Billing Information</h2>
+                                            <p class="billing-top-info">Changes to your billing
+                                                information will
+                                                take effect starting with secheduled payment and will be
+                                                refelected on your
+                                                next invoice.</p>
+                                        </div>
+                                        <div class="billing-wrapper">
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <h4 class="billing-name">Address #1</h4>
+                                                    <p class="billing-text">4517 Washington Ave.
+                                                        Manchester,
+                                                        Kentucky 39495</p>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <h4 class="billing-name">Address #1</h4>
+                                                    <p class="billing-text">8502 Preston Rd. Inglewood,
+                                                        Maine 98380</p>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <h4 class="billing-name">Address #1</h4>
+                                                    <p class="billing-text">3891 Ranchview Dr.
+                                                        Richardson, California 62639</p>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pt-4"><button type="button" class="btn btn-purple">Add New
+                                                Address</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 mb-4">
+                                    <div class="billing-section">
+                                        <div class="billing-top">
+                                            <h2 class="billing-top-title">Payment History</h2>
+                                            <p class="billing-top-info">Changes to your billing
+                                                information will
+                                                take effect starting with secheduled payment and will be
+                                                refelected on your
+                                                next invoice.</p>
+                                        </div>
+                                        <div class="billing-wrapper">
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <div class="billing-content">
+                                                        <div class="billing-content-img">
+                                                            <img src="assets/images/icons/master-card.svg"
+                                                                alt="credit card">
+                                                        </div>
+                                                        <div class="billing-content-text">
+                                                            <h4 class="billing-name">Mastercard</h4>
+                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <div class="billing-content">
+                                                        <div class="billing-content-img">
+                                                            <img src="assets/images/icons/amex-card.svg"
+                                                                alt="credit card">
+                                                        </div>
+                                                        <div class="billing-content-text">
+                                                            <h4 class="billing-name">American Express</h4>
+                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                            <div class="single-billing">
+                                                <div class="single-billing-left">
+                                                    <div class="billing-content">
+                                                        <div class="billing-content-img">
+                                                            <img src="assets/images/icons/visa-card.svg"
+                                                                alt="credit card">
+                                                        </div>
+                                                        <div class="billing-content-text">
+                                                            <h4 class="billing-name">Visa Card</h4>
+                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-billing-right">
+                                                    <a href="#" class="btn-edit-orange">Edit</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pt-4"><button type="button" class="btn btn-purple">Add New
+                                                Address</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 mb-4">
+                                    <div class="billing-section">
+                                        <div class="billing-top">
+                                            <h2 class="billing-top-title">Add Billing Address</h2>
+                                            <p class="billing-top-info">Changes your new Billing Information.</p>
+                                        </div>
+                                        <form id="billing-form" class="billing-wrapper">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">Name</label>
+                                                        <input type="text" class="form-control" id="billing-name"
+                                                            placeholder="Enter name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">Email</label>
+                                                        <input type="email" class="form-control" id="billing-email"
+                                                            placeholder="Enter email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">Address</label>
+                                                        <input type="text" class="form-control" id="billing-address"
+                                                            placeholder="Enter address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">City</label>
+                                                        <input type="text" class="form-control" id="billing-city"
+                                                            placeholder="Enter city">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">State</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>State</option>
+                                                            <option value="1">State 1</option>
+                                                            <option value="2">State 2</option>
+                                                            <option value="3">State 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="billing-name">Zip</label>
+                                                        <input type="text" class="form-control" id="billing-zip"
+                                                            placeholder="Enter zip">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
+                                                    Address</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 mb-4">
+                                    <div class="billing-section">
+                                        <div class="billing-top">
+                                            <h2 class="billing-top-title">Add Payment Method</h2>
+                                            <p class="billing-top-info">Change your new payment method information</p>
+                                        </div>
+                                        <form id="payment-form" class="billing-wrapper">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="payment-card-brand">Card Brand</label>
+                                                        <select class="form-select" aria-label="Mastercard">
+                                                            <option value="Mastercard" selected>Mastercard</option>
+                                                            <option value="amex">American Express</option>
+                                                            <option value="visa">Visa</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="payment-card-number">Card Number</label>
+                                                        <input type="text" class="form-control" id="billing-zip"
+                                                            placeholder="Type here...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="payment-card-holder-name">Card Holder Name</label>
+                                                        <input type="text" class="form-control" id="billing-zip"
+                                                            placeholder="Enter name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="payment-card-cvv">CVV</label>
+                                                        <input type="text" class="form-control" id="billing-zip"
+                                                            placeholder="0000">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
+                                                    Payment</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Billing & Payment Section End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
