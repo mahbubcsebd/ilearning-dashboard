@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="dashboard-content-box">
+                        <div class="instructor-dashboard-top-box">
+                            <div class="ittb-left">
+                                <p class="instructor-dashboard-top-text">Hi Shadhin!</p>
+                                <h2 class="instructor-dashboard-top-title">Welcome iLearning 👋</h2>
+                            </div>
+                            <button type="button" class="btn btn-purple"><span><img src="assets/images/icons/upload.svg"
+                                        alt="upload]"></span>
+                                New Upload</button>
+                        </div>
+
+
+                        <!-- Instructor  Dashboard Page Start-->
+                        <div class="instructor-dashboard">
+                            <div class="row">
+                                <div class="col-lg-9 mb-4">
+                                    <!-- Student Statistics Section Start -->
+                                    <div class="dashboard-card-wrapper">
+                                        <div class="row">
+                                            <div class="col-md-4 mb-4">
+                                                <div class="dashboard-single-card dsc-purple">
+                                                    <div class="dsc-top">
+                                                        <div class="dsc-top-icon">
+                                                            <img src="assets/images/icons/user.svg" alt="user">
+                                                        </div>
+                                                        <div class="dsc-top-content">
+                                                            <p>Total Students</p>
+                                                            <h3>2450</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dsc-bottom">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 44%"></div>
+                                                        </div>
+                                                        <p>50% Increase in last year</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="dashboard-single-card dsc-blue">
+                                                    <div class="dsc-top">
+                                                        <div class="dsc-top-icon">
+                                                            <img src="assets/images/icons/enrollment.svg" alt="user">
+                                                        </div>
+                                                        <div class="dsc-top-content">
+                                                            <p>TTotal Course Enrollment</p>
+                                                            <h3>3k+</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dsc-bottom">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 44%"></div>
+                                                        </div>
+                                                        <p>50% Increase in last year</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-4">
+                                                <div class="dashboard-single-card dsc-orange">
+                                                    <div class="dsc-top">
+                                                        <div class="dsc-top-icon">
+                                                            <img src="assets/images/icons/revinue.svg" alt="revinue">
+                                                        </div>
+                                                        <div class="dsc-top-content">
+                                                            <p>Total Revenue</p>
+                                                            <h3>$7,350</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dsc-bottom">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                style="width: 44%"></div>
+                                                        </div>
+                                                        <p>50% Increase in last year</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Student Statistics Section End -->
+
+
+                                    <!-- Progress Section Start -->
+                                    <div id="progress-area" class="progress-area mb-4">
+                                        <div class="row align-items-stretch">
+                                            <div class="yearly-progress-chart single-dashboard-content h-100">
+                                                <canvas id="yearly-progress-canvas"
+                                                    class="yearly-progress-canvas"></canvas>
+                                                <div class="chart-title-box">
+                                                    <h2>Yearly Progress</h2>
+                                                    <div class="chart-title-rev">
+                                                        <p class="rev-text">Revenue:</p>
+                                                        <p class="rev-green"><img
+                                                                src="assets/images/icons/curve-arrow-green.svg"
+                                                                alt="curve">
+                                                            +0.5%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="yearly-progress-filter">
+                                                    <select class="form-select" aria-label="">
+                                                        <option selected>This Year</option>
+                                                        <option value="active">2024</option>
+                                                        <option value="deactive">2023</option>
+                                                        <option value="deactive">2022</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Progress Section End -->
+
+
+                                    <!-- Course Overview Section Start -->
+                                    <div class="course-overview-area mb-4">
+                                        <div class="single-dashboard-content">
+                                            <div class="history-table-top p-0">
+                                                <div class="htt-left">
+                                                    <h2 class="history-table-title">Payment History</h2>
+                                                    <p class="history-table-text">Access all your previous invoices.
+                                                    </p>
+                                                </div>
+                                                <div class="history-table-filter">
+                                                    <select class="form-select" aria-label="This Month">
+                                                        <option selected>This Month</option>
+                                                        <option value="jan">January</option>
+                                                        <option value="feb">February</option>
+                                                        <option value="mar">March</option>
+                                                        <option value="apr">April</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="user-data-table">
+                                                <div class="table-responsive">
+                                                    <table class="table align-middle">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Course Name</th>
+                                                                <th scope="col">Instructors</th>
+                                                                <th scope="col">Category</th>
+                                                                <th scope="col">Duration</th>
+                                                                <th scope="col">Amount</th>
+                                                                <th scope="col">Course Type</th>
+                                                                <th scope="col">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-3.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-3.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-4.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-5.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="course-name-box">
+                                                                        <div class="course-name-img">
+                                                                            <img src="assets/images/course-6.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <a href="#">
+                                                                            <h4>Introduction of UI/UX</h4>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    Esther Howard
+                                                                </td>
+                                                                <td>Design</td>
+                                                                <td>3 Month</td>
+                                                                <td>$450</td>
+                                                                <td>Online</td>
+                                                                <td>
+                                                                    <p class="cms-visibility success ">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Course Overview Section End -->
+                                </div>
+                                <div class="col-lg-3 mb-4">
+                                    <!-- Upcomming Lesson Start -->
+                                    <div class="upcomming-section id-sidebar mb-4">
+                                        <h3 class="id-sidebar-title">Upcoming Lessons</h3>
+                                        <div class="single-upcomming purple mb-3">
+                                            <div>
+                                                <div class="upcomming-img">
+                                                    <img src="assets/images/upcomming-1.png" alt="Image">
+                                                </div>
+                                            </div>
+                                            <div class="upcomming-content">
+                                                <a href="#">Design System</a>
+                                                <p>12 January, 2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="single-upcomming orange mb-3">
+                                            <div>
+                                                <div class="upcomming-img">
+                                                    <img src="assets/images/upcomming-2.png" alt="Image">
+                                                </div>
+                                            </div>
+                                            <div class="upcomming-content">
+                                                <a href="#">Design Token</a>
+                                                <p>12 January, 2023</p>
+                                            </div>
+                                        </div>
+                                        <div class="single-upcomming purple mb-3">
+                                            <div>
+                                                <div class="upcomming-img">
+                                                    <img src="assets/images/upcomming-3.png" alt="Image">
+                                                </div>
+                                            </div>
+                                            <div class="upcomming-content">
+                                                <a href="#">Mobile App</a>
+                                                <p>12 January, 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Upcomming Lesson End -->
+
+                                    <!-- Sales Overview Start -->
+                                    <div class="course-progress-doughnut single-dashboard-content">
+                                        <div class="doughnut-title">
+                                            <h2>Course Progress</h2>
+                                            <div class="ellipsis-box">
+                                                <button class="ellipsis-btn rotate-90">
+                                                    ...
+                                                </button>
+                                                <div class="tteb-popup-content">
+                                                    <ul>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button">Demo</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <canvas id="course-progress-chart" class="course-progress-chart"></canvas>
+                                    </div>
+                                    <!-- Sales Overview End -->
+
+
+                                    <!-- Course Review Start -->
+                                    <div class="course-review-section-2 id-sidebar mb-4">
+                                        <h3 class="id-sidebar-title">Course Review</h3>
+                                        <div class="single-course-rev mb-3">
+                                            <div class="course-rev-top">
+                                                <div>
+                                                    <div class="course-rev-img">
+                                                        <img src="assets/images/instructor-review-1.png"
+                                                            alt="course img">
+                                                    </div>
+                                                </div>
+                                                <div class="course-rev-top-content">
+                                                    <a href="#">Wade Warren</a>
+                                                    <p>02 Feb, 2:30 pm</p>
+                                                </div>
+                                            </div>
+                                            <div class="course-rev-bottom">
+                                                <p class="rev-text mb-3">Dawn was hands down the best instructor I've
+                                                    ever
+                                                    worked...</p>
+                                                <a href="#" class="respond-btn w-100"><span><img
+                                                            src="assets/images/icons/respond.svg"
+                                                            alt="chat"></span>Respond</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-course-rev mb-3">
+                                            <div class="course-rev-top">
+                                                <div>
+                                                    <div class="course-rev-img">
+                                                        <img src="assets/images/instructor-review-1.png"
+                                                            alt="course img">
+                                                    </div>
+                                                </div>
+                                                <div class="course-rev-top-content">
+                                                    <a href="#">Jenny Wilson</a>
+                                                    <p>02 Feb, 2:30 pm</p>
+                                                </div>
+                                            </div>
+                                            <div class="course-rev-bottom">
+                                                <p class="rev-text mb-3">Dawn was hands down the best instructor I've
+                                                    ever
+                                                    worked...</p>
+                                                <a href="#" class="respond-btn w-100"><span><img
+                                                            src="assets/images/icons/respond.svg"
+                                                            alt="chat"></span>Respond</a>
+                                            </div>
+                                        </div>
+                                        <div class="single-course-rev mb-3">
+                                            <div class="course-rev-top">
+                                                <div>
+                                                    <div class="course-rev-img">
+                                                        <img src="assets/images/instructor-review-1.png"
+                                                            alt="course img">
+                                                    </div>
+                                                </div>
+                                                <div class="course-rev-top-content">
+                                                    <a href="#">Robert Fox</a>
+                                                    <p>02 Feb, 2:30 pm</p>
+                                                </div>
+                                            </div>
+                                            <div class="course-rev-bottom">
+                                                <p class="rev-text mb-3">Dawn was hands down the best instructor I've
+                                                    ever
+                                                    worked...</p>
+                                                <a href="#" class="respond-btn w-100"><span><img
+                                                            src="assets/images/icons/respond.svg"
+                                                            alt="chat"></span>Respond</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Course Review End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Instructor  Dashboard Page End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLearning | User Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Inter Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
+</head>
+
+<body>
+    <div id="ilearning-dashboard" class="ilearning-dashboard">
+        <div class="ilearning-dashboard-area">
+            <div class="ilearning-dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside id="sidebar" class="sidebar">
+                    <div class="h-100">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <img src="assets/images/icons/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Sidebar Navigation -->
+                        <ul class="sidebar-nav" id="sidebar-content">
+                            <li class="sidebar-header">
+                                Supper Admin Panel
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                    <i class="fa-solid fa-user-plus pe-2"></i>
+                                    User
+                                </a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                    <i class="fa-solid fa-cube pe-2"></i>
+                                    CMS
+                                </a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                    <i class="fa-solid fa-gear pe-2"></i>
+                                    Config
+                                </a>
+                                <ul id="config" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                    <i class="fa-solid fa-sliders pe-2"></i>
+                                    Dashboard
+                                </a>
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                                    Courses
+                                </a>
+                                <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                    <i class="fa-regular fa-circle-user pe-2"></i>
+                                    Instructor
+                                </a>
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                    <i class="fa-solid fa-bag-shopping pe-2"></i>
+                                    Shop
+                                </a>
+                                <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                    <i class="fa-solid fa-gears pe-2"></i>
+                                    Widget
+                                </a>
+                                <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Pages
+                                </a>
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Login</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Register</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Main Component -->
+                <div class="main">
+                    <div id="header" class="header">
+                        <div class="header-area">
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="container-fluid">
+                                    <div class="d-flex justify-content-between align-items-center w-100">
+                                        <div class="d-flex align-items-center gap-4">
+                                            <button class="btn" type="button">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                            <form class="d-flex position-relative">
+                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                                    aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/chat.svg" alt="chat">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick"> Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon"> Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="dashboard-content-box">
+                        <div class="page-title-box">
+                            <h2 class="page-title">My Account</h2>
+                        </div>
+
+                        <div class="my-profile-wrapper">
+                            <!-- My Account Profile Section Start -->
+                            <div class="my-account-profile">
+                                <div class="profile-cover-photo">
+                                    <img src="assets/images/cover-photo.png" alt="cover">
+                                </div>
+                                <div class="profile-content">
+                                    <div class="profile-img-bg">
+                                        <div class="profile-img">
+                                            <img src="assets/images/profile.png" alt="profile">
+                                        </div>
+                                        <img src="assets/images/icons/verified-tick.svg" alt="verified"
+                                            class="verified">
+                                    </div>
+                                    <div class="profile-info">
+                                        <h3 class="profile-name">Gilberto Ward</h3>
+                                        <p class="profile-category">Instructor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- My Account Profile Section End -->
+
+
+                            <!-- My Account Content Tab Section Start -->
+                            <div class="product-details-tab">
+                                <ul class="nav nav-tabs" id="certificate-tab">
+                                    <li class="nav-item">
+                                        <button class="nav-link active" id="generals-tab" data-bs-toggle="tab"
+                                            data-bs-target="#generals-tab-pane" type="button">Generals</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="billing-info-tab" data-bs-toggle="tab"
+                                            data-bs-target="#billing-info-tab-pane" type="button">Billing Info</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="history-tab" data-bs-toggle="tab"
+                                            data-bs-target="#history-tab-pane" type="button">History</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="nav-link" id="withdraw-tab" data-bs-toggle="tab"
+                                            data-bs-target="#withdraw-tab-pane" type="button">Withdraw</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="productTabContent">
+                                    <div class="tab-pane fade show active" id="generals-tab-pane"
+                                        aria-labelledby="generals-tab" tabindex="0">
+                                        <div class="certificate-title-box">
+                                            <h2 class="certificate-title">Mahbubur Rahman / Edit Profile</h2>
+                                            <a href="account-setting.html"><img
+                                                    src="assets/images/icons/certificate-icon.svg"
+                                                    alt="certificate"></a>
+                                        </div>
+                                        <div class="profile-name-box">
+                                            <div class="pn-img-box">
+                                                <img src="assets/images/profile-lg.png" alt="profile">
+                                            </div>
+                                            <div class="pn-button-box">
+                                                <div class="attachment-box">
+                                                    <input type="file" name="file-input" id="file-input"
+                                                        class="file-input-input">
+                                                    <label
+                                                        class="btn-purple d-flex align-items-center gap-2 cursor-pointer"
+                                                        for="file-input">
+                                                        <span><img src="assets/images/icons/upload.svg"
+                                                                alt=""></span>Upload
+                                                        new
+                                                        picture</label>
+
+                                                </div>
+
+                                                <button type="button" class=""></button>
+                                                <button type="button" class="btn-outline-gray">Delete</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <form id="certificate-form" class="certificate-form">
+
+                                                <div class="row mb-4">
+                                                    <div class="col-md-6 mb-4 mb-lg-0">
+                                                        <div class="form-group">
+                                                            <label for="certificate-fname">First Name</label>
+                                                            <input type="text" class="form-control"
+                                                                id="certificate-fname" placeholder="First Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="certificate-lname">Last Name</label>
+                                                            <input type="text" class="form-control"
+                                                                id="certificate-lname" placeholder="Last Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="certificate-address">Address</label>
+                                                            <input type="text" class="form-control"
+                                                                id="certificate-address" placeholder="Address">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Phone Number</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <select class="selectpicker"
+                                                                        data-live-search="true">
+                                                                        <option data-tokens="US +1">US (+1)</option>
+                                                                        <option data-tokens="GB +44">UK (+44)</option>
+                                                                        <option data-tokens="CA +1">BD (+880)</option>
+                                                                        <!-- add more countries here -->
+                                                                    </select>
+                                                                </div>
+                                                                <input type="tel" class="form-control" id="phone"
+                                                                    name="certificate-phone" placeholder="Phone Number"
+                                                                    required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="certificate-msg">Bio</label>
+                                                            <textarea rows="5" class="form-control" id="certificate-msg"
+                                                                placeholder="Add a cover letter or anything else you want to share"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <h2 class="inst-social">
+                                                        Password and Security
+                                                    </h2>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="certificate-current-pass">Current
+                                                                Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="certificate-current-pass" placeholder="*********">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="certificate-new-pass">New Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="certificate-new-pass" placeholder="*********">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="certificate-conf-pass">Confirm Password</label>
+                                                            <input type="password" class="form-control"
+                                                                id="certificate-conf-pass" placeholder="*********">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row-mt-3 mt-md-5">
+                                                    <button type="submit" class="btn-purple">Change Password</button>
+                                                </div>
+                                            </form>
+                                            <form id="social-media-form" class="">
+                                                <div class="row mt-4">
+                                                    <h2 class="inst-social">
+                                                        Social Media
+                                                    </h2>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="mb-3">
+                                                        <label for="instructor-linkedin" class="form-label">Linkedin
+                                                            URL</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text"
+                                                                id="instructor-addon6">http://</span>
+                                                            <input type="text" class="form-control"
+                                                                id="instructor-linkedin"
+                                                                placeholder="Link to your Linkedin URL">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="mb-3">
+                                                        <label for="instructor-facebook" class="form-label">Facebook
+                                                            URL<span>(Optional)
+                                                            </span>
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text"
+                                                                id="instructor-addon3">http://</span>
+                                                            <input type="text" class="form-control"
+                                                                id="instructor-facebook"
+                                                                placeholder="Link to your Facebook URL">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="mb-3">
+                                                        <label for="instructor-facebook" class="form-label">Instagram
+                                                            URL
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text"
+                                                                id="instructor-addon-9">http://</span>
+                                                            <input type="text" class="form-control"
+                                                                id="instructor-facebook-2"
+                                                                placeholder="Link to your Instagram URL">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row-mt-3 mt-md-5">
+                                                    <button type="submit" class="btn-purple">Save Profile</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="billing-info-tab-pane"
+                                        aria-labelledby="billing-info-tab" tabindex="0">
+                                        <!-- Billing Info Section Start -->
+                                        <div class="billing-info-section">
+                                            <div class="billing-info-card-box row">
+                                                <div class="col-lg-6 mb-4">
+                                                    <div class="single-billing-info-card purple">
+                                                        <div class="available-balance-box">
+                                                            <h3 class="available-balance-title">Available Balance</h3>
+                                                            <div class="available-balance-bag">
+                                                                <img src="assets/images/icons/moneybag.svg"
+                                                                    alt="moneybag">
+                                                            </div>
+                                                        </div>
+                                                        <div class="balance-amount-box">
+                                                            <div class="b-amount-left">
+                                                                <h2>$1280.00</h2>
+                                                                <p>Your unpaid earning</p>
+                                                            </div>
+                                                            <button type="button" data-bs-toggle="modal"
+                                                                data-bs-target="#confirmPayment"
+                                                                class="withdraw-btn">Withdraw</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-4">
+                                                    <div class="single-pay-method">
+                                                        <div class="pay-wrapper-box">
+                                                            <div class="pay-method-top">
+                                                                <h3 class="pay-method-title">Payment Methods</h3>
+                                                                <p class="pay-method-text">Change how you pay for your
+                                                                    plan.
+                                                                </p>
+                                                                <div class="pay-box">
+                                                                    <div class="pay-left">
+                                                                        <div>
+                                                                            <img src="assets/images/icons/visa-pay.svg"
+                                                                                alt="visa">
+                                                                        </div>
+                                                                        <div class="pay-left-content">
+                                                                            <h3 class="visa-ending">Visa ending in 1234
+                                                                            </h3>
+                                                                            <p class="visa-date">Expiry 06/2024</p>
+                                                                            <p class="visa-email"><span><i
+                                                                                        class="fa-regular fa-envelope"></i></span>billing@untitledui.com
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Billing Info Section End -->
+
+
+                                        <!-- Payment Method Box Start -->
+                                        <div class="payment-method-section">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <h2 class="short-dec-title mb-4">Payment Method</h2>
+                                                    <div class="checkout-box mb-4">
+                                                        <div class="checkout-top-title-box">
+                                                            <div class="user-checkbox-wrapper">
+                                                                <div class="user-left">
+                                                                    <div class="checkbox-mark">
+                                                                        <p></p>
+                                                                    </div>
+                                                                    <h3>Add Payment Information</h3>
+                                                                </div>
+                                                            </div>
+                                                            <img src="assets/images/icons/moneybag-2.svg" alt="bag"
+                                                                class="moneybag-2">
+                                                        </div>
+
+                                                        <form id="checkout-address">
+                                                            <div class="payment-method-form">
+                                                                <div class="row payment-method-wrapper">
+                                                                    <div class="col-lg-6 mb-4">
+                                                                        <div class="single-payment-method">
+                                                                            <label class="payment-method-box">
+                                                                                <input type="checkbox"
+                                                                                    name="payment-method" />
+                                                                                <img class="img-responsive"
+                                                                                    src="assets/images/icons/payoneer.svg"
+                                                                                    alt="payoneer">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-4">
+                                                                        <div class="single-payment-method">
+                                                                            <label class="payment-method-box">
+                                                                                <input type="checkbox"
+                                                                                    name="payment-method" />
+                                                                                <img class="img-responsive"
+                                                                                    src="assets/images/icons/paypal.svg"
+                                                                                    alt="paypal">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-4">
+                                                                        <div class="single-payment-method">
+                                                                            <label class="payment-method-box">
+                                                                                <input type="checkbox"
+                                                                                    name="payment-method" />
+                                                                                <img class="img-responsive"
+                                                                                    src="assets/images/icons/stripe.svg"
+                                                                                    alt="stripe">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-4">
+                                                                        <div class="single-payment-method">
+                                                                            <label class="payment-method-box">
+                                                                                <input type="checkbox"
+                                                                                    name="payment-method" value="visa">
+                                                                                <img class="img-responsive"
+                                                                                    src="assets/images/icons/visa.svg"
+                                                                                    alt="visa">
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-4">
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div class="form-group">
+                                                                        <label for="pay-card-num">Card Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="pay-card-num"
+                                                                            placeholder="Type here...">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-4">
+                                                                    <div class="form-group">
+                                                                        <label for="pay-card-date">Date</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="pay-card-date" placeholder="12/26">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-4">
+                                                                    <div class="form-group">
+                                                                        <label for="pay-card-cvv">CVV</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="pay-card-cvv" placeholder="***">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mb-4">
+                                                                    <div class="form-group">
+                                                                        <label for="pay-card-post">Post Code</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="pay-card-post" placeholder="Post Code">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12 mb-4">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="credit-checkbox">
+                                                                        <label class="form-check-label"
+                                                                            for="credit-checkbox">
+                                                                            Save this credit card for later use
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="shipping-checkbox">
+                                                                        <label class="form-check-label"
+                                                                            for="shipping-checkbox">
+                                                                            Billing address same as shipping address
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-4">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="address-full">Address</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="address-full"
+                                                                            placeholder="Full address here...">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-4">
+                                                                <div class="col-xl-4 col-md-6 mb-4">
+                                                                    <div class="form-group">
+                                                                        <label for="adress-state-2">State</label>
+                                                                        <select class="form-control"
+                                                                            id="adress-state-2">
+                                                                            <option>Dhaka</option>
+                                                                            <option>Cumilla</option>
+                                                                            <option>Sylhet</option>
+                                                                            <option>Chittagong</option>
+                                                                            <option>Rajshahi</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-4 col-md-6 mb-4 mb-lg-0">
+                                                                    <div class="form-group">
+                                                                        <label for="address-zip">Zip Code</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="address-zip" placeholder="400">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xl-4 col-md-6 mb-4 mb-lg-0">
+                                                                    <div class="form-group">
+                                                                        <label for="address-unit">Unit</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="address-unit" placeholder="#21">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex gap-3">
+                                                                <button
+                                                                    class="btn-outline-gray mb-2 mb-lg-0 me-4">Cancel</button>
+                                                                <button type="submit" class="btn-purple">Use This
+                                                                    Address</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Payment Method Box End -->
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="history-tab-pane" aria-labelledby="history-tab"
+                                        tabindex="0">
+                                        <!-- History Section Start -->
+                                        <div class="history-section">
+                                            <div class="user-data-table">
+                                                <div class="history-table-top">
+                                                    <div class="htt-left">
+                                                        <h2 class="history-table-title">Payment History</h2>
+                                                        <p class="history-table-text">Access all your previous invoices.
+                                                        </p>
+                                                    </div>
+                                                    <div class="history-table-filter">
+                                                        <select class="form-select" aria-label="This Month">
+                                                            <option selected>This Month</option>
+                                                            <option value="jan">January</option>
+                                                            <option value="feb">February</option>
+                                                            <option value="mar">March</option>
+                                                            <option value="apr">April</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table align-middle th-transparent">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Invoice</th>
+                                                                <th scope="col">Course</th>
+                                                                <th scope="col">Account Admin</th>
+                                                                <th scope="col">Amount</th>
+                                                                <th scope="col">Date</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Download</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-1.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#INV-001122022</td>
+                                                                <td>
+                                                                    <div class="admin-course">
+                                                                        <div class="admin-course-img">
+                                                                            <img src="assets/images/admin-course-2.png"
+                                                                                alt="course">
+                                                                        </div>
+                                                                        <div class="admin-course-info">
+                                                                            <a href="#">Introduction of UI/UX</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="account-admin-box">
+                                                                        <div class="account-admin-img">
+                                                                            <img src="assets/images/account-admin.png"
+                                                                                alt="admin">
+                                                                        </div>
+                                                                        <div>
+                                                                            <a href="#" class="account-admin-name">
+                                                                                Olivia Rhye
+                                                                            </a>
+                                                                            <p class="account-admin-email">
+                                                                                olivia@untitledui.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td>USD $10.00</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Pagination Start -->
+                                        <div class="pagination-box">
+                                            <div class="pagination-show">
+                                                <p>Show result:</p>
+                                                <select class="form-select" aria-label="">
+                                                    <option selected>1</option>
+                                                    <option value="1">20</option>
+                                                    <option value="2">30</option>
+                                                    <option value="3">40</option>
+                                                </select>
+                                            </div>
+                                            <ul class="pagination-list">
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        <i class="fa-solid fa-chevron-left"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item active">
+                                                        1
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        2
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        3
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        ...
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        50
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Pagination End -->
+                                        <!-- History Section End -->
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="withdraw-tab-pane" aria-labelledby="withdraw-tab"
+                                        tabindex="0">
+                                        <!-- Withdraw Section Start -->
+                                        <div class="withdraw-section">
+                                            <div class="user-data-table">
+                                                <div class="history-table-top">
+                                                    <div class="htt-left">
+                                                        <h2 class="history-table-title">Withdraw History</h2>
+                                                    </div>
+                                                    <div class="history-table-filter">
+                                                        <select class="form-select" aria-label="This Month">
+                                                            <option selected>This Month</option>
+                                                            <option value="jan">January</option>
+                                                            <option value="feb">February</option>
+                                                            <option value="mar">March</option>
+                                                            <option value="apr">April</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table align-middle th-transparent">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Invoice</th>
+                                                                <th scope="col">Date</th>
+                                                                <th scope="col">Amount</th>
+                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Payment Method</th>
+                                                                <th scope="col">Download</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-pending">Pending <span><img
+                                                                                src="assets/images/icons/x-close.svg"
+                                                                                alt="cross icon"></span></p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>#12045</td>
+                                                                <td>Jan 1, 2023</td>
+                                                                <td>USD $10.00</td>
+                                                                <td>
+                                                                    <p class="payment-paid"><span><img
+                                                                                src="assets/images/icons/check.svg"
+                                                                                alt="check"></span>Paid</p>
+                                                                </td>
+                                                                <td>Mastercard</td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <img src="assets/images/icons/download.svg"
+                                                                            alt="download-icon" class="download-icon">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Withdraw Section End -->
+
+                                        <!-- Pagination Start -->
+                                        <div class="pagination-box">
+                                            <div class="pagination-show">
+                                                <p>Show result:</p>
+                                                <select class="form-select" aria-label="">
+                                                    <option selected>1</option>
+                                                    <option value="1">20</option>
+                                                    <option value="2">30</option>
+                                                    <option value="3">40</option>
+                                                </select>
+                                            </div>
+                                            <ul class="pagination-list">
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        <i class="fa-solid fa-chevron-left"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item active">
+                                                        1
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        2
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        3
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        ...
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        50
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="pagination-item">
+                                                        <i class="fa-solid fa-chevron-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Pagination End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- My Account Content Tab Section End -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Confirm Payment Modal Start -->
+        <div class="modal fade dashboard-modal" id="confirmPayment" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="modal-body add-question-body">
+                        <h3 class="add-question-title">Confirm Payment</h3>
+                        <form class="confirm-payment-form">
+                            <div class="mb-4">
+                                <label for="add-question-input" class="form-label">Select Payment</label>
+                                <select class="form-select" aria-label="USD">
+                                    <option selected value="USD">USD</option>
+                                    <option value="EURO">EURO</option>
+                                    <option value="TAKA">TAKA</option>
+                                </select>
+                            </div>
+                            <div class="pay-box pay-box-modal">
+                                <div class="pay-left">
+                                    <div>
+                                        <img src="assets/images/icons/visa-pay.svg" alt="visa">
+                                    </div>
+                                    <div class="pay-left-content">
+                                        <h3 class="visa-ending">Visa ending in 1234</h3>
+                                        <p class="visa-date">Expiry 06/2024</p>
+                                        <div class="visa-btn-box">
+                                            <button class="visa-btn">Set as Default</button>
+                                            <button class="visa-btn">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="assets/images/icons/circle-tick.svg" alt="circle-tick" class="circle-tick">
+                            </div>
+                            <div class="add-payment-new mb-4">
+                                <button class="add-new-payment-btn"><span><i class="fa-solid fa-plus"></i></span> Add
+                                    new payment method</button>
+                            </div>
+                            <div class="mb-4">
+                                <label for="amount-withdraw" class="form-label">Amount to Withdraw</label>
+                                <input type="email" class="form-control" id="amount-withdraw" placeholder="0.00">
+                            </div>
+                            <div class="">
+                                <label for="" class="form-label">Description <span
+                                        class="optional">(optional)</span></label>
+                                <textarea type="text" rows="4" class="form-control"
+                                    placeholder="This description will appear in Transactions"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-purple mt-5">Add Questions</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Confirm Payment Modal End -->
+
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <script type="text/javascript" src="assets/js/google-chart.js"></script>
+        <!-- Dropzone -->
+        <script src="assets/js/dropzone.min.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>

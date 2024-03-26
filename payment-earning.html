@@ -25,10 +25,14 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
@@ -57,16 +61,13 @@
                                 <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-item">
-                                        <div class="sub-circle active"></div>
-                                        <a href="#" class="sidebar-sub-link">User</a>
+                                        <a href="#" class="sidebar-link">Analytics</a>
                                     </li>
                                     <li class="sidebar-item">
-                                        <div class="sub-circle"></div>
-                                        <a href="#" class="sidebar-sub-link">Group</a>
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
                                     </li>
                                     <li class="sidebar-item">
-                                        <div class="sub-circle"></div>
-                                        <a href="#" class="sidebar-sub-link">Permission</a>
+                                        <a href="#" class="sidebar-link">Crypto</a>
                                     </li>
                                 </ul>
                             </li>
@@ -411,474 +412,136 @@
                             </nav>
                         </div>
                     </div>
-                    <!--  -->
                     <div class="dashboard-content-box">
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>Filter</h4>
+                        <!-- Earning Analytics Chart Start -->
+                        <div class="earning-analytics-section">
+                            <div class="student-chart">
+                                <div id="earning-analytics-chart" class="earning-analytics-chart mb-5"></div>
+                                <div class="doughnut-title">
+                                    <h2>Earning Analytics</h2>
+                                    <div class="ellipsis-box">
+                                        <button class="ellipsis-btn">
+                                            ...
+                                        </button>
+                                        <div class="tteb-popup-content">
+                                            <ul>
+                                                <li>
+                                                    <button type="button">Demo</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button">Demo</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dashboard-content-body">
-                                <div class="user-filter-box row align-items-center">
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-email" type="email" class="form-control" placeholder="Email">
+                                <div class="earning-card-wrapper row">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="single-earing-card purple">
+                                            <div class="single-earning-img">
+                                                <img src="assets/images/icons/erning-1.svg" alt="course earning">
+                                            </div>
+                                            <div class="single-earning-content">
+                                                <h3>Total Course Earnings</h3>
+                                                <p>$10.4K</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="single-earing-card orange">
+                                            <div class="single-earning-img">
+                                                <img src="assets/images/icons/erning-2.svg" alt="course earning">
+                                            </div>
+                                            <div class="single-earning-content">
+                                                <h3>Book Sales Earnings</h3>
+                                                <p>$1.6K</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-group" type="text" class="form-control"
-                                            placeholder="Select Group">
-                                    </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <div class="dashboard-content-action">
-                                            <button type="button" class="btn btn-purple"><span><i
-                                                        class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
-                                            <button type="button" class="btn btn-orange">Clear</button>
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="single-earing-card blue">
+                                            <div class="single-earning-img">
+                                                <img src="assets/images/icons/erning-3.svg" alt="course earning">
+                                            </div>
+                                            <div class="single-earning-content">
+                                                <h3>Overall Earning</h3>
+                                                <p>$12.00K</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>Users</h4>
-                                </div>
-                                <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
-                                        class="btn btn-orange">Delete</button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#createUserModal"
-                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
-                                        User</button>
-                                </div>
-                            </div>
-                            <div class="dashboard-content-body">
-                                <div class="user-data-table">
-                                    <div class="table-responsive">
-                                        <table class="table align-middle">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Type</th>
-                                                    <th scope="col">Phone </th>
-                                                    <th scope="col">DOB</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Leslie Alexander</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-2.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Esther Howard</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-3.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Brooklyn Simmons</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-4.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Eleanor Pena</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Manager</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status offline"><span></span>Offline</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-5.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Albert Flores</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-6.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Bessie Coope</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>John Doe</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--  -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="bc-instructor-header">
-                        <div class="bcih-content">
-                            <h2>New User Form</h2>
-                        </div>
-                        <div class="new-user-profile-pic">
-                            <img src="assets/images/new-user.png" alt="new user">
-                            <label class="upload-area">
-                                <input type="file">
-                                <span class="upload-button">
-                                    <i class="fas fa-arrow-up"></i>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="modal-body">
-                    <form id="create-user-form" class="dashboard-form">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-fname">First Name</label>
-                                    <input type="text" class="form-control" id="instructor-fname"
-                                        placeholder="First Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-lname">Last Name</label>
-                                    <input type="text" class="form-control" id="instructor-lname"
-                                        placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Username</label>
-                                    <input type="text" class="form-control" id="instructor-username"
-                                        placeholder="Username">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label>Role</label>
-                                    <select class="form-select">
-                                        <option selected>Moderator</option>
-                                        <option value="1">Admin</option>
-                                        <option value="2">Manager</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Date of Birth</label>
-                                    <input type="date" class="form-control" id="instructor-dob">
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <h2 class="inst-social">
-                                Social Media
-                            </h2>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="mb-3">
-                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-linkedin"
-                                        placeholder="www.Linkedin.com/">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                                <label for="instructor-facebook" class="form-label">Facebook URL<span>
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-facebook"
-                                        placeholder="www.facebook.com/">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-msg">Additional Information</label>
-                                    <textarea rows="5" class="form-control" id="instructor-msg"
-                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
-                                    <small>Maximum 500 characters</small>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-password">New Password</label>
-                                    <input type="password" class="form-control" id="instructor-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-confirm-password">Confirm Password</label>
-                                    <input type="password" class="form-control" id="instructor-confirm-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Discard</button>
-                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
-                                Changes</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Create User Modal End -->
-
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="deleteUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-body delete-user-body">
-                    <div class="delete-user-confirmation-box">
-                        <div class="duc-icon">
-                            <img src="assets/images/icons/delete-info.svg" alt="info">
-                        </div>
-                        <h2 class="duc-title">Are you sure?</h2>
-                        <h2 class="duc-text">You won't be able to revert this!</h2>
-                        <div class="duc-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Delete</button>
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-gray">Cancel</button>
-                        </div>
+                        <!-- Earning Analytics Chart End -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Create User Modal End -->
 
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <script type="text/javascript" src="assets/js/google-chart.js"></script>
+        <!-- Dropzone -->
+        <script src="assets/js/dropzone.min.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawVisualization);
 
+            function drawVisualization() {
+                // Some raw data (not necessarily accurate)
+                var data = google.visualization.arrayToDataTable([
+                    ['Date', 'Course Earning', 'Book Earning'],
+                    ['Mar 10', 4000, 9500],
+                    ['Mar 11', 7800, 6800],
+                    ['Mar 12', 8000, 6000],
+                    ['Mar 13', 9000, 7000],
+                    ['Mar 14', 10000, 8000],
+                    ['Mar 15', 11000, 9000],
+                    ['Mar 16', 12000, 10000],
+                    ['Mar 17', 13000, 11000],
+                    ['Mar 18', 14000, 12000],
+                    ['Mar 19', 14500, 13000],
+                    ['Mar 20', 13000, 14000],
+                ]);
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.6.4.min.js"></script>
-    <!-- Waypoint -->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Slick Slider -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
-    <!-- AOS -->
-    <script src="assets/js/aos.js"></script>
-    <!-- Main Script -->
-    <script src="assets/js/main.js"></script>
-</body>
+                var options = {
+                    title: null,
+                    legend: { position: 'top', alignment: 'center', maxLines: 3 },
+                    vAxis: { title: null, ticks: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000] },
+                    hAxis: { title: null, },
+                    seriesType: 'bars',
+                    series: {
+                        0: { type: 'bars', color: '#9C4DF4' },
+                        1: { type: 'bars', color: '#FF6652' }
+                    },
+                    bar: {
+                        groupWidth: 20,
+                    }
+                };
+
+                var chart = new google.visualization.ComboChart(document.getElementById('earning-analytics-chart'));
+                chart.draw(data, options);
+            }
+        </script>
 
 </html>

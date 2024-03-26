@@ -269,6 +269,8 @@ $(document).ready(function () {
         const myChart = new Chart(ctx, config);
     })();
 
+
+
     // Doughnut Chart for Course Progress
     (function () {
         var ctx = document
@@ -610,4 +612,183 @@ $(document).ready(function () {
             });
         })();
     }
+});
+
+
+$(document).ready(function () {
+    (function () {
+        const ctx = document
+            .getElementById('yearly-progress-status-canvas')
+            .getContext('2d');
+
+        // Replace these with your actual data for visits and sales each month
+        const labels = [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+        ];
+        const visitData = [
+            1800, 4300, 3400, 5600, 3200, 5000, 4300, 2200, 2600, 2900, 3300,
+            4200,
+        ];
+        const salesData = [
+            400, 2350, 2200, 2900, 900, 4200, 700, 3600, 2700, 2200, 2900, 2500,
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Course Visit',
+                    data: visitData,
+                    borderColor: '#9C4DF4',
+                    borderWidth: 1,
+                    strokeColor: '#ACC26D',
+                    pointColor: '#fff',
+                    pointStrokeColor: '#9DB86D',
+                    tension: 0.2,
+                    cubicInterpolationMode: 'monotone',
+                    backgroundColor: 'rgba(156, 77, 244, .2)',
+                    fill: 'start',
+                },
+                {
+                    label: 'Course Sale',
+                    data: salesData,
+                    backgroundColor: '#FF6652',
+                    borderColor: '#FF6652',
+                    borderWidth: 1,
+                    tension: 0.2,
+                    // pointHitRadius: 10,
+                    cubicInterpolationMode: 'monotone',
+                    // backgroundColor: 'rgba(156, 77, 244, .2)',
+                    // borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    // fill: 'start',
+                },
+            ],
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                plugins: {
+                    title: {
+                        display: false,
+                        text: 'Yearly Progress',
+                        padding: {
+                            top: 10,
+                            bottom: 30,
+                        },
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                        },
+                        color: '#333',
+                    },
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        align: 'center',
+                        fullWidth: true,
+                        reverse: false,
+
+                        labels: {
+                            color: '#333',
+                            usePointStyle: true,
+                            font: {
+                                size: 12,
+                                weight: 'normal',
+                            },
+                        },
+                    },
+                    elements: {
+                        line: {
+                            borderWidth: 2,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Set the fill color for the area under the line
+                            borderRadius: 10,
+                            fill: true, // Set this to true to fill the area under the line
+                        },
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: '#fff',
+                        titleColor: '#333',
+                        bodyColor: '#333',
+                        titleFont: {
+                            size: 16,
+                            weight: 'bold',
+                        },
+                        bodyFont: {
+                            size: 14,
+                            weight: 'bold',
+                        },
+                    },
+                    responsive: true,
+                },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10,
+                    },
+                },
+                responsive: true, // Makes the chart responsive to screen size
+                animations: {
+                    radius: {
+                        duration: 400,
+                        easing: 'linear',
+                    },
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                        },
+                        ticks: {
+                            // display: false,
+                            // Include a dollar sign in the ticks
+                            callback: function (value, index, values) {
+                                return '$' + value;
+                            },
+                            color: '#333',
+                            font: {
+                                size: 14,
+                                weight: 'bold',
+                            },
+
+                            gridLines: {
+                                display: false,
+                            },
+                        },
+                        grid: {
+                            display: true, // Set this to false to hide the y-axis grid lines
+                        },
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            // text: 'Month'
+                        },
+                        grid: {
+                            display: false, // Set this to false to hide the y-axis grid lines
+                        },
+                    },
+                },
+            },
+        };
+
+        const myChart = new Chart(ctx, config);
+    })();
 });

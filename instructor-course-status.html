@@ -25,10 +25,14 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
@@ -57,16 +61,13 @@
                                 <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-item">
-                                        <div class="sub-circle active"></div>
-                                        <a href="#" class="sidebar-sub-link">User</a>
+                                        <a href="#" class="sidebar-link">Analytics</a>
                                     </li>
                                     <li class="sidebar-item">
-                                        <div class="sub-circle"></div>
-                                        <a href="#" class="sidebar-sub-link">Group</a>
+                                        <a href="#" class="sidebar-link">Ecommerce</a>
                                     </li>
                                     <li class="sidebar-item">
-                                        <div class="sub-circle"></div>
-                                        <a href="#" class="sidebar-sub-link">Permission</a>
+                                        <a href="#" class="sidebar-link">Crypto</a>
                                     </li>
                                 </ul>
                             </li>
@@ -413,472 +414,256 @@
                     </div>
                     <!--  -->
                     <div class="dashboard-content-box">
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>Filter</h4>
-                                </div>
+                        <div class="courses-breadcrumb-top">
+                            <div class="page-breadcrumb-box">
+                                <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Course Status</li>
+                                    </ol>
+                                </nav>
                             </div>
-                            <div class="dashboard-content-body">
-                                <div class="user-filter-box row align-items-center">
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-email" type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
-                                    </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-group" type="text" class="form-control"
-                                            placeholder="Select Group">
-                                    </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <div class="dashboard-content-action">
-                                            <button type="button" class="btn btn-purple"><span><i
-                                                        class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
-                                            <button type="button" class="btn btn-orange">Clear</button>
+                            <button type="button" class="btn btn-purple"><span><img src="assets/images/icons/upload.svg"
+                                        alt="upload"></span>Revenue Report</button>
+                        </div>
+
+                        <!-- Course Status Card Section Start -->
+                        <div class="course-status-card-box">
+                            <div class="single-course-status-card purple">
+                                <p>Total Earning</p>
+                                <h4>$15,200</h4>
+                            </div>
+                            <div class="single-course-status-card orange">
+                                <p>Total Enrollment</p>
+                                <h4>3,200</h4>
+                            </div>
+                            <div class="single-course-status-card blue">
+                                <p>Courses Ratting</p>
+                                <h4>4.5 <span><i class="fa-solid fa-star"></i></span></h4>
+                            </div>
+                        </div>
+                        <!-- Course Status Card Section End -->
+
+
+
+                        <!-- Instructor Course Status Page Start -->
+                        <!-- Progress Section Start -->
+                        <div id="progress-area" class="progress-area mt-5 mb-4">
+                            <div class="row align-items-stretch">
+                                <div class="yearly-progress-chart single-dashboard-content h-100">
+                                    <canvas id="yearly-progress-status-canvas" class="yearly-progress-canvas"></canvas>
+                                    <div class="chart-title-box">
+                                        <h2>Yearly Progress</h2>
+                                        <div class="chart-title-rev">
+                                            <p class="rev-text">Revenue:</p>
+                                            <p class="rev-green"><img src="assets/images/icons/curve-arrow-green.svg"
+                                                    alt="curve">
+                                                +0.5%</p>
                                         </div>
+                                    </div>
+                                    <div class="yearly-progress-filter">
+                                        <select class="form-select" aria-label="">
+                                            <option selected>This Year</option>
+                                            <option value="active">2024</option>
+                                            <option value="deactive">2023</option>
+                                            <option value="deactive">2022</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>Users</h4>
+                        <!-- Progress Section End -->
+
+
+                        <!-- Course Overview Section Start -->
+                        <div class="course-overview-area mb-4">
+                            <div class="single-dashboard-content">
+                                <div class="history-table-top p-0">
+                                    <div class="htt-left">
+                                        <h2 class="history-table-title">Course Status</h2>
+                                        <p class="history-table-text">Access all your previous invoices.
+                                        </p>
+                                    </div>
+                                    <div class="history-table-filter">
+                                        <select class="form-select" aria-label="This Month">
+                                            <option selected>This Month</option>
+                                            <option value="jan">January</option>
+                                            <option value="feb">February</option>
+                                            <option value="mar">March</option>
+                                            <option value="apr">April</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
-                                        class="btn btn-orange">Delete</button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#createUserModal"
-                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
-                                        User</button>
-                                </div>
-                            </div>
-                            <div class="dashboard-content-body">
                                 <div class="user-data-table">
                                     <div class="table-responsive">
                                         <table class="table align-middle">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Type</th>
-                                                    <th scope="col">Phone </th>
-                                                    <th scope="col">DOB</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Action</th>
+                                                    <th scope="col">Category</th>
+                                                    <th scope="col">Sales</th>
+                                                    <th scope="col">Ratting</th>
+                                                    <th scope="col">Earning</th>
+                                                    <th scope="col">Visitor</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-1.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Leslie Alexander</h5>
-                                                            </a>
+                                                            <div>
+                                                                <a href="#">
+                                                                    <h4>Introduction of UI/UX</h4>
+                                                                </a>
+                                                                <p>Your Course</p>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-2.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-2.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Esther Howard</h5>
-                                                            </a>
+                                                            <div>
+                                                                <a href="#">
+                                                                    <h4>Introduction of UI/UX</h4>
+                                                                </a>
+                                                                <p>Your Course</p>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-3.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-1.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Brooklyn Simmons</h5>
-                                                            </a>
+                                                            <div>
+                                                                <h4>Building Design System</h4>
+                                                                <p>Your Course</p>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-4.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-3.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Eleanor Pena</h5>
-                                                            </a>
+                                                            <div>
+                                                                <h4>Figma Design Basic</h4>
+                                                                <p>Your Course</p>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Manager</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status offline"><span></span>Offline</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-5.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-2.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Albert Flores</h5>
-                                                            </a>
+                                                            <div>
+                                                                <h4>Building Design System</h4>
+                                                                <p>Your Course</p>
+                                                            </div>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-6.png" alt="user">
+                                                        <div class="course-name-box">
+                                                            <div class="course-name-img">
+                                                                <img src="assets/images/course-3.png" alt="course">
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Bessie Coope</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
+                                                            <div>
+                                                                <h4>Figma Design Basic</h4>
+                                                                <p>Your Course</p>
                                                             </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>John Doe</h5>
-                                                            </a>
                                                         </div>
                                                     </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Design</td>
+                                                    <td>455</td>
+                                                    <td class="ratting-td">4.5 <span><i
+                                                                class="fa-solid fa-star"></i></span></td>
+                                                    <td>$12,345</td>
+                                                    <td>8942</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--  -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="bc-instructor-header">
-                        <div class="bcih-content">
-                            <h2>New User Form</h2>
-                        </div>
-                        <div class="new-user-profile-pic">
-                            <img src="assets/images/new-user.png" alt="new user">
-                            <label class="upload-area">
-                                <input type="file">
-                                <span class="upload-button">
-                                    <i class="fas fa-arrow-up"></i>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="modal-body">
-                    <form id="create-user-form" class="dashboard-form">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-fname">First Name</label>
-                                    <input type="text" class="form-control" id="instructor-fname"
-                                        placeholder="First Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-lname">Last Name</label>
-                                    <input type="text" class="form-control" id="instructor-lname"
-                                        placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Username</label>
-                                    <input type="text" class="form-control" id="instructor-username"
-                                        placeholder="Username">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label>Role</label>
-                                    <select class="form-select">
-                                        <option selected>Moderator</option>
-                                        <option value="1">Admin</option>
-                                        <option value="2">Manager</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Date of Birth</label>
-                                    <input type="date" class="form-control" id="instructor-dob">
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <h2 class="inst-social">
-                                Social Media
-                            </h2>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="mb-3">
-                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-linkedin"
-                                        placeholder="www.Linkedin.com/">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                                <label for="instructor-facebook" class="form-label">Facebook URL<span>
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-facebook"
-                                        placeholder="www.facebook.com/">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-msg">Additional Information</label>
-                                    <textarea rows="5" class="form-control" id="instructor-msg"
-                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
-                                    <small>Maximum 500 characters</small>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-password">New Password</label>
-                                    <input type="password" class="form-control" id="instructor-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-confirm-password">Confirm Password</label>
-                                    <input type="password" class="form-control" id="instructor-confirm-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Discard</button>
-                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
-                                Changes</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Create User Modal End -->
-
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="deleteUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-body delete-user-body">
-                    <div class="delete-user-confirmation-box">
-                        <div class="duc-icon">
-                            <img src="assets/images/icons/delete-info.svg" alt="info">
-                        </div>
-                        <h2 class="duc-title">Are you sure?</h2>
-                        <h2 class="duc-text">You won't be able to revert this!</h2>
-                        <div class="duc-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Delete</button>
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-gray">Cancel</button>
-                        </div>
+                        <!-- Course Overview Section End -->
+                        <!-- Instructor Course Status Page End -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Create User Modal End -->
 
-
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery-3.6.4.min.js"></script>
-    <!-- Waypoint -->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Counter Up -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Slick Slider -->
-    <script src="assets/js/slick.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="assets/js/all.min.js"></script>
-    <script src="assets/js/fontawesome.min.js"></script>
-    <!-- AOS -->
-    <script src="assets/js/aos.js"></script>
-    <!-- Main Script -->
-    <script src="assets/js/main.js"></script>
+        <!-- jQuery -->
+        <script src="assets/js/jquery-3.6.4.min.js"></script>
+        <!-- Waypoint -->
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Counter Up -->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- Slick Slider -->
+        <script src="assets/js/slick.min.js"></script>
+        <!-- Font Awesome -->
+        <script src="assets/js/all.min.js"></script>
+        <script src="assets/js/fontawesome.min.js"></script>
+        <!-- AOS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Radial Progress -->
+        <script src="assets/js/circle-progress.min.js" type="module"></script>
+        <!-- Chart JS -->
+        <script src="assets/js/chart.js"></script>
+        <!-- Dropzone -->
+        <script src="assets/js/dropzone.min.js"></script>
+        <!-- Main Script -->
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>
