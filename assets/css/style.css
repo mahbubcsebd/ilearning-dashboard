@@ -51,6 +51,10 @@ img {
     max-width: 100%;
 }
 
+.table {
+    min-width: 900px;
+}
+
 /*=========================================================================================
     Sidebar Section Start
  ==========================================================================================*/
@@ -186,16 +190,15 @@ img {
     margin-bottom: 12px;
 }
 
-/* .sidebar-link.collapsed {
+.sidebar-link:hover {
     color: #fff;
     background: var(
         --Gradient,
         linear-gradient(101deg, #9c4df4 0%, #b071f6 100%)
     );
-} */
+}
 
-
-.sidebar-link:hover {
+.sidebar-link.active {
     color: #fff;
     background: var(
         --Gradient,
@@ -288,6 +291,22 @@ img {
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
+}
+
+.header-search-box {
+    position: relative;
+}
+
+.header-search-box input {
+    padding-right: 50px !important;
+}
+
+.header-search-box button {
+    position: absolute;
+    content: '';
+    right: 20px;
+    top: 10px;
+    color: #6c688a;
 }
 /* Header End */
 
@@ -483,6 +502,28 @@ td {
     background: #fffaeb;
 }
 
+.select-top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-top-select-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 370px;
+}
+
+.select-top-select-title h4 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
 .user-status {
     color: var(--gray-colors-900, #0a033c);
     font-family: Inter;
@@ -664,7 +705,7 @@ tr:last-child .tteb-popup-content {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px; /* 157.143% */
+    line-height: 22px;
     letter-spacing: 0.07px;
 }
 
@@ -1268,7 +1309,7 @@ label {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px; /* 150% */
+    line-height: 30px;
     margin-bottom: 12px;
 }
 
@@ -1633,7 +1674,7 @@ th {
 /* Notification Setting End */
 
 /*=========================================================================================
-    22.0 - 404 Page Start
+    404 Page Start
  ==========================================================================================*/
 .error-page {
     padding-top: 160px;
@@ -1663,11 +1704,11 @@ th {
 }
 
 /*=========================================================================================
-    22.0 - 404 Page End
+    404 Page End
  ==========================================================================================*/
 
 /*=========================================================================================
-    22.0 - 404 Page Start
+    Account Lock Page Start
  ==========================================================================================*/
 .account-lock {
     border-radius: 12px;
@@ -1693,7 +1734,7 @@ th {
 }
 
 /*=========================================================================================
-    22.0 - 404 Page End
+    Account Lock Page End
  ==========================================================================================*/
 
 /*=========================================================================================
@@ -2341,7 +2382,7 @@ th {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px; /* 157.143% */
+    line-height: 22px;
     margin-bottom: 8px;
 }
 
@@ -2351,7 +2392,7 @@ th {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
 }
 
 .single-notification {
@@ -3040,7 +3081,7 @@ th {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px; /* 157.143% */
+    line-height: 22px;
 }
 
 .sdm-title-box span {
@@ -3065,7 +3106,7 @@ th {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
 }
 
 .msg-btn {
@@ -3620,7 +3661,7 @@ th {
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 18px; /* 150% */
+    line-height: 18px;
     margin-right: 12px;
 }
 
@@ -4030,7 +4071,7 @@ h3.signing-title {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
     margin-bottom: 16px;
 }
 
@@ -4667,7 +4708,7 @@ h3.course-instructor-name {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
 }
 
 .instructor-name {
@@ -4705,7 +4746,7 @@ h3.course-instructor-name {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
 }
 
 .course-approval-content {
@@ -4760,7 +4801,7 @@ h3.course-instructor-name {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
     margin-bottom: 12px;
 }
 
@@ -4904,7 +4945,7 @@ h3.course-instructor-name {
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
-    line-height: 54px; /* 150% */
+    line-height: 54px;
     margin-bottom: 30px;
 }
 
@@ -4982,7 +5023,7 @@ h3.course-instructor-name {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 22px; /* 157.143% */
+    line-height: 22px;
     padding: 12px 0;
 }
 
@@ -4995,7 +5036,7 @@ h2.overall-ratting-title {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 36px; /* 150% */
+    line-height: 36px;
     margin-bottom: 32px;
     margin-top: 16px;
 }
@@ -5440,7 +5481,7 @@ h2.overall-ratting-title {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px; /* 150% */
+    line-height: 30px;
 }
 
 .available-balance-box {
@@ -6139,3 +6180,213 @@ h2.overall-ratting-title {
 /*=========================================================================================
     Instructor Dashboard Page End
  ==========================================================================================*/
+
+/*=========================================================================================
+    CMS Menu Page End
+ ==========================================================================================*/
+.menu-type-accordion .accordion-item .accordion-button {
+    border-radius: 8px !important;
+    border: 1px solid #ffe0dc;
+    background: #fff7f6 !important;
+    padding: 16px 24px;
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    /*200%*/
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+}
+
+.menu-type-accordion .accordion-item {
+    background: transparent;
+}
+
+.menu-type-accordion .accordion-body {
+    font-size: 14px;
+    color: #6c688a;
+    background: #fff7f6;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    padding: 12px 24px;
+}
+
+.menu-type-accordion .accordion-button:not(.collapsed) {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.menu-type-accordion .accordion-item:first-of-type .accordion-button {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+}
+
+.menu-type-accordion
+    .accordion-item:first-of-type
+    .accordion-button:not(.collapsed) {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+.menu-type-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.menu-type-box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+/* Menu Names */
+.menu-names-accordion .accordion-item .accordion-button {
+    border-radius: 8px !important;
+    border: 1px solid #ffe0dc;
+    background: #fff7f6 !important;
+    color: var(--Gray-colors-900, #6c688a);
+    font-family: Inter;
+    line-height: 32px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 8px 12px;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+}
+
+.menu-names-accordion .accordion-item {
+    background: transparent;
+}
+
+.menu-names-accordion .accordion-body {
+    font-size: 14px;
+    color: #6c688a;
+    background: #fff7f6;
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    padding: 12px 24px;
+}
+
+.menu-names-accordion .accordion-button:not(.collapsed) {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.menu-names-accordion .accordion-item:first-of-type .accordion-button {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+}
+
+.menu-names-accordion
+    .accordion-item:first-of-type
+    .accordion-button:not(.collapsed) {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+.menu-type-title {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.menu-type-box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+/*=========================================================================================
+    CMS Menu Page End
+ ==========================================================================================*/
+
+.open-sidebar-btn {
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.open-sidebar-btn span {
+    position: absolute;
+    background: #0a033c;
+    display: inline-block;
+    border-radius: 3px;
+    left: 14px;
+    height: 3px;
+    transition: all 0.4s;
+}
+.open-sidebar-btn span:nth-of-type(1) {
+    top: 15px;
+    width: 45%;
+}
+.open-sidebar-btn span:nth-of-type(2) {
+    top: 23px;
+    width: 35%;
+}
+.open-sidebar-btn span:nth-of-type(3) {
+    top: 31px;
+    width: 20%;
+}
+
+.open-sidebar-btn.active span:nth-of-type(1) {
+    width: 45%;
+    top: 18px;
+    left: 14px;
+    transform: translateY(6px) rotate(-135deg);
+}
+.open-sidebar-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+.open-sidebar-btn.active span:nth-of-type(3) {
+    width: 45%;
+    top: 30px;
+    left: 14px;
+    transform: translateY(-6px) rotate(135deg);
+}
+
+.open-sidebar-btn-2 {
+    display: none;
+}
+
+.close-btn-box {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 4px;
+}
+
+.sidebar-menu-box {
+    height: 100vh;
+    overflow: auto;
+}
+
+.close-btn-box {
+    display: none;
+}

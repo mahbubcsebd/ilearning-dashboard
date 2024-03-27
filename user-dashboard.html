@@ -37,7 +37,12 @@
             <div class="ilearning-dashboard-wrapper">
                 <!-- Sidebar -->
                 <aside id="sidebar" class="sidebar">
-                    <div class="h-100">
+                    <div class="close-btn-box">
+                        <button type="button" class="close-sidebar-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar-menu-box">
                         <div class="sidebar-logo">
                             <a href="#">
                                 <img src="assets/images/icons/logo.svg" alt="logo">
@@ -49,7 +54,7 @@
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link active" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
@@ -57,147 +62,305 @@
                                 <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
-                                        <a href="#" class="sidebar-sub-link sub-link-active"><span
+                                        <a href="user-user.html" class="sidebar-sub-link sub-link-active"><span
                                                 class="sub-circle active"></span>User</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="#" class="sidebar-sub-link"><span class="sub-circle"></span>Group</a>
+                                        <a href="user-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Group</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="#" class="sidebar-sub-link"><span
+                                        <a href="user-permission.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Permission</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cms"
+                                    aria-expanded="false" aria-controls="cms">
                                     <i class="fa-solid fa-cube pe-2"></i>
                                     CMS
                                 </a>
                                 <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-pages.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pages</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-blog.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Blog</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-event.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Event</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-menu.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Menu</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="" class="sidebar-sub-link"><span class="sub-circle"></span>Event</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-subscriber.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Subscriber</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-contact.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Contact</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#config"
+                                    aria-expanded="false" aria-controls="config">
                                     <i class="fa-solid fa-gear pe-2"></i>
                                     Config
                                 </a>
                                 <ul id="config" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-site.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Site</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-social.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Social</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-theme.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Theme</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-all.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>All Config</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#dashboard"
+                                    aria-expanded="false" aria-controls="dashboard">
                                     <i class="fa-solid fa-sliders pe-2"></i>
                                     Dashboard
                                 </a>
                                 <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-activity.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Activity</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Profile</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#courses"
+                                    aria-expanded="false" aria-controls="courses">
                                     <i class="fa-solid fa-person-chalkboard pe-2"></i>
                                     Courses
                                 </a>
                                 <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Courses</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-pending.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pending Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="add_new_course.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Course</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Reviews</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#instructor"
+                                    aria-expanded="false" aria-controls="instructor">
                                     <i class="fa-regular fa-circle-user pe-2"></i>
                                     Instructor
                                 </a>
                                 <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="add_new_course.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add New Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-course-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Course
+                                            Status</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-student.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Students</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-account.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Account</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#shop"
+                                    aria-expanded="false" aria-controls="shop">
                                     <i class="fa-solid fa-bag-shopping pe-2"></i>
                                     Shop
                                 </a>
                                 <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-product-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Product List</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-add-book.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Book</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-order-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Order Status</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#widget"
+                                    aria-expanded="false" aria-controls="widget">
                                     <i class="fa-solid fa-gears pe-2"></i>
                                     Widget
                                 </a>
                                 <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
                                 <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="404.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Error</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-lock-screen.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Lock Screen</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>FAQS</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-pricing.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pricing Plan</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-team.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Teams</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#students"
+                                    aria-expanded="false" aria-controls="students">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Students
+                                </a>
+                                <ul id="students" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student List</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#payments"
+                                    aria-expanded="false" aria-controls="payments">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Payment
+                                </a>
+                                <ul id="payments" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Profile</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-add-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Money</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-instructor-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Instructor Payment</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-earning.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Earning Analysis</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#sign-in-out"
+                                    aria-expanded="false" aria-controls="sign-in-out">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Login
+                                </a>
+                                <ul id="sign-in-out" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="signin.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Log In</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="signup.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Sign Up</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#students"
+                                    aria-expanded="false" aria-controls="students">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Students
+                                </a>
+                                <ul id="students" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="" class="sidebar-sub-link"><span class="sub-circle"></span>Error</a>
                                     </li>
                                 </ul>
                             </li>
@@ -212,11 +375,17 @@
                                 <div class="container-fluid">
                                     <div class="d-flex justify-content-between align-items-center w-100">
                                         <div class="d-flex align-items-center gap-4">
-                                            <button class="btn" type="button">
+                                            <div class="open-sidebar-btn open-sidebar-btn-1">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="open-sidebar-btn open-sidebar-btn-2">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <!-- <button class="btn" type="button">
                                                 <span class="navbar-toggler-icon"></span>
-                                            </button>
-                                            <form class="d-flex position-relative">
-                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                            </button> -->
+                                            <form class="d-flex position-relative header-search-box">
+                                                <input class="form-control me-2" type="text" placeholder="Search"
                                                     aria-label="Search">
                                                 <button type="submit"><i
                                                         class="fa-solid fa-magnifying-glass"></i></button>
@@ -420,17 +589,17 @@
                             </div>
                             <div class="dashboard-content-body">
                                 <div class="user-filter-box row align-items-center">
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <input id="filter-email" type="email" class="form-control" placeholder="Email">
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <input id="filter-group" type="text" class="form-control"
                                             placeholder="Select Group">
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <div class="dashboard-content-action">
                                             <button type="button" class="btn btn-purple"><span><i
                                                         class="fa-solid fa-magnifying-glass"></i></span>Filter</button>

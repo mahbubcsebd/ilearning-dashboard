@@ -3,10 +3,25 @@
 
 $(document).ready(function () {
     // Sidebar toggle behavior
-    const toggler = document.querySelector('.btn');
+    const toggler = document.querySelector('.open-sidebar-btn-1');
     toggler.addEventListener('click', function () {
         document.querySelector('#sidebar').classList.toggle('collapsed');
+         $('.open-sidebar-btn').toggleClass('active');
     });
+
+    $('.open-sidebar-btn-2').on('click', function () {
+        $('#sidebar').addClass('active');
+    });
+
+    $('.close-sidebar-btn').on('click', function () {
+        $('#sidebar').removeClass('active');
+    });
+
+
+        $('.sidebar-link').on('click', function () {
+            $('.sidebar-link').removeClass('active');
+            $(this).addClass('active');
+        });
 
     // Tooltip
     $('.tteb-popup-content').hide();
