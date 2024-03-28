@@ -264,6 +264,9 @@ img {
     height: 50px;
     background: #faf6fe;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hp-img {
@@ -1006,6 +1009,7 @@ label {
     display: flex;
     align-items: center;
     gap: 8px;
+    border-bottom: 1px solid #9c4df4;
 }
 
 .btn-purple:hover {
@@ -2272,6 +2276,24 @@ th {
     align-items: center;
     padding: 30px;
     gap: 12px;
+}
+
+.hpi-name h5 {
+    color: var(--Gray-colors-900, #0a033c);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.hpi-name p {
+    color: var(--Gray-colors-600, #6c688a);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 .header-profile-info-bottom {
@@ -6324,7 +6346,6 @@ h2.overall-ratting-title {
 /*=========================================================================================
     CMS Menu Page End
  ==========================================================================================*/
-
 .open-sidebar-btn {
     background: transparent;
     width: 50px;
@@ -6343,14 +6364,17 @@ h2.overall-ratting-title {
     height: 3px;
     transition: all 0.4s;
 }
+
 .open-sidebar-btn span:nth-of-type(1) {
     top: 15px;
     width: 45%;
 }
+
 .open-sidebar-btn span:nth-of-type(2) {
     top: 23px;
     width: 35%;
 }
+
 .open-sidebar-btn span:nth-of-type(3) {
     top: 31px;
     width: 20%;
@@ -6362,9 +6386,11 @@ h2.overall-ratting-title {
     left: 14px;
     transform: translateY(6px) rotate(-135deg);
 }
+
 .open-sidebar-btn.active span:nth-of-type(2) {
     opacity: 0;
 }
+
 .open-sidebar-btn.active span:nth-of-type(3) {
     width: 45%;
     top: 30px;

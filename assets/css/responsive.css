@@ -11,8 +11,48 @@
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 768px) {
+    .hpi-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-profile-info-top {
+        padding: 20px;
+    }
+
+    .hpi-name h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .hpi-name p {
+        font-size: 16px;
+    }
+
+    .header-profile-info-bottom ul li a {
+        font-size: 16px;
+        line-height: 26px;
+        gap: 12px;
+    }
+
+    .header-profile-info-bottom ul li {
+        margin-bottom: 16px;
+    }
+
+    .header-logout-btn {
+        font-size: 16px;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .header-profile-info-bottom {
+        padding: 20px;
+    }
+
+    .header .dropdown-menu.show {
+        border-radius: 8px;
+    }
+
     .sidebar {
         position: absolute;
         left: -100%;
@@ -38,10 +78,108 @@
     .close-btn-box {
         display: flex;
     }
+
+    .dashboard-content-header-title h4 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .dashboard-content-header {
+        margin-bottom: 16px;
+    }
+
+    .form-control,
+    .form-select,
+    .chosen-choices {
+        font-size: 16px !important;
+        padding: 8px 12px !important;
+    }
+
+    .btn {
+        font-size: 16px !important;
+    }
+
+    .hrb-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hrb-btn img {
+        width: 20px;
+    }
+
+    .hp-dropdown {
+        font-size: 18px;
+    }
+
+    .hp-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    td,
+    th {
+        padding: 16px 10px !important;
+    }
+
+    .single-notification-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header-notification {
+        width: 340px;
+    }
+    .mark-as-read-btn {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .hn-title span {
+        font-size: 8px;
+    }
+
+    .mark-as-read-btn img {
+        width: 16px;
+    }
+
+    .header .header-notification-dropdown {
+        left: unset;
+        right: 50%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 18px;
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width: 768px) {
 }
 @media screen and (max-width: 576px) {
+    td,
+    th {
+        padding: 12px 10px !important;
+    }
+
+    .header {
+        padding: 16px;
+    }
 }
 @media screen and (max-width: 480px) {
+    .btn {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+    }
+
+    .hrb-btn {
+        display: none;
+    }
+
+    .header-profile {
+        gap: 4px;
+    }
+
+    .header {
+        padding: 12px;
+    }
 }
 @media screen and (max-width: 360px) {
 }
