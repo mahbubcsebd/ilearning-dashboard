@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | User Dashboard</title>
+    <title>iLearning | Event Registrtion List</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -25,17 +25,33 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Chosen -->
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
+    <!-- File Uploader -->
+    <link rel="stylesheet" href="assets/css/file-upload-with-preview.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- VideoJS CSS -->
+    <link rel="stylesheet" href="assets/css/video-js.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Tiny MCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"
+        integrity="sha512-6JR4bbn8rCKvrkdoTJd/VFyXAN4CE9XMtgykPWgKiHjou56YDJxWsi90hAeMTYxNwUnKSQu9JPc3SQUg+aGCHw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
     <div id="ilearning-dashboard" class="ilearning-dashboard">
         <div class="ilearning-dashboard-area">
             <div class="ilearning-dashboard-wrapper">
-                <!-- Sidebar -->
+                <!-- Sidebar Start -->
                 <aside id="sidebar" class="sidebar">
                     <div class="close-btn-box">
                         <button type="button" class="close-sidebar-btn">
@@ -44,7 +60,7 @@
                     </div>
                     <div class="sidebar-menu-box">
                         <div class="sidebar-logo">
-                            <a href="#">
+                            <a href="index.html">
                                 <img src="assets/images/icons/logo.svg" alt="logo">
                             </a>
                         </div>
@@ -54,19 +70,18 @@
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="user-dashboard.html" class="sidebar-link active" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
                                 </a>
-                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
-                                    data-bs-parent="#sidebar">
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
-                                        <a href="user-user.html" class="sidebar-sub-link sub-link-active"><span
+                                        <a href="index.html" class="sidebar-sub-link"><span
                                                 class="sub-circle active"></span>User</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="user-dashboard.html" class="sidebar-sub-link"><span
+                                        <a href="user-group.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Group</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -76,12 +91,13 @@
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cms"
+                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse" data-bs-target="#cms"
                                     aria-expanded="false" aria-controls="cms">
                                     <i class="fa-solid fa-cube pe-2"></i>
                                     CMS
                                 </a>
-                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="cms-pages.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Pages</a>
@@ -95,11 +111,16 @@
                                                 class="sub-circle"></span>Event</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="cms-menu.html" class="sidebar-sub-link"><span
-                                                class="sub-circle"></span>Menu</a>
+                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Registration List</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="" class="sidebar-sub-link"><span class="sub-circle"></span>Event</a>
+                                        <a href="cms-testimonial.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Testimonial</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-menu.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Menu</a>
                                     </li>
                                     <li class="sidebar-sub-item">
                                         <a href="cms-subscriber.html" class="sidebar-sub-link"><span
@@ -108,6 +129,10 @@
                                     <li class="sidebar-sub-item">
                                         <a href="cms-contact.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Contact</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-register-list.html" class="sidebar-sub-link sub-link-active"><span
+                                                class="sub-circle"></span>Register List</a>
                                     </li>
                                 </ul>
                             </li>
@@ -180,11 +205,11 @@
                                                 class="sub-circle"></span>Pending Courses</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="add_new_course.html" class="sidebar-sub-link"><span
+                                        <a href="course-add-new.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Add Course</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="review.html" class="sidebar-sub-link"><span
+                                        <a href="course-review.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Reviews</a>
                                     </li>
                                 </ul>
@@ -206,7 +231,7 @@
                                                 class="sub-circle"></span>My Courses</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="add_new_course.html" class="sidebar-sub-link"><span
+                                        <a href="add-new-course.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Add New Courses</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -217,6 +242,10 @@
                                     <li class="sidebar-sub-item">
                                         <a href="instructor-student.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Students</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Review</a>
                                     </li>
                                     <li class="sidebar-sub-item">
                                         <a href="instructor-my-account.html" class="sidebar-sub-link"><span
@@ -351,24 +380,15 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#students"
-                                    aria-expanded="false" aria-controls="students">
-                                    <i class="fa-solid fa-layer-group pe-2"></i>
-                                    Students
-                                </a>
-                                <ul id="students" class="sidebar-dropdown list-unstyled collapse"
-                                    data-bs-parent="#sidebar">
-                                    <li class="sidebar-sub-item">
-                                        <a href="" class="sidebar-sub-link"><span class="sub-circle"></span>Error</a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                     </div>
                 </aside>
-                <!-- Main Component -->
+                <!-- Sidebar End -->
+
+
+                <!-- Main Component Start -->
                 <div class="main">
+                    <!-- Header Section Start -->
                     <div id="header" class="header">
                         <div class="header-area">
                             <nav class="navbar navbar-expand-lg">
@@ -381,9 +401,6 @@
                                             <div class="open-sidebar-btn open-sidebar-btn-2">
                                                 <span></span><span></span><span></span>
                                             </div>
-                                            <!-- <button class="btn" type="button">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button> -->
                                             <form class="d-flex position-relative header-search-box">
                                                 <input class="form-control me-2" type="text" placeholder="Search"
                                                     aria-label="Search">
@@ -398,11 +415,6 @@
                                                         <img src="assets/images/icons/setting.svg" alt="setting">
                                                     </button>
                                                 </li>
-                                                <!-- <li>
-                                                    <button class="hrb-btn">
-                                                        <img src="assets/images/icons/chat.svg" alt="chat">
-                                                    </button>
-                                                </li> -->
                                                 <li>
                                                     <div class="header-profile">
                                                         <div class="dropdown">
@@ -419,7 +431,8 @@
                                                                                 NEW</span></h3>
                                                                         <button class="mark-as-read-btn"><img
                                                                                 src="assets/images/icons/double-mark.svg"
-                                                                                alt="double tick"> Mark as read</button>
+                                                                                alt="double tick">
+                                                                            Mark as read</button>
                                                                     </div>
                                                                     <div class="header-notification-bottom">
                                                                         <ul>
@@ -565,7 +578,8 @@
                                                                     </div>
                                                                     <button type="button" class="header-logout-btn"><img
                                                                             src="assets/images/icons/logout-purple.svg"
-                                                                            alt="logout icon"> Log
+                                                                            alt="logout icon">
+                                                                        Log
                                                                         out</button>
                                                                 </div>
                                                             </div>
@@ -579,47 +593,25 @@
                             </nav>
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- Header Section End -->
+
+
+
+                    <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>Filter</h4>
-                                </div>
-                            </div>
-                            <div class="dashboard-content-body">
-                                <div class="user-filter-box row align-items-center">
-                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                                        <input id="filter-email" type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                                        <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                                        <input id="filter-group" type="text" class="form-control"
-                                            placeholder="Select Group">
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-md-4 mb-xl-0">
-                                        <div class="dashboard-content-action">
-                                            <button type="button" class="btn btn-purple"><span><i
-                                                        class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
-                                            <button type="button" class="btn btn-orange">Clear</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="page-breadcrumb-box">
+                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Event Registrtion List</li>
+                                </ol>
+                            </nav>
                         </div>
                         <div class="single-dashboard-content">
                             <div class="dashboard-content-header">
                                 <div class="dashboard-content-header-title">
-                                    <h4>Users</h4>
-                                </div>
-                                <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
-                                        class="btn btn-orange">Delete</button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#createUserModal"
-                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
-                                        User</button>
+                                    <h4>Registration List</h4>
                                 </div>
                             </div>
                             <div class="dashboard-content-body">
@@ -628,404 +620,133 @@
                                         <table class="table align-middle">
                                             <thead>
                                                 <tr>
+                                                    <th scope="col">Event Name</th>
                                                     <th scope="col">Name</th>
+                                                    <th scope="col">Facebook URL</th>
                                                     <th scope="col">Email</th>
-                                                    <th scope="col">Type</th>
-                                                    <th scope="col">Phone </th>
-                                                    <th scope="col">DOB</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Action</th>
+                                                    <th scope="col">Phone</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Leslie Alexander</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-2.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Esther Howard</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-3.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Brooklyn Simmons</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Moderator</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-4.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Eleanor Pena</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Manager</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status offline"><span></span>Offline</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-5.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Albert Flores</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-6.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>Bessie Coope</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="user-data-table-info">
-                                                            <div class="user-data-table-info-img">
-                                                                <img src="assets/images/user-1.png" alt="user">
-                                                            </div>
-                                                            <a href="#" class="user-data-table-info-name">
-                                                                <h5>John Doe</h5>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                    <td>example@gmail.com</td>
-                                                    <td>
-                                                        <p class="cms-visibility draft">Super Admin</p>
-                                                    </td>
-                                                    <td>01887755330</td>
-                                                    <td>1999- 10-02</td>
-                                                    <td>
-                                                        <p class="user-status online"><span></span>Online</p>
-                                                    </td>
-                                                    <td>
-                                                        <div class="user-data-table-action">
-                                                            <button type="button" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
-                                                            </button>
-                                                            <button type="button" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
-                                                            </button>
-                                                        </div>
-                                                    </td>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Social Media Marketing</td>
+                                                    <td>Arlene McCoy</td>
+                                                    <td>facebook.com/username</td>
+                                                    <td>info@example.com</td>
+                                                    <td>(505) 555-0125</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Pagination Start -->
+                        <div class="pagination-box">
+                            <div class="pagination-show">
+                                <p>Show result:</p>
+                                <select class="form-select" aria-label="">
+                                    <option selected>1</option>
+                                    <option value="1">20</option>
+                                    <option value="2">30</option>
+                                    <option value="3">40</option>
+                                </select>
+                            </div>
+                            <ul class="pagination-list">
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item active">
+                                        1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        3
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        ...
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        50
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination-item">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Pagination End -->
                     </div>
-                    <!--  -->
+                    <!--  Page Content Wrapper End -->
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="bc-instructor-header">
-                        <div class="bcih-content">
-                            <h2>New User Form</h2>
-                        </div>
-                        <div class="new-user-profile-pic">
-                            <img src="assets/images/new-user.png" alt="new user">
-                            <label class="upload-area">
-                                <input type="file">
-                                <span class="upload-button">
-                                    <i class="fas fa-arrow-up"></i>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="modal-body">
-                    <form id="create-user-form" class="dashboard-form">
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-fname">First Name</label>
-                                    <input type="text" class="form-control" id="instructor-fname"
-                                        placeholder="First Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-lname">Last Name</label>
-                                    <input type="text" class="form-control" id="instructor-lname"
-                                        placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Username</label>
-                                    <input type="text" class="form-control" id="instructor-username"
-                                        placeholder="Username">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label>Role</label>
-                                    <select class="form-select">
-                                        <option selected>Moderator</option>
-                                        <option value="1">Admin</option>
-                                        <option value="2">Manager</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-username">Date of Birth</label>
-                                    <input type="date" class="form-control" id="instructor-dob">
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <h2 class="inst-social">
-                                Social Media
-                            </h2>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="mb-3">
-                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-linkedin"
-                                        placeholder="www.Linkedin.com/">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 mb-4">
-                                <label for="instructor-facebook" class="form-label">Facebook URL<span>
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
-                                        URL</span>
-                                    <input type="text" class="form-control" id="instructor-facebook"
-                                        placeholder="www.facebook.com/">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-msg">Additional Information</label>
-                                    <textarea rows="5" class="form-control" id="instructor-msg"
-                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
-                                    <small>Maximum 500 characters</small>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-password">New Password</label>
-                                    <input type="password" class="form-control" id="instructor-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-4">
-                                <div class="form-group">
-                                    <label for="instructor-confirm-password">Confirm Password</label>
-                                    <input type="password" class="form-control" id="instructor-confirm-password"
-                                        placeholder="********">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Discard</button>
-                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
-                                Changes</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Create User Modal End -->
-
-
-
-
-    <!-- Create User Modal Start -->
-    <div class="modal fade dashboard-modal" id="deleteUserModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-body delete-user-body">
-                    <div class="delete-user-confirmation-box">
-                        <div class="duc-icon">
-                            <img src="assets/images/icons/delete-info.svg" alt="info">
-                        </div>
-                        <h2 class="duc-title">Are you sure?</h2>
-                        <h2 class="duc-text">You won't be able to revert this!</h2>
-                        <div class="duc-btn-box">
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-orange">Delete</button>
-                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                class="btn btn-gray">Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Create User Modal End -->
 
 
 
@@ -1045,6 +766,23 @@
     <script src="assets/js/fontawesome.min.js"></script>
     <!-- AOS -->
     <script src="assets/js/aos.js"></script>
+    <!-- Chosen -->
+    <script src="assets/js/chosen.jquery.min.js"></script>
+    <!-- Circle Progress -->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/chart.js"></script>
+    <!-- Google Chart -->
+    <script src="assets/js/google-chart.js"></script>
+    <!-- Video JS -->
+    <script src="assets/js/video.min.js"></script>
+    <script src="assets/js/videojs-playlist.min.js"></script>
+    <!-- Dropzone -->
+    <script src="assets/js/dropzone.min.js"></script>
+    <!-- Tiny MCE -->
+    <script src="assets/js/tinymce.min.js"></script>
+    <!-- File Upload With Preview -->
+    <script src="assets/js/file-upload-with-preview.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | FAQS</title>
+    <title>iLearning | Instructor Add Course</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -214,12 +214,12 @@
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#instructor"
-                                    aria-expanded="false" aria-controls="instructor">
+                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse"
+                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
                                     <i class="fa-regular fa-circle-user pe-2"></i>
                                     Instructor
                                 </a>
-                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
+                                <ul id="instructor" class="sidebar-dropdown list-unstyled collapse show"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="instructor-dashboard.html" class="sidebar-sub-link"><span
@@ -227,10 +227,11 @@
                                     </li>
                                     <li class="sidebar-sub-item">
                                         <a href="instructor-my-courses.html" class="sidebar-sub-link"><span
-                                                class="sub-circle"></span>My Courses</a>
+                                                class="sub-circle"></span>My
+                                            Courses</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="add-new-course.html" class="sidebar-sub-link"><span
+                                        <a href="add-new-course.html" class="sidebar-sub-link sub-link-active"><span
                                                 class="sub-circle"></span>Add New Courses</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -288,12 +289,12 @@
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
-                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse show"
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="404.html" class="sidebar-sub-link"><span
@@ -304,7 +305,7 @@
                                                 class="sub-circle"></span>Lock Screen</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="pages-faq.html" class="sidebar-sub-link sub-link-active"><span
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>FAQS</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -595,234 +596,166 @@
                     <!-- Header Section End -->
 
 
+
                     <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
-                        <div class="page-breadcrumb-box">
-                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Account Locked</li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div class="single-dashboard-content">
-                            <div class="dashboard-content-header">
-                                <div class="dashboard-content-header-title">
-                                    <h4>FAQs</h4>
-                                </div>
-                                <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#addQuestionModal"
-                                        class="btn btn-purple">Add Questions</button>
-                                </div>
+                        <div class="courses-breadcrumb-top">
+                            <div class="page-breadcrumb-box">
+                                <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Add New Course</li>
+                                    </ol>
+                                </nav>
                             </div>
-                            <div class="dashboard-content-body">
-                                <div class="faq-box">
-                                    <div class="accordion" id="accordionFaq">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="faqOne" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
+                            <button type="button" class="btn btn-purple"><span><img src="assets/images/icons/upload.svg"
+                                        alt="upload]"></span>
+                                New Upload</button>
+                        </div>
+
+
+                        <!-- Add New Course Start -->
+                        <div class="add new-course-section">
+                            <div class="row">
+                                <div class="col-xl-8">
+                                    <div class="single-dashboard-content">
+                                        <div class="row">
+                                            <h3 class="spb-title">File Upload</h3>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="single-dropzone">
+                                                    <h4 class="drop-top-title">Main Course File</h4>
+                                                    <form id="main-course-drop-2" class="dropzone dropzone-lg">
+                                                        <div class="dz-message needsclick">
+                                                            <div class="dropzone-content">
+                                                                <img src="assets/images/icons/dropzone.svg"
+                                                                    alt="upload">
+                                                                <p class="dropzone-text">Drop file here or click to
+                                                                    upload.
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="single-dropzone mb-4">
+                                                    <h4 class="drop-top-title">Introduction File</h4>
+                                                    <form id="introduction-drop" action="#"
+                                                        class="dropzone dropzone-sm">
+                                                        <div class="dz-message needsclick">
+                                                            <div class="dropzone-content">
+                                                                <div class="dropzone-content-left">
+                                                                    <img src="assets/images/icons/dropzone.svg"
+                                                                        alt="upload">
+                                                                </div>
+                                                                <div class="dropzone-content-right">
+                                                                    <p class="dropzone-text">Drop file here or click to
+                                                                        upload.
+                                                                    </p>
+                                                                    <span class="drop-span">JPG(max. 800x400px)</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="single-dropzone">
+                                                    <h4 class="drop-top-title">thumbnil-drop</h4>
+                                                    <form id="main-course-drop" class="dropzone dropzone-sm">
+                                                        <div class="dz-message needsclick">
+                                                            <div class="dropzone-content">
+                                                                <div class="dropzone-content-left">
+                                                                    <img src="assets/images/icons/dropzone.svg"
+                                                                        alt="upload">
+                                                                </div>
+                                                                <div class="dropzone-content-right">
+                                                                    <p class="dropzone-text">Drop file here or click to
+                                                                        upload.
+                                                                    </p>
+                                                                    <span class="drop-span">JPG(max. 800x400px)</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    Any Prerequisites To Learn Python?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="faqTwo" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
+                                        <form id="add-course-form">
+                                            <h3 class="spb-title">Other Information</h3>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group mb-4">
+                                                        <label for="add-course-lesson" class="form-label">Lesson
+                                                            Name</label>
+                                                        <input id="add-course-lesson" type="text" class="form-control"
+                                                            placeholder="Type here...">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="add-course-tags" class="form-label">Tags</label>
+                                                        <textarea class="form-control" name="add-course-tags"
+                                                            id="add-course-tags" rows="3"
+                                                            placeholder="Type here..."></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-group mb-4">
+                                                        <label for="add-course-description"
+                                                            class="form-label">Description</label>
+                                                        <textarea class="form-control" name="add-course-description"
+                                                            id="add-course-description" rows="3"
+                                                            placeholder="Type here..."></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="add-course-price" class="form-label">Price</label>
+                                                        <input id="add-course-price" type="text" class="form-control"
+                                                            placeholder="Type here...">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Course
+                                                            Category</label>
+                                                        <select class="form-select" aria-label="Select category">
+                                                            <option selected>Category 1</option>
+                                                            <option value="1">Category 2</option>
+                                                            <option value="2">Category 3</option>
+                                                            <option value="3">Category 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="add-course-sub-cat" class="form-label">Course
+                                                            Sub-Category</label>
+                                                        <input id="add-course-sub-cat" type="text" class="form-control"
+                                                            placeholder="Type here...">
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="faqThree" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
+                                            <div
+                                                class="pt-0 pt-lg-5 d-flex align-items-start flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="agreed">
+                                                    <label class="form-check-label" for="agreed">
+                                                        I agree to Terms & condition
+                                                    </label>
                                                 </div>
+                                                <button type="submit" class="btn btn-purple">Submit for review</button>
                                             </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFour">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    What does it take become an author?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFour" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFive">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    How do I redeem a coupon?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFive" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSix">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                                    aria-expanded="false" aria-controls="collapseSix">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSix" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSix" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSeven">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                                    aria-expanded="false" aria-controls="collapseSeven">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSeven" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSeven" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Add New Course End -->
                     </div>
                     <!--  Page Content Wrapper End -->
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Add Question Modal Start -->
-    <div class="modal fade dashboard-modal" id="addQuestionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="modal-body add-question-body">
-                    <h3 class="add-question-title">Add faq Questions</h3>
-                    <form id="add-question-form" class="add-question-form">
-                        <div class="mb-4">
-                            <label for="add-question-input" class="form-label">Question</label>
-                            <input type="text" class="form-control" id="add-question-input"
-                                placeholder="Type Question:">
-                        </div>
-                        <div class="">
-                            <label for="faqs-ans" class="form-label">Answer</label>
-                            <textarea class="form-control" id="faqs-ans" placeholder="Type Answer:"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-purple mt-5">Add Questions</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Add Question Modal End -->
-
-
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.4.min.js"></script>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | FAQS</title>
+    <title>iLearning | User Dashboard</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -70,14 +70,15 @@
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="user-dashboard.html" class="sidebar-link" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link active" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
                                 </a>
-                                <ul id="user" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
-                                        <a href="index.html" class="sidebar-sub-link"><span
+                                        <a href="index.html" class="sidebar-sub-link sub-link-active"><span
                                                 class="sub-circle active"></span>User</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -288,12 +289,12 @@
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
-                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse show"
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="404.html" class="sidebar-sub-link"><span
@@ -304,7 +305,7 @@
                                                 class="sub-circle"></span>Lock Screen</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="pages-faq.html" class="sidebar-sub-link sub-link-active"><span
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>FAQS</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -597,230 +598,452 @@
 
                     <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
-                        <div class="page-breadcrumb-box">
-                            <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Account Locked</li>
-                                </ol>
-                            </nav>
+                        <div class="single-dashboard-content">
+                            <div class="dashboard-content-header">
+                                <div class="dashboard-content-header-title">
+                                    <h4>Filter</h4>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-body">
+                                <div class="user-filter-box row align-items-center">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                                        <input id="filter-email" type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                                        <input id="filter-mobile" type="text" class="form-control" placeholder="Mobile">
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                                        <input id="filter-group" type="text" class="form-control"
+                                            placeholder="Select Group">
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-md-4 mb-xl-0">
+                                        <div class="dashboard-content-action">
+                                            <button type="button" class="btn btn-purple"><span><i
+                                                        class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
+                                            <button type="button" class="btn btn-orange">Clear</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="single-dashboard-content">
                             <div class="dashboard-content-header">
                                 <div class="dashboard-content-header-title">
-                                    <h4>FAQs</h4>
+                                    <h4>Users</h4>
                                 </div>
                                 <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#addQuestionModal"
-                                        class="btn btn-purple">Add Questions</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#deleteUserModal"
+                                        class="btn btn-orange">Delete</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#createUserModal"
+                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
+                                        User</button>
                                 </div>
                             </div>
                             <div class="dashboard-content-body">
-                                <div class="faq-box">
-                                    <div class="accordion" id="accordionFaq">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="faqOne" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    Any Prerequisites To Learn Python?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="faqTwo" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="faqThree" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFour">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    What does it take become an author?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFour" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFive">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    How do I redeem a coupon?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFive" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSix">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                                    aria-expanded="false" aria-controls="collapseSix">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSix" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSix" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSeven">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                                    aria-expanded="false" aria-controls="collapseSeven">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSeven" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSeven" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="user-data-table">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Phone </th>
+                                                    <th scope="col">DOB</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-1.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Leslie Alexander</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-2.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Esther Howard</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Moderator</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-3.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Brooklyn Simmons</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Moderator</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-4.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Eleanor Pena</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Manager</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status offline"><span></span>Offline</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-5.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Albert Flores</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-6.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>Bessie Coope</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <div class="user-data-table-info-img">
+                                                                <img src="assets/images/user-1.png" alt="user">
+                                                            </div>
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5>John Doe</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>example@gmail.com</td>
+                                                    <td>
+                                                        <p class="cms-visibility draft">Super Admin</p>
+                                                    </td>
+                                                    <td>01887755330</td>
+                                                    <td>1999- 10-02</td>
+                                                    <td>
+                                                        <p class="user-status online"><span></span>Online</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--  Page Content Wrapper End -->
                 </div>
+                <!-- Main Component End -->
             </div>
         </div>
     </div>
 
 
-    <!-- Add Question Modal Start -->
-    <div class="modal fade dashboard-modal" id="addQuestionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
+
+    <!-- Create User Modal Start -->
+    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="bc-instructor-header">
+                        <div class="bcih-content">
+                            <h2>New User Form</h2>
+                        </div>
+                        <div class="new-user-profile-pic">
+                            <img src="assets/images/new-user.png" alt="new user">
+                            <label class="upload-area">
+                                <input type="file">
+                                <span class="upload-button">
+                                    <i class="fas fa-arrow-up"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div class="modal-body add-question-body">
-                    <h3 class="add-question-title">Add faq Questions</h3>
-                    <form id="add-question-form" class="add-question-form">
-                        <div class="mb-4">
-                            <label for="add-question-input" class="form-label">Question</label>
-                            <input type="text" class="form-control" id="add-question-input"
-                                placeholder="Type Question:">
+                <div class="modal-body">
+                    <form id="create-user-form" class="dashboard-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-fname">First Name</label>
+                                    <input type="text" class="form-control" id="instructor-fname"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-lname">Last Name</label>
+                                    <input type="text" class="form-control" id="instructor-lname"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Username</label>
+                                    <input type="text" class="form-control" id="instructor-username"
+                                        placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <select class="form-select">
+                                        <option selected>Moderator</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Manager</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Date of Birth</label>
+                                    <input type="date" class="form-control" id="instructor-dob">
+                                </div>
+                            </div>
                         </div>
-                        <div class="">
-                            <label for="faqs-ans" class="form-label">Answer</label>
-                            <textarea class="form-control" id="faqs-ans" placeholder="Type Answer:"></textarea>
+                        <hr>
+                        <div class="row">
+                            <h2 class="inst-social">
+                                Social Media
+                            </h2>
                         </div>
-                        <button type="submit" class="btn btn-purple mt-5">Add Questions</button>
+                        <div class="row mb-4">
+                            <div class="mb-3">
+                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-linkedin"
+                                        placeholder="www.Linkedin.com/">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <label for="instructor-facebook" class="form-label">Facebook URL
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-facebook"
+                                        placeholder="www.facebook.com/">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-msg">Additional Information</label>
+                                    <textarea rows="5" class="form-control" id="instructor-msg"
+                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
+                                    <small>Maximum 500 characters</small>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-password">New Password</label>
+                                    <input type="password" class="form-control" id="instructor-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-confirm-password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="instructor-confirm-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Discard</button>
+                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
+                                Changes</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Add Question Modal End -->
+    <!-- Create User Modal End -->
+
+
+
+
+    <!-- Delete User Modal Start -->
+    <div class="modal fade dashboard-modal" id="deleteUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-body delete-user-body">
+                    <div class="delete-user-confirmation-box">
+                        <div class="duc-icon">
+                            <img src="assets/images/icons/delete-info.svg" alt="info">
+                        </div>
+                        <h2 class="duc-title">Are you sure?</h2>
+                        <h2 class="duc-text">You won't be able to revert this!</h2>
+                        <div class="duc-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Delete</button>
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-gray">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete User Modal End -->
 
 
 

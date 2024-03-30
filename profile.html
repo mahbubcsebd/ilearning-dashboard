@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | User Dashboard</title>
+    <title>iLearning | Profile</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -25,10 +25,24 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Chosen -->
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
+    <!-- File Uploader -->
+    <link rel="stylesheet" href="assets/css/file-upload-with-preview.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- VideoJS CSS -->
+    <link rel="stylesheet" href="assets/css/video-js.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Tiny MCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"
+        integrity="sha512-6JR4bbn8rCKvrkdoTJd/VFyXAN4CE9XMtgykPWgKiHjou56YDJxWsi90hAeMTYxNwUnKSQu9JPc3SQUg+aGCHw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Crisp -->
     <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
@@ -37,11 +51,16 @@
     <div id="ilearning-dashboard" class="ilearning-dashboard">
         <div class="ilearning-dashboard-area">
             <div class="ilearning-dashboard-wrapper">
-                <!-- Sidebar -->
+                <!-- Sidebar Start -->
                 <aside id="sidebar" class="sidebar">
-                    <div class="h-100">
+                    <div class="close-btn-box">
+                        <button type="button" class="close-sidebar-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar-menu-box">
                         <div class="sidebar-logo">
-                            <a href="#">
+                            <a href="index.html">
                                 <img src="assets/images/icons/logo.svg" alt="logo">
                             </a>
                         </div>
@@ -51,172 +70,338 @@
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
                                 </a>
-                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
-                                    data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="index.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>User</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="user-group.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Group</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="user-permission.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Permission</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cms"
+                                    aria-expanded="false" aria-controls="cms">
                                     <i class="fa-solid fa-cube pe-2"></i>
                                     CMS
                                 </a>
                                 <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-pages.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pages</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-blog.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Blog</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-event.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Event</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Registration List</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-testimonial.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Testimonial</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-menu.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Menu</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-subscriber.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Subscriber</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-contact.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Contact</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Register List</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#config"
+                                    aria-expanded="false" aria-controls="config">
                                     <i class="fa-solid fa-gear pe-2"></i>
                                     Config
                                 </a>
                                 <ul id="config" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-site.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Site</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-social.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Social</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-theme.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Theme</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-all.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>All Config</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse"
                                     data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                                     <i class="fa-solid fa-sliders pe-2"></i>
                                     Dashboard
                                 </a>
-                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
+                                <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse show"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-activity.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Activity</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="profile.html" class="sidebar-sub-link sub-link-active"><span
+                                                class="sub-circle"></span>Profile</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#courses"
+                                    aria-expanded="false" aria-controls="courses">
                                     <i class="fa-solid fa-person-chalkboard pe-2"></i>
                                     Courses
                                 </a>
                                 <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Courses</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-pending.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pending Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-add-new.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Course</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Reviews</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#instructor"
+                                    aria-expanded="false" aria-controls="instructor">
                                     <i class="fa-regular fa-circle-user pe-2"></i>
                                     Instructor
                                 </a>
                                 <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="add-new-course.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add New Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-course-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Course
+                                            Status</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-student.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Students</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Review</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-account.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Account</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#shop"
+                                    aria-expanded="false" aria-controls="shop">
                                     <i class="fa-solid fa-bag-shopping pe-2"></i>
                                     Shop
                                 </a>
                                 <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-product-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Product List</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-add-book.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Book</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-order-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Order Status</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#widget"
+                                    aria-expanded="false" aria-controls="widget">
                                     <i class="fa-solid fa-gears pe-2"></i>
                                     Widget
                                 </a>
                                 <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
                                 <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="404.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Error</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-lock-screen.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Lock Screen</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>FAQS</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-pricing.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pricing Plan</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-team.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Teams</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#students"
+                                    aria-expanded="false" aria-controls="students">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Students
+                                </a>
+                                <ul id="students" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student List</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#payments"
+                                    aria-expanded="false" aria-controls="payments">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Payment
+                                </a>
+                                <ul id="payments" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Profile</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-add-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Money</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-instructor-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Instructor Payment</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-earning.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Earning Analysis</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#sign-in-out"
+                                    aria-expanded="false" aria-controls="sign-in-out">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Login
+                                </a>
+                                <ul id="sign-in-out" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="signin.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Log In</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="signup.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Sign Up</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </aside>
-                <!-- Main Component -->
+                <!-- Sidebar End -->
+
+
+                <!-- Main Component Start -->
                 <div class="main">
+                    <!-- Header Section Start -->
                     <div id="header" class="header">
                         <div class="header-area">
                             <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <div class="d-flex justify-content-between align-items-center w-100">
                                         <div class="d-flex align-items-center gap-4">
-                                            <button class="btn" type="button">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button>
-                                            <form class="d-flex position-relative">
-                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                            <div class="open-sidebar-btn open-sidebar-btn-1">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="open-sidebar-btn open-sidebar-btn-2">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <form class="d-flex position-relative header-search-box">
+                                                <input class="form-control me-2" type="text" placeholder="Search"
                                                     aria-label="Search">
                                                 <button type="submit"><i
                                                         class="fa-solid fa-magnifying-glass"></i></button>
@@ -230,11 +415,6 @@
                                                     </button>
                                                 </li>
                                                 <li>
-                                                    <button class="hrb-btn">
-                                                        <img src="assets/images/icons/chat.svg" alt="chat">
-                                                    </button>
-                                                </li>
-                                                <li>
                                                     <div class="header-profile">
                                                         <div class="dropdown">
                                                             <button class="hp-dropdown dropdown-toggle hrb-btn"
@@ -243,14 +423,15 @@
                                                                 <img src="assets/images/icons/notification.svg"
                                                                     alt="notification ">
                                                             </button>
-                                                            <div class="dropdown-menu">
+                                                            <div class="dropdown-menu header-notification-dropdown">
                                                                 <div class="header-notification">
                                                                     <div class="header-notification-top">
                                                                         <h3 class="hn-title">notification <span>2
                                                                                 NEW</span></h3>
                                                                         <button class="mark-as-read-btn"><img
                                                                                 src="assets/images/icons/double-mark.svg"
-                                                                                alt="double tick"> Mark as read</button>
+                                                                                alt="double tick">
+                                                                            Mark as read</button>
                                                                     </div>
                                                                     <div class="header-notification-bottom">
                                                                         <ul>
@@ -339,7 +520,7 @@
                                                                 data-bs-toggle="dropdown" aria-expanded="false">
                                                                 Mahbub
                                                             </button>
-                                                            <div class="dropdown-menu">
+                                                            <div class="dropdown-menu header-profile-dropdown">
                                                                 <div class="header-profile-info">
                                                                     <div class="header-profile-info-top">
                                                                         <div class="hpi-img">
@@ -396,7 +577,8 @@
                                                                     </div>
                                                                     <button type="button" class="header-logout-btn"><img
                                                                             src="assets/images/icons/logout-purple.svg"
-                                                                            alt="logout icon"> Log
+                                                                            alt="logout icon">
+                                                                        Log
                                                                         out</button>
                                                                 </div>
                                                             </div>
@@ -410,7 +592,11 @@
                             </nav>
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- Header Section End -->
+
+
+
+                    <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
                         <div class="page-breadcrumb-box">
                             <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
@@ -465,7 +651,7 @@
                                             <div class="profile-setting-profile">
                                                 <div>
                                                     <div class="ps-profile-img">
-                                                        <img src="assets/images/user-1.png" alt="profile" />
+                                                        <img src="assets/images/user-1.png" alt="profile">
                                                     </div>
                                                 </div>
                                                 <div class="ps-profile-content">
@@ -482,7 +668,7 @@
                                             <div class="sp-profile-info">
                                                 <h3 class="spi-title">Company</h3>
                                                 <div class="spi-right">
-                                                    <img src="assets/images/icons/ilearning-sm.svg" alt="ileaning" />
+                                                    <img src="assets/images/icons/ilearning-sm.svg" alt="ileaning">
                                                 </div>
                                             </div>
                                             <div class="sp-profile-info">
@@ -536,7 +722,7 @@
                                         <div class="warning-box">
                                             <div class="warning-box-content">
                                                 <div class="warning-box-left">
-                                                    <img src="assets/images/icons/waring.svg" alt="warning" />
+                                                    <img src="assets/images/icons/waring.svg" alt="warning">
                                                 </div>
                                                 <div class="warning-box-right">
                                                     <h3>Secure Your Account</h3>
@@ -550,298 +736,1210 @@
                                     </div>
                                     <div class="tab-pane fade" id="basic-info-pane" aria-labelledby="basic-info"
                                         tabindex="0">
-                                        <div class="courses-products-box">
-                                            Basic Information
+                                        <div class="basic-info-box">
+                                            <div class="section-border">
+                                                <h2 class="dashboard-info-title">Basic Information</h2>
+                                                <form class="basic-info-form">
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Avatar</h3>
+                                                        <div class="sbi-avatar-box">
+                                                            <div class="sbi-avatar-img">
+                                                                <img src="assets/images/avatar.png" alt="avatar">
+                                                            </div>
+                                                            <button class="btn btn-purple">Change Avatar</button>
+                                                            <button class="btn btn-orange"><span><i
+                                                                        class="fa-solid fa-trash"></i></span>
+                                                                Delete</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Full Name</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control"
+                                                                    id="basic-info-fName" placeholder="First name">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input type="text" class="form-control"
+                                                                    id="basic-info-lName" placeholder="Last name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Company</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <input type="text" class="form-control"
+                                                                    id="basic-info-comapny" placeholder="Company name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Contact phone</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <input type="tel" class="form-control"
+                                                                    id="basic-info-phone" placeholder="Phone number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Country</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <select class="form-control" id="countries">
+                                                                    <option value="AF" data-capital="Kabul">Afghanistan
+                                                                    </option>
+                                                                    <option value="AX" data-capital="Mariehamn">Aland
+                                                                        Islands</option>
+                                                                    <option value="AL" data-capital="Tirana">Albania
+                                                                    </option>
+                                                                    <option value="DZ" data-capital="Algiers">Algeria
+                                                                    </option>
+                                                                    <option value="AS" data-capital="Pago Pago">American
+                                                                        Samoa</option>
+                                                                    <option value="AD" data-capital="Andorra la Vella">
+                                                                        Andorra</option>
+                                                                    <option value="AO" data-capital="Luanda">Angola
+                                                                    </option>
+                                                                    <option value="AI" data-capital="The Valley">
+                                                                        Anguilla</option>
+                                                                    <option value="AG" data-capital="St. John's">Antigua
+                                                                        and Barbuda</option>
+                                                                    <option value="AR" data-capital="Buenos Aires">
+                                                                        Argentina</option>
+                                                                    <option value="AM" data-capital="Yerevan">Armenia
+                                                                    </option>
+                                                                    <option value="AW" data-capital="Oranjestad">Aruba
+                                                                    </option>
+                                                                    <option value="AU" data-capital="Canberra">Australia
+                                                                    </option>
+                                                                    <option value="AT" data-capital="Vienna">Austria
+                                                                    </option>
+                                                                    <option value="AZ" data-capital="Baku">Azerbaijan
+                                                                    </option>
+                                                                    <option value="BS" data-capital="Nassau">Bahamas
+                                                                    </option>
+                                                                    <option value="BH" data-capital="Manama">Bahrain
+                                                                    </option>
+                                                                    <option value="BD" data-capital="Dhaka">Bangladesh
+                                                                    </option>
+                                                                    <option value="BB" data-capital="Bridgetown">
+                                                                        Barbados</option>
+                                                                    <option value="BY" data-capital="Minsk">Belarus
+                                                                    </option>
+                                                                    <option value="BE" data-capital="Brussels">Belgium
+                                                                    </option>
+                                                                    <option value="BZ" data-capital="Belmopan">Belize
+                                                                    </option>
+                                                                    <option value="BJ" data-capital="Porto-Novo">Benin
+                                                                    </option>
+                                                                    <option value="BM" data-capital="Hamilton">Bermuda
+                                                                    </option>
+                                                                    <option value="BT" data-capital="Thimphu">Bhutan
+                                                                    </option>
+                                                                    <option value="BO" data-capital="Sucre">Bolivia
+                                                                    </option>
+                                                                    <option value="BA" data-capital="Sarajevo">Bosnia
+                                                                        and Herzegovina</option>
+                                                                    <option value="BW" data-capital="Gaborone">Botswana
+                                                                    </option>
+                                                                    <option value="BR" data-capital="Brasília">Brazil
+                                                                    </option>
+                                                                    <option value="IO" data-capital="Diego Garcia">
+                                                                        British Indian Ocean Territory
+                                                                    </option>
+                                                                    <option value="BN"
+                                                                        data-capital="Bandar Seri Begawan">Brunei
+                                                                        Darussalam</option>
+                                                                    <option value="BG" data-capital="Sofia">Bulgaria
+                                                                    </option>
+                                                                    <option value="BF" data-capital="Ouagadougou">
+                                                                        Burkina Faso</option>
+                                                                    <option value="BI" data-capital="Bujumbura">Burundi
+                                                                    </option>
+                                                                    <option value="CV" data-capital="Praia">Cabo Verde
+                                                                    </option>
+                                                                    <option value="KH" data-capital="Phnom Penh">
+                                                                        Cambodia</option>
+                                                                    <option value="CM" data-capital="Yaoundé">Cameroon
+                                                                    </option>
+                                                                    <option value="CA" data-capital="Ottawa">Canada
+                                                                    </option>
+                                                                    <option value="KY" data-capital="George Town">Cayman
+                                                                        Islands</option>
+                                                                    <option value="CF" data-capital="Bangui">Central
+                                                                        African Republic</option>
+                                                                    <option value="TD" data-capital="N'Djamena">Chad
+                                                                    </option>
+                                                                    <option value="CL" data-capital="Santiago">Chile
+                                                                    </option>
+                                                                    <option value="CN" data-capital="Beijing">China
+                                                                    </option>
+                                                                    <option value="CX" data-capital="Flying Fish Cove">
+                                                                        Christmas Island</option>
+                                                                    <option value="CC" data-capital="West Island">Cocos
+                                                                        (Keeling) Islands</option>
+                                                                    <option value="CO" data-capital="Bogotá">Colombia
+                                                                    </option>
+                                                                    <option value="KM" data-capital="Moroni">Comoros
+                                                                    </option>
+                                                                    <option value="CK" data-capital="Avarua">Cook
+                                                                        Islands</option>
+                                                                    <option value="CR" data-capital="San José">Costa
+                                                                        Rica</option>
+                                                                    <option value="HR" data-capital="Zagreb">Croatia
+                                                                    </option>
+                                                                    <option value="CU" data-capital="Havana">Cuba
+                                                                    </option>
+                                                                    <option value="CW" data-capital="Willemstad">Curaçao
+                                                                    </option>
+                                                                    <option value="CY" data-capital="Nicosia">Cyprus
+                                                                    </option>
+                                                                    <option value="CZ" data-capital="Prague">Czech
+                                                                        Republic</option>
+                                                                    <option value="CI" data-capital="Yamoussoukro">Côte
+                                                                        d'Ivoire</option>
+                                                                    <option value="CD" data-capital="Kinshasa">
+                                                                        Democratic Republic of the Congo
+                                                                    </option>
+                                                                    <option value="DK" data-capital="Copenhagen">Denmark
+                                                                    </option>
+                                                                    <option value="DJ" data-capital="Djibouti">Djibouti
+                                                                    </option>
+                                                                    <option value="DM" data-capital="Roseau">Dominica
+                                                                    </option>
+                                                                    <option value="DO" data-capital="Santo Domingo">
+                                                                        Dominican Republic</option>
+                                                                    <option value="EC" data-capital="Quito">Ecuador
+                                                                    </option>
+                                                                    <option value="EG" data-capital="Cairo">Egypt
+                                                                    </option>
+                                                                    <option value="SV" data-capital="San Salvador">El
+                                                                        Salvador</option>
+                                                                    <option value="GQ" data-capital="Malabo">Equatorial
+                                                                        Guinea</option>
+                                                                    <option value="ER" data-capital="Asmara">Eritrea
+                                                                    </option>
+                                                                    <option value="EE" data-capital="Tallinn">Estonia
+                                                                    </option>
+                                                                    <option value="ET" data-capital="Addis Ababa">
+                                                                        Ethiopia</option>
+                                                                    <option value="FK" data-capital="Stanley">Falkland
+                                                                        Islands</option>
+                                                                    <option value="FO" data-capital="Tórshavn">Faroe
+                                                                        Islands</option>
+                                                                    <option value="FM" data-capital="Palikir">Federated
+                                                                        States of Micronesia
+                                                                    </option>
+                                                                    <option value="FJ" data-capital="Suva">Fiji</option>
+                                                                    <option value="FI" data-capital="Helsinki">Finland
+                                                                    </option>
+                                                                    <option value="MK" data-capital="Skopje">Former
+                                                                        Yugoslav Republic of Macedonia
+                                                                    </option>
+                                                                    <option value="FR" data-capital="Paris">France
+                                                                    </option>
+                                                                    <option value="PF" data-capital="Papeete">French
+                                                                        Polynesia</option>
+                                                                    <option value="GA" data-capital="Libreville">Gabon
+                                                                    </option>
+                                                                    <option value="GM" data-capital="Banjul">Gambia
+                                                                    </option>
+                                                                    <option value="GE" data-capital="Tbilisi">Georgia
+                                                                    </option>
+                                                                    <option value="DE" data-capital="Berlin">Germany
+                                                                    </option>
+                                                                    <option value="GH" data-capital="Accra">Ghana
+                                                                    </option>
+                                                                    <option value="GI" data-capital="Gibraltar">
+                                                                        Gibraltar</option>
+                                                                    <option value="GR" data-capital="Athens">Greece
+                                                                    </option>
+                                                                    <option value="GL" data-capital="Nuuk">Greenland
+                                                                    </option>
+                                                                    <option value="GD" data-capital="St. George's">
+                                                                        Grenada</option>
+                                                                    <option value="GU" data-capital="Hagåtña">Guam
+                                                                    </option>
+                                                                    <option value="GT" data-capital="Guatemala City">
+                                                                        Guatemala</option>
+                                                                    <option value="GG" data-capital="Saint Peter Port">
+                                                                        Guernsey</option>
+                                                                    <option value="GN" data-capital="Conakry">Guinea
+                                                                    </option>
+                                                                    <option value="GW" data-capital="Bissau">
+                                                                        Guinea-Bissau</option>
+                                                                    <option value="GY" data-capital="Georgetown">Guyana
+                                                                    </option>
+                                                                    <option value="HT" data-capital="Port-au-Prince">
+                                                                        Haiti</option>
+                                                                    <option value="VA" data-capital="Vatican City">Holy
+                                                                        See</option>
+                                                                    <option value="HN" data-capital="Tegucigalpa">
+                                                                        Honduras</option>
+                                                                    <option value="HK" data-capital="Hong Kong">Hong
+                                                                        Kong</option>
+                                                                    <option value="HU" data-capital="Budapest">Hungary
+                                                                    </option>
+                                                                    <option value="IS" data-capital="Reykjavik">Iceland
+                                                                    </option>
+                                                                    <option value="IN" data-capital="New Delhi">India
+                                                                    </option>
+                                                                    <option value="ID" data-capital="Jakarta">Indonesia
+                                                                    </option>
+                                                                    <option value="IR" data-capital="Tehran">Iran
+                                                                    </option>
+                                                                    <option value="IQ" data-capital="Baghdad">Iraq
+                                                                    </option>
+                                                                    <option value="IE" data-capital="Dublin">Ireland
+                                                                    </option>
+                                                                    <option value="IM" data-capital="Douglas">Isle of
+                                                                        Man</option>
+                                                                    <option value="IL" data-capital="Jerusalem">Israel
+                                                                    </option>
+                                                                    <option value="IT" data-capital="Rome">Italy
+                                                                    </option>
+                                                                    <option value="JM" data-capital="Kingston">Jamaica
+                                                                    </option>
+                                                                    <option value="JP" data-capital="Tokyo">Japan
+                                                                    </option>
+                                                                    <option value="JE" data-capital="Saint Helier">
+                                                                        Jersey</option>
+                                                                    <option value="JO" data-capital="Amman">Jordan
+                                                                    </option>
+                                                                    <option value="KZ" data-capital="Astana">Kazakhstan
+                                                                    </option>
+                                                                    <option value="KE" data-capital="Nairobi">Kenya
+                                                                    </option>
+                                                                    <option value="KI" data-capital="South Tarawa">
+                                                                        Kiribati</option>
+                                                                    <option value="KW" data-capital="Kuwait City">Kuwait
+                                                                    </option>
+                                                                    <option value="KG" data-capital="Bishkek">Kyrgyzstan
+                                                                    </option>
+                                                                    <option value="LA" data-capital="Vientiane">Laos
+                                                                    </option>
+                                                                    <option value="LV" data-capital="Riga">Latvia
+                                                                    </option>
+                                                                    <option value="LB" data-capital="Beirut">Lebanon
+                                                                    </option>
+                                                                    <option value="LS" data-capital="Maseru">Lesotho
+                                                                    </option>
+                                                                    <option value="LR" data-capital="Monrovia">Liberia
+                                                                    </option>
+                                                                    <option value="LY" data-capital="Tripoli">Libya
+                                                                    </option>
+                                                                    <option value="LI" data-capital="Vaduz">
+                                                                        Liechtenstein</option>
+                                                                    <option value="LT" data-capital="Vilnius">Lithuania
+                                                                    </option>
+                                                                    <option value="LU" data-capital="Luxembourg City">
+                                                                        Luxembourg</option>
+                                                                    <option value="MO" data-capital="Macau">Macau
+                                                                    </option>
+                                                                    <option value="MG" data-capital="Antananarivo">
+                                                                        Madagascar</option>
+                                                                    <option value="MW" data-capital="Lilongwe">Malawi
+                                                                    </option>
+                                                                    <option value="MY" data-capital="Kuala Lumpur">
+                                                                        Malaysia</option>
+                                                                    <option value="MV" data-capital="Malé">Maldives
+                                                                    </option>
+                                                                    <option value="ML" data-capital="Bamako">Mali
+                                                                    </option>
+                                                                    <option value="MT" data-capital="Valletta">Malta
+                                                                    </option>
+                                                                    <option value="MH" data-capital="Majuro">Marshall
+                                                                        Islands</option>
+                                                                    <option value="MQ" data-capital="Fort-de-France">
+                                                                        Martinique</option>
+                                                                    <option value="MR" data-capital="Nouakchott">
+                                                                        Mauritania</option>
+                                                                    <option value="MU" data-capital="Port Louis">
+                                                                        Mauritius</option>
+                                                                    <option value="MX" data-capital="Mexico City">Mexico
+                                                                    </option>
+                                                                    <option value="MD" data-capital="Chișinău">Moldova
+                                                                    </option>
+                                                                    <option value="MC" data-capital="Monaco">Monaco
+                                                                    </option>
+                                                                    <option value="MN" data-capital="Ulaanbaatar">
+                                                                        Mongolia</option>
+                                                                    <option value="ME" data-capital="Podgorica">
+                                                                        Montenegro</option>
+                                                                    <option value="MS"
+                                                                        data-capital="Little Bay, Brades, Plymouth">
+                                                                        Montserrat
+                                                                    </option>
+                                                                    <option value="MA" data-capital="Rabat">Morocco
+                                                                    </option>
+                                                                    <option value="MZ" data-capital="Maputo">Mozambique
+                                                                    </option>
+                                                                    <option value="MM" data-capital="Naypyidaw">Myanmar
+                                                                    </option>
+                                                                    <option value="NA" data-capital="Windhoek">Namibia
+                                                                    </option>
+                                                                    <option value="NR" data-capital="Yaren District">
+                                                                        Nauru</option>
+                                                                    <option value="NP" data-capital="Kathmandu">Nepal
+                                                                    </option>
+                                                                    <option value="NL" data-capital="Amsterdam">
+                                                                        Netherlands</option>
+                                                                    <option value="NZ" data-capital="Wellington">New
+                                                                        Zealand</option>
+                                                                    <option value="NI" data-capital="Managua">Nicaragua
+                                                                    </option>
+                                                                    <option value="NE" data-capital="Niamey">Niger
+                                                                    </option>
+                                                                    <option value="NG" data-capital="Abuja">Nigeria
+                                                                    </option>
+                                                                    <option value="NU" data-capital="Alofi">Niue
+                                                                    </option>
+                                                                    <option value="NF" data-capital="Kingston">Norfolk
+                                                                        Island</option>
+                                                                    <option value="KP" data-capital="Pyongyang">North
+                                                                        Korea</option>
+                                                                    <option value="MP" data-capital="Capitol Hill">
+                                                                        Northern Mariana Islands</option>
+                                                                    <option value="NO" data-capital="Oslo">Norway
+                                                                    </option>
+                                                                    <option value="OM" data-capital="Muscat">Oman
+                                                                    </option>
+                                                                    <option value="PK" data-capital="Islamabad">Pakistan
+                                                                    </option>
+                                                                    <option value="PW" data-capital="Ngerulmud">Palau
+                                                                    </option>
+                                                                    <option value="PA" data-capital="Panama City">Panama
+                                                                    </option>
+                                                                    <option value="PG" data-capital="Port Moresby">Papua
+                                                                        New Guinea</option>
+                                                                    <option value="PY" data-capital="Asunción">Paraguay
+                                                                    </option>
+                                                                    <option value="PE" data-capital="Lima">Peru</option>
+                                                                    <option value="PH" data-capital="Manila">Philippines
+                                                                    </option>
+                                                                    <option value="PN" data-capital="Adamstown">Pitcairn
+                                                                    </option>
+                                                                    <option value="PL" data-capital="Warsaw">Poland
+                                                                    </option>
+                                                                    <option value="PT" data-capital="Lisbon">Portugal
+                                                                    </option>
+                                                                    <option value="PR" data-capital="San Juan">Puerto
+                                                                        Rico</option>
+                                                                    <option value="QA" data-capital="Doha">Qatar
+                                                                    </option>
+                                                                    <option value="CG" data-capital="Brazzaville">
+                                                                        Republic of the Congo</option>
+                                                                    <option value="RO" data-capital="Bucharest">Romania
+                                                                    </option>
+                                                                    <option value="RU" data-capital="Moscow">Russia
+                                                                    </option>
+                                                                    <option value="RW" data-capital="Kigali">Rwanda
+                                                                    </option>
+                                                                    <option value="BL" data-capital="Gustavia">Saint
+                                                                        Barthélemy</option>
+                                                                    <option value="KN" data-capital="Basseterre">Saint
+                                                                        Kitts and Nevis</option>
+                                                                    <option value="LC" data-capital="Castries">Saint
+                                                                        Lucia</option>
+                                                                    <option value="VC" data-capital="Kingstown">Saint
+                                                                        Vincent and the Grenadines
+                                                                    </option>
+                                                                    <option value="WS" data-capital="Apia">Samoa
+                                                                    </option>
+                                                                    <option value="SM" data-capital="San Marino">San
+                                                                        Marino</option>
+                                                                    <option value="ST" data-capital="São Tomé">Sao Tome
+                                                                        and Principe</option>
+                                                                    <option value="SA" data-capital="Riyadh">Saudi
+                                                                        Arabia</option>
+                                                                    <option value="SN" data-capital="Dakar">Senegal
+                                                                    </option>
+                                                                    <option value="RS" data-capital="Belgrade">Serbia
+                                                                    </option>
+                                                                    <option value="SC" data-capital="Victoria">
+                                                                        Seychelles</option>
+                                                                    <option value="SL" data-capital="Freetown">Sierra
+                                                                        Leone</option>
+                                                                    <option value="SG" data-capital="Singapore">
+                                                                        Singapore</option>
+                                                                    <option value="SX" data-capital="Philipsburg">Sint
+                                                                        Maarten</option>
+                                                                    <option value="SK" data-capital="Bratislava">
+                                                                        Slovakia</option>
+                                                                    <option value="SI" data-capital="Ljubljana">Slovenia
+                                                                    </option>
+                                                                    <option value="SB" data-capital="Honiara">Solomon
+                                                                        Islands</option>
+                                                                    <option value="SO" data-capital="Mogadishu">Somalia
+                                                                    </option>
+                                                                    <option value="ZA" data-capital="Pretoria">South
+                                                                        Africa</option>
+                                                                    <option value="KR" data-capital="Seoul">South Korea
+                                                                    </option>
+                                                                    <option value="SS" data-capital="Juba">South Sudan
+                                                                    </option>
+                                                                    <option value="ES" data-capital="Madrid">Spain
+                                                                    </option>
+                                                                    <option value="LK"
+                                                                        data-capital="Sri Jayawardenepura Kotte, Colombo">
+                                                                        Sri Lanka
+                                                                    </option>
+                                                                    <option value="PS" data-capital="Ramallah">State of
+                                                                        Palestine</option>
+                                                                    <option value="SD" data-capital="Khartoum">Sudan
+                                                                    </option>
+                                                                    <option value="SR" data-capital="Paramaribo">
+                                                                        Suriname</option>
+                                                                    <option value="SZ" data-capital="Lobamba, Mbabane">
+                                                                        Swaziland</option>
+                                                                    <option value="SE" data-capital="Stockholm">Sweden
+                                                                    </option>
+                                                                    <option value="CH" data-capital="Bern">Switzerland
+                                                                    </option>
+                                                                    <option value="SY" data-capital="Damascus">Syrian
+                                                                        Arab Republic</option>
+                                                                    <option value="TW" data-capital="Taipei">Taiwan
+                                                                    </option>
+                                                                    <option value="TJ" data-capital="Dushanbe">
+                                                                        Tajikistan</option>
+                                                                    <option value="TZ" data-capital="Dodoma">Tanzania
+                                                                    </option>
+                                                                    <option value="TH" data-capital="Bangkok">Thailand
+                                                                    </option>
+                                                                    <option value="TL" data-capital="Dili">Timor-Leste
+                                                                    </option>
+                                                                    <option value="TG" data-capital="Lomé">Togo</option>
+                                                                    <option value="TK"
+                                                                        data-capital="Nukunonu, Atafu,Tokelau">Tokelau
+                                                                    </option>
+                                                                    <option value="TO" data-capital="Nukuʻalofa">Tonga
+                                                                    </option>
+                                                                    <option value="TT" data-capital="Port of Spain">
+                                                                        Trinidad and Tobago</option>
+                                                                    <option value="TN" data-capital="Tunis">Tunisia
+                                                                    </option>
+                                                                    <option value="TR" data-capital="Ankara">Turkey
+                                                                    </option>
+                                                                    <option value="TM" data-capital="Ashgabat">
+                                                                        Turkmenistan</option>
+                                                                    <option value="TC" data-capital="Cockburn Town">
+                                                                        Turks and Caicos Islands
+                                                                    </option>
+                                                                    <option value="TV" data-capital="Funafuti">Tuvalu
+                                                                    </option>
+                                                                    <option value="UG" data-capital="Kampala">Uganda
+                                                                    </option>
+                                                                    <option value="UA" data-capital="Kiev">Ukraine
+                                                                    </option>
+                                                                    <option value="AE" data-capital="Abu Dhabi">United
+                                                                        Arab Emirates</option>
+                                                                    <option value="GB" data-capital="London">United
+                                                                        Kingdom</option>
+                                                                    <option value="US" data-capital="Washington, D.C.">
+                                                                        United States of America
+                                                                    </option>
+                                                                    <option value="UY" data-capital="Montevideo">Uruguay
+                                                                    </option>
+                                                                    <option value="UZ" data-capital="Tashkent">
+                                                                        Uzbekistan</option>
+                                                                    <option value="VU" data-capital="Port Vila">Vanuatu
+                                                                    </option>
+                                                                    <option value="VE" data-capital="Caracas">Venezuela
+                                                                    </option>
+                                                                    <option value="VN" data-capital="Hanoi">Vietnam
+                                                                    </option>
+                                                                    <option value="VG" data-capital="Road Town">Virgin
+                                                                        Islands (British)</option>
+                                                                    <option value="VI" data-capital="Charlotte Amalie">
+                                                                        Virgin Islands (U.S.)
+                                                                    </option>
+                                                                    <option value="EH" data-capital="Laayoune">Western
+                                                                        Sahara</option>
+                                                                    <option value="YE" data-capital="Sana'a">Yemen
+                                                                    </option>
+                                                                    <option value="ZM" data-capital="Lusaka">Zambia
+                                                                    </option>
+                                                                    <option value="ZW" data-capital="Harare">Zimbabwe
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Language</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <select class="form-select" aria-label="Language">
+                                                                    <option selected>Select a language</option>
+                                                                    <option value="bn">Bangla</option>
+                                                                    <option value="en">English</option>
+                                                                    <option value="sp">Spanish</option>
+                                                                    <option value="hi">Hindi</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Time Zone</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <select class="form-select" aria-label="Time Zone">
+                                                                    <option selected>Select a timezone</option>
+                                                                    <option value="gmt+6">GMT +6</option>
+                                                                    <option value="gmt+8">GMT +8</option>
+                                                                    <option value="gmt-6">GMT -6</option>
+                                                                    <option value="gmt-8">GMT -8</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-basic-info">
+                                                        <h3 class="sbi-title">Currency</h3>
+                                                        <div class="row sbi-input-box">
+                                                            <div class="col-md-12">
+                                                                <select class="form-select" aria-label="Currency">
+                                                                    <option selected>Select a currency</option>
+                                                                    <option value="doller">$ Doller</option>
+                                                                    <option value="euro">€ Euro</option>
+                                                                    <option value="pound">£ Pound</option>
+                                                                    <option value="taka">৳ Taka</option>
+                                                                    <option value="rupee">₹ Rupee</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sbi-btn-box">
+                                                        <button type="button" class="btn btn-orange">Discard</button>
+                                                        <button type="submit" class="btn btn-purple">Save
+                                                            Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="payent-method-pane" aria-labelledby="payent-method"
                                         tabindex="0">
                                         <div class="payment-method">
-                                            Payment Method
+                                            <!-- Billing & Payment Section Start -->
+                                            <div class="billing-and-payment-section">
+                                                <div class="row align-items-stretch">
+                                                    <div class="col-xl-6 mb-4">
+                                                        <div class="billing-section section-border">
+                                                            <div class="billing-top">
+                                                                <h2 class="billing-top-title">Billing Information</h2>
+                                                                <p class="billing-top-info">Changes to your billing
+                                                                    information will
+                                                                    take effect starting with secheduled payment and
+                                                                    will be
+                                                                    refelected on your
+                                                                    next invoice.</p>
+                                                            </div>
+                                                            <div class="billing-wrapper">
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <h4 class="billing-name">Address #1</h4>
+                                                                        <p class="billing-text">4517 Washington Ave.
+                                                                            Manchester,
+                                                                            Kentucky 39495</p>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <h4 class="billing-name">Address #1</h4>
+                                                                        <p class="billing-text">8502 Preston Rd.
+                                                                            Inglewood,
+                                                                            Maine 98380</p>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <h4 class="billing-name">Address #1</h4>
+                                                                        <p class="billing-text">3891 Ranchview Dr.
+                                                                            Richardson, California 62639</p>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pt-4"><button type="button"
+                                                                    class="btn btn-purple">Add New
+                                                                    Address</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 mb-4">
+                                                        <div class="billing-section section-border">
+                                                            <div class="billing-top">
+                                                                <h2 class="billing-top-title">Payment History</h2>
+                                                                <p class="billing-top-info">Changes to your billing
+                                                                    information will
+                                                                    take effect starting with secheduled payment and
+                                                                    will be
+                                                                    refelected on your
+                                                                    next invoice.</p>
+                                                            </div>
+                                                            <div class="billing-wrapper">
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <div class="billing-content">
+                                                                            <div class="billing-content-img">
+                                                                                <img src="assets/images/icons/master-card.svg"
+                                                                                    alt="credit card">
+                                                                            </div>
+                                                                            <div class="billing-content-text">
+                                                                                <h4 class="billing-name">Mastercard</h4>
+                                                                                <p class="billing-text">XXXX XXXX XXXX
+                                                                                    7584
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <div class="billing-content">
+                                                                            <div class="billing-content-img">
+                                                                                <img src="assets/images/icons/amex-card.svg"
+                                                                                    alt="credit card">
+                                                                            </div>
+                                                                            <div class="billing-content-text">
+                                                                                <h4 class="billing-name">American
+                                                                                    Express
+                                                                                </h4>
+                                                                                <p class="billing-text">XXXX XXXX XXXX
+                                                                                    7584
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="single-billing">
+                                                                    <div class="single-billing-left">
+                                                                        <div class="billing-content">
+                                                                            <div class="billing-content-img">
+                                                                                <img src="assets/images/icons/visa-card.svg"
+                                                                                    alt="credit card">
+                                                                            </div>
+                                                                            <div class="billing-content-text">
+                                                                                <h4 class="billing-name">Visa Card</h4>
+                                                                                <p class="billing-text">XXXX XXXX XXXX
+                                                                                    7584
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="single-billing-right">
+                                                                        <a href="#" class="btn-edit-orange">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pt-4"><button type="button"
+                                                                    class="btn btn-purple">Add New
+                                                                    Address</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 mb-4">
+                                                        <div class="billing-section section-border">
+                                                            <div class="billing-top">
+                                                                <h2 class="billing-top-title">Add Billing Address</h2>
+                                                                <p class="billing-top-info">Changes your new Billing
+                                                                    Information.</p>
+                                                            </div>
+                                                            <form id="billing-form" class="billing-wrapper">
+                                                                <div class="row">
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">Name</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="billing-name"
+                                                                                placeholder="Enter name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">Email</label>
+                                                                            <input type="email" class="form-control"
+                                                                                id="billing-email"
+                                                                                placeholder="Enter email">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">Address</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="billing-address"
+                                                                                placeholder="Enter address">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">City</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="billing-city"
+                                                                                placeholder="Enter city">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">State</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Default select example">
+                                                                                <option selected>State</option>
+                                                                                <option value="1">State 1</option>
+                                                                                <option value="2">State 2</option>
+                                                                                <option value="3">State 3</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="billing-name">Zip</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="billing-zip"
+                                                                                placeholder="Enter zip">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="pt-4"><button type="submit"
+                                                                        class="btn btn-purple">Add
+                                                                        Address</button>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6 mb-4">
+                                                        <div class="billing-section section-border">
+                                                            <div class="billing-top">
+                                                                <h2 class="billing-top-title">Add Payment Method</h2>
+                                                                <p class="billing-top-info">Change your new payment
+                                                                    method
+                                                                    information</p>
+                                                            </div>
+                                                            <form id="payment-form" class="billing-wrapper">
+                                                                <div class="row">
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label>Card
+                                                                                Brand</label>
+                                                                            <select class="form-select"
+                                                                                aria-label="Mastercard">
+                                                                                <option value="Mastercard" selected>
+                                                                                    Mastercard</option>
+                                                                                <option value="amex">American Express
+                                                                                </option>
+                                                                                <option value="visa">Visa</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="payment-card-number">Card
+                                                                                Number</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="payment-card-number"
+                                                                                placeholder="Type here...">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="payment-card-holder-name">Card
+                                                                                Holder Name</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="payment-card-holder-name"
+                                                                                placeholder="Enter name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-4">
+                                                                        <div class="form-group">
+                                                                            <label for="payment-card-cvv">CVV</label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="payment-card-cvv"
+                                                                                placeholder="0000">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="pt-4"><button type="submit"
+                                                                        class="btn btn-purple">Add
+                                                                        Payment</button>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Billing & Payment Section End -->
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="conn-account-pane" aria-labelledby="conn-account"
                                         tabindex="0">
-                                        <div class="payment-method">
-                                            Connect
+                                        <div class="connected-account">
+                                            <div class="section-border">
+                                                <h2 class="dashboard-info-title">Connected Accounts</h2>
+                                                <div class="security-warning">
+                                                    <div class="security-icon">
+                                                        <img src="assets/images/icons/security.svg" alt="security">
+                                                    </div>
+                                                    <div class="security-content">
+                                                        <h3>Secure Your Account</h3>
+                                                        <p>Two-factor authentication adds an extra layer of security to
+                                                            your account. To log in, in
+                                                            addition you'll need to provide
+                                                            a 6 digit code. <a href="#">Learn more </a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="single-connected-account">
+                                                    <div class="sca-left">
+                                                        <div class="sca-icon">
+                                                            <img src="assets/images/icons/google.svg" alt="google">
+                                                        </div>
+                                                        <div class="sca-content">
+                                                            <h3>Google</h3>
+                                                            <p>Plan properly your workflow</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sca-right">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="google-connect">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-connected-account">
+                                                    <div class="sca-left">
+                                                        <div class="sca-icon">
+                                                            <img src="assets/images/icons/slack.svg" alt="slack">
+                                                        </div>
+                                                        <div class="sca-content">
+                                                            <h3>Google</h3>
+                                                            <p>Plan properly your workflow</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sca-right">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="slack-connect">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-connected-account">
+                                                    <div class="sca-left">
+                                                        <div class="sca-icon">
+                                                            <img src="assets/images/icons/dropbox.svg" alt="dropbox">
+                                                        </div>
+                                                        <div class="sca-content">
+                                                            <h3>Google</h3>
+                                                            <p>Plan properly your workflow</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sca-right">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="dropbox-connect">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="notification-pane" aria-labelledby="notification"
                                         tabindex="0">
-                                        <div class="payment-method">
-                                            notification
+                                        <div class="notification-account">
+                                            <!-- Notification Setting Section Start -->
+                                            <div class="row">
+                                                <h2 class="dashboard-info-title">Notification Settings</h2>
+                                                <div class="single-dashboard-notification">
+                                                    <div class="dashboard-notification-content-box">
+                                                        <h3>Comments</h3>
+                                                        <p>These are notifications for comments on your posts and
+                                                            replies to your comments.</p>
+                                                    </div>
+                                                    <div class="dashboard-notification-switch">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="comment-notification-push">
+                                                            <label for="comment-notification-push">Push</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="comment-notification-email">
+                                                            <label for="comment-notification-email">Email</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="comment-notification-sms">
+                                                            <label for="comment-notification-sms">SMS</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="single-dashboard-notification">
+                                                    <div class="dashboard-notification-content-box">
+                                                        <h3>Tags</h3>
+                                                        <p>These are notifications for when someone tags you in a
+                                                            comment, post or story.</p>
+                                                    </div>
+                                                    <div class="dashboard-notification-switch">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="tag-notification-push">
+                                                            <label for="tag-notification-push">Push</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="tag-notification-email">
+                                                            <label for="tag-notification-email">Email</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="tag-notification-sms">
+                                                            <label for="tag-notification-sms">SMS</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="single-dashboard-notification">
+                                                    <div class="dashboard-notification-content-box">
+                                                        <h3>Reminders</h3>
+                                                        <p>These are notifications to remind you of updates you might
+                                                            have missed.</p>
+                                                    </div>
+                                                    <div class="dashboard-notification-switch">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="reminder-notification-push">
+                                                            <label for="reminder-notification-push">Push</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="reminder-notification-email">
+                                                            <label for="reminder-notification-email">Email</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="reminder-notification-sms">
+                                                            <label for="reminder-notification-sms">SMS</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="dashboard-notification-content-box">
+                                                        <h3>More activity about you</h3>
+                                                        <p>These are notifications for posts on your profile, likes and
+                                                            other reactions to your
+                                                            posts, and more.</p>
+                                                    </div>
+                                                    <div class="dashboard-notification-switch">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="more-notification-push">
+                                                            <label for="more-notification-push">Push</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="more-notification-email">
+                                                            <label for="more-notification-email">Email</label>
+                                                        </div>
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="more-notification-sms">
+                                                            <label for="more-notification-sms">SMS</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="checkbox" value=""
+                                                                id="news-notification-push"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label>News and updates</label>
+                                                            <p>News about product and feature updates.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="checkbox" value=""
+                                                                id="tips-notification-push"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label>Tips and tutorials</label>
+                                                            <p>Tips on getting more out of Untitled.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="checkbox" value=""
+                                                                id="research-notification-push">
+                                                        </p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label>User research</label>
+                                                            <p>Get involved in our beta testing program or participate
+                                                                in paid product user
+                                                                research.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="sdn-title-box">
+                                                    <h3>Comments</h3>
+                                                    <p>These are notifications for comments on your posts and replies to
+                                                        your comments.</p>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="radio" name="notify"
+                                                                id="do-not-notify"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label for="do-not-notify">Do not notifiy me</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="radio" name="notify"
+                                                                id="mention-only"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label for="mention-only">Mentions only</label>
+                                                            <p>Only notify me if I’m mentioned in a comment.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="radio" name="notify"
+                                                                id="all-comment"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label for="all-comment">All comments</label>
+                                                            <p>Notify me for all comments on my posts. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="sdn-title-box">
+                                                    <h3>More activity about you</h3>
+                                                    <p>These are notifications for posts on your profile, likes and
+                                                        other reactions to your posts.
+                                                    </p>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="radio" name="reminder"
+                                                                id="activity-1"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label for="activity-1">Do not notifiy me</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="single-dashboard-notification mb-4">
+                                                    <div class="sdn-box">
+                                                        <p><input class="form-check-input" type="radio" name="reminder"
+                                                                id="activity-2"></p>
+                                                        <div class="dashboard-notification-content-box">
+                                                            <label for="activity-2">All reminders</label>
+                                                            <p>Notify me for all other activity.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Notification Setting Section End -->
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="deactivate-pane" aria-labelledby="deactivate"
                                         tabindex="0">
-                                        <div class="payment-method">
-                                            Deactivate
+                                        <div class="deactive-account section-border">
+                                            <h3 class="billing-top-title mb-4">Deactivate Account</h3>
+                                            <div class="warning-box">
+                                                <div class="warning-box-content">
+                                                    <div class="warning-box-left">
+                                                        <img src="assets/images/icons/waring.svg" alt="warning">
+                                                    </div>
+                                                    <div class="warning-box-right">
+                                                        <h3>Secure Your Account</h3>
+                                                        <p>For extra security, this requires you to confirm your email
+                                                            or phone number when you reset your sign in password. Learn
+                                                            more</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check mt-2">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="deactivate-acc-check">
+                                                <label class="form-check-label" for="deactivate-acc-check">
+                                                    Confirm Account Deactivation
+                                                </label>
+                                            </div>
+                                            <!-- Warning Box End -->
+                                            <div class="d-flex justify-content-end mt-4">
+                                                <button type="button" class="deactivate-account-btn">Deactivate
+                                                    account</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Profile Section Start -->
-
-
-                        <!-- Billing & Payment Section Start -->
-                        <div class="billing-and-payment-section">
-                            <div class="row align-items-stretch">
-                                <div class="col-xl-6 mb-4">
-                                    <div class="billing-section">
-                                        <div class="billing-top">
-                                            <h2 class="billing-top-title">Billing Information</h2>
-                                            <p class="billing-top-info">Changes to your billing
-                                                information will
-                                                take effect starting with secheduled payment and will be
-                                                refelected on your
-                                                next invoice.</p>
-                                        </div>
-                                        <div class="billing-wrapper">
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <h4 class="billing-name">Address #1</h4>
-                                                    <p class="billing-text">4517 Washington Ave.
-                                                        Manchester,
-                                                        Kentucky 39495</p>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <h4 class="billing-name">Address #1</h4>
-                                                    <p class="billing-text">8502 Preston Rd. Inglewood,
-                                                        Maine 98380</p>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <h4 class="billing-name">Address #1</h4>
-                                                    <p class="billing-text">3891 Ranchview Dr.
-                                                        Richardson, California 62639</p>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pt-4"><button type="button" class="btn btn-purple">Add New
-                                                Address</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 mb-4">
-                                    <div class="billing-section">
-                                        <div class="billing-top">
-                                            <h2 class="billing-top-title">Payment History</h2>
-                                            <p class="billing-top-info">Changes to your billing
-                                                information will
-                                                take effect starting with secheduled payment and will be
-                                                refelected on your
-                                                next invoice.</p>
-                                        </div>
-                                        <div class="billing-wrapper">
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <div class="billing-content">
-                                                        <div class="billing-content-img">
-                                                            <img src="assets/images/icons/master-card.svg"
-                                                                alt="credit card">
-                                                        </div>
-                                                        <div class="billing-content-text">
-                                                            <h4 class="billing-name">Mastercard</h4>
-                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <div class="billing-content">
-                                                        <div class="billing-content-img">
-                                                            <img src="assets/images/icons/amex-card.svg"
-                                                                alt="credit card">
-                                                        </div>
-                                                        <div class="billing-content-text">
-                                                            <h4 class="billing-name">American Express</h4>
-                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                            <div class="single-billing">
-                                                <div class="single-billing-left">
-                                                    <div class="billing-content">
-                                                        <div class="billing-content-img">
-                                                            <img src="assets/images/icons/visa-card.svg"
-                                                                alt="credit card">
-                                                        </div>
-                                                        <div class="billing-content-text">
-                                                            <h4 class="billing-name">Visa Card</h4>
-                                                            <p class="billing-text">XXXX XXXX XXXX 7584</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="single-billing-right">
-                                                    <a href="#" class="btn-edit-orange">Edit</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pt-4"><button type="button" class="btn btn-purple">Add New
-                                                Address</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 mb-4">
-                                    <div class="billing-section">
-                                        <div class="billing-top">
-                                            <h2 class="billing-top-title">Add Billing Address</h2>
-                                            <p class="billing-top-info">Changes your new Billing Information.</p>
-                                        </div>
-                                        <form id="billing-form" class="billing-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">Name</label>
-                                                        <input type="text" class="form-control" id="billing-name"
-                                                            placeholder="Enter name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">Email</label>
-                                                        <input type="email" class="form-control" id="billing-email"
-                                                            placeholder="Enter email">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">Address</label>
-                                                        <input type="text" class="form-control" id="billing-address"
-                                                            placeholder="Enter address">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">City</label>
-                                                        <input type="text" class="form-control" id="billing-city"
-                                                            placeholder="Enter city">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">State</label>
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>State</option>
-                                                            <option value="1">State 1</option>
-                                                            <option value="2">State 2</option>
-                                                            <option value="3">State 3</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="billing-name">Zip</label>
-                                                        <input type="text" class="form-control" id="billing-zip"
-                                                            placeholder="Enter zip">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
-                                                    Address</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 mb-4">
-                                    <div class="billing-section">
-                                        <div class="billing-top">
-                                            <h2 class="billing-top-title">Add Payment Method</h2>
-                                            <p class="billing-top-info">Change your new payment method information</p>
-                                        </div>
-                                        <form id="payment-form" class="billing-wrapper">
-                                            <div class="row">
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="payment-card-brand">Card Brand</label>
-                                                        <select class="form-select" aria-label="Mastercard">
-                                                            <option value="Mastercard" selected>Mastercard</option>
-                                                            <option value="amex">American Express</option>
-                                                            <option value="visa">Visa</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="payment-card-number">Card Number</label>
-                                                        <input type="text" class="form-control" id="billing-zip"
-                                                            placeholder="Type here...">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="payment-card-holder-name">Card Holder Name</label>
-                                                        <input type="text" class="form-control" id="billing-zip"
-                                                            placeholder="Enter name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-group">
-                                                        <label for="payment-card-cvv">CVV</label>
-                                                        <input type="text" class="form-control" id="billing-zip"
-                                                            placeholder="0000">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
-                                                    Payment</button>
-                                            </div>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Billing & Payment Section End -->
                     </div>
+                    <!--  Page Content Wrapper End -->
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- jQuery -->
-        <script src="assets/js/jquery-3.6.4.min.js"></script>
-        <!-- Waypoint -->
-        <script src="assets/js/jquery.waypoints.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <!-- Counter Up -->
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <!-- Slick Slider -->
-        <script src="assets/js/slick.min.js"></script>
-        <!-- Font Awesome -->
-        <script src="assets/js/all.min.js"></script>
-        <script src="assets/js/fontawesome.min.js"></script>
-        <!-- AOS -->
-        <script src="assets/js/aos.js"></script>
-        <!-- Radial Progress -->
-        <script src="assets/js/circle-progress.min.js" type="module"></script>
-        <!-- Chart JS -->
-        <script src="assets/js/chart.js"></script>
-        <!-- Main Script -->
-        <script src="assets/js/main.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!-- Waypoint -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <!-- AOS -->
+    <script src="assets/js/aos.js"></script>
+    <!-- Chosen -->
+    <script src="assets/js/chosen.jquery.min.js"></script>
+    <!-- Circle Progress -->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/chart.js"></script>
+    <!-- Google Chart -->
+    <script src="assets/js/google-chart.js"></script>
+    <!-- Video JS -->
+    <script src="assets/js/video.min.js"></script>
+    <script src="assets/js/videojs-playlist.min.js"></script>
+    <!-- Dropzone -->
+    <script src="assets/js/dropzone.min.js"></script>
+    <!-- Tiny MCE -->
+    <script src="assets/js/tinymce.min.js"></script>
+    <!-- File Upload With Preview -->
+    <script src="assets/js/file-upload-with-preview.min.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

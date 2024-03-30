@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | FAQS</title>
+    <title>iLearning | User Group</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -70,18 +70,19 @@
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="user-dashboard.html" class="sidebar-link" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link active" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
                                 </a>
-                                <ul id="user" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="index.html" class="sidebar-sub-link"><span
                                                 class="sub-circle active"></span>User</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="user-group.html" class="sidebar-sub-link"><span
+                                        <a href="user-group.html" class="sidebar-sub-link  sub-link-active"><span
                                                 class="sub-circle"></span>Group</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -288,12 +289,12 @@
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
-                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse show"
+                                <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
                                     <li class="sidebar-sub-item">
                                         <a href="404.html" class="sidebar-sub-link"><span
@@ -304,7 +305,7 @@
                                                 class="sub-circle"></span>Lock Screen</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="pages-faq.html" class="sidebar-sub-link sub-link-active"><span
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>FAQS</a>
                                     </li>
                                     <li class="sidebar-sub-item">
@@ -595,6 +596,7 @@
                     <!-- Header Section End -->
 
 
+
                     <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
                         <div class="page-breadcrumb-box">
@@ -602,188 +604,146 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Account Locked</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Group</li>
                                 </ol>
                             </nav>
                         </div>
                         <div class="single-dashboard-content">
                             <div class="dashboard-content-header">
                                 <div class="dashboard-content-header-title">
-                                    <h4>FAQs</h4>
+                                    <h4>Manage Group</h4>
                                 </div>
                                 <div class="dashboard-content-action">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#addQuestionModal"
-                                        class="btn btn-purple">Add Questions</button>
+                                    <button type="button" class="btn btn-purple"><span><i
+                                                class="fa-solid fa-plus"></i></span>Add Group</button>
                                 </div>
                             </div>
                             <div class="dashboard-content-body">
-                                <div class="faq-box">
-                                    <div class="accordion" id="accordionFaq">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqOne">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="false" aria-controls="collapseOne">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse"
-                                                aria-labelledby="faqOne" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqTwo">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    Any Prerequisites To Learn Python?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="faqTwo" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqThree">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="faqThree" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFour">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    What does it take become an author?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFour" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqFive">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                                    aria-expanded="false" aria-controls="collapseFive">
-                                                    How do I redeem a coupon?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse"
-                                                aria-labelledby="faqFive" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                                                    saepe,
-                                                    blanditiis eum adipisci dolorum reprehenderit laudantium sapiente
-                                                    quasi
-                                                    illum dolores, sint nulla similique dignissimos explicabo error
-                                                    impedit
-                                                    maiores veritatis incidunt. Iure, ratione? Eius quis repudiandae
-                                                    voluptatem
-                                                    obcaecati in! Itaque ut rerum dolorum voluptas facilis perferendis
-                                                    blanditiis provident molestiae consequuntur earum!
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSix">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                                    aria-expanded="false" aria-controls="collapseSix">
-                                                    How long is my personal free trial?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSix" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSix" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="faqSeven">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                                                    aria-expanded="false" aria-controls="collapseSeven">
-                                                    How to Change my Plan using PayPal?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseSeven" class="accordion-collapse collapse"
-                                                aria-labelledby="faqSeven" data-bs-parent="#accordionFaq">
-                                                <div class="accordion-body">
-                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, sit
-                                                    voluptate ad optio fuga itaque aperiam commodi doloremque atque
-                                                    ducimus
-                                                    voluptatem. Soluta molestiae enim distinctio illo dolorum similique,
-                                                    odio
-                                                    cumque animi perferendis quis doloremque tempora alias quidem
-                                                    veritatis
-                                                    saepe tenetur possimus, unde vero omnis eius sit eum laborum
-                                                    expedita dicta?
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="user-data-table">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Group Name</th>
+                                                    <th scope="col">User Count</th>
+                                                    <th scope="col">Permission Count</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5> Admin</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="cms-visibility draft"><span
+                                                                class="d-inline-block me-1"><i
+                                                                    class="fa-solid fa-user"></i></span>2 Admin</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="user-active-status active"><span></span>Active</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5> Admin</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="cms-visibility draft"><span
+                                                                class="d-inline-block me-1"><i
+                                                                    class="fa-solid fa-user"></i></span>2 Moderator</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="user-active-status active"><span></span>Active</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5> Admin</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="cms-visibility draft"><span
+                                                                class="d-inline-block me-1"><i
+                                                                    class="fa-solid fa-user"></i></span>1 Manager</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="user-active-status active"><span></span>Active</p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="user-data-table-info">
+                                                            <a href="#" class="user-data-table-info-name">
+                                                                <h5> Admin</h5>
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <p class="cms-visibility draft"><span
+                                                                class="d-inline-block me-1"><i
+                                                                    class="fa-solid fa-user"></i></span>1 Unknown</p>
+                                                    </td>
+                                                    <td>
+                                                        <p class="user-active-status deactivate"><span></span>Deactivate
+                                                        </p>
+                                                    </td>
+                                                    <td>
+                                                        <div class="user-data-table-action">
+                                                            <button type="button" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            </button>
+                                                            <button type="button" class=""><i
+                                                                    class="fa-solid fa-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -793,34 +753,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Add Question Modal Start -->
-    <div class="modal fade dashboard-modal" id="addQuestionModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="modal-body add-question-body">
-                    <h3 class="add-question-title">Add faq Questions</h3>
-                    <form id="add-question-form" class="add-question-form">
-                        <div class="mb-4">
-                            <label for="add-question-input" class="form-label">Question</label>
-                            <input type="text" class="form-control" id="add-question-input"
-                                placeholder="Type Question:">
-                        </div>
-                        <div class="">
-                            <label for="faqs-ans" class="form-label">Answer</label>
-                            <textarea class="form-control" id="faqs-ans" placeholder="Type Answer:"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-purple mt-5">Add Questions</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Add Question Modal End -->
 
 
 

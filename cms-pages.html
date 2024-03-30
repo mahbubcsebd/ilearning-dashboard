@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLearning | User Dashboard</title>
+    <title>iLearning | CMS Pages</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <!-- Inter Google Font -->
@@ -25,222 +25,566 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+    <!-- Chosen -->
+    <link rel="stylesheet" href="assets/css/chosen.min.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="assets/css/dropzone.min.css">
+    <!-- File Uploader -->
+    <link rel="stylesheet" href="assets/css/file-upload-with-preview.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- VideoJS CSS -->
+    <link rel="stylesheet" href="assets/css/video-js.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Tiny MCE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"
+        integrity="sha512-6JR4bbn8rCKvrkdoTJd/VFyXAN4CE9XMtgykPWgKiHjou56YDJxWsi90hAeMTYxNwUnKSQu9JPc3SQUg+aGCHw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Crisp -->
+    <script> window.$crisp = []; window.CRISP_WEBSITE_ID = "c6b76f55-12b3-4e58-a551-d7fea841e5ae"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })(); </script>
 </head>
 
 <body>
     <div id="ilearning-dashboard" class="ilearning-dashboard">
         <div class="ilearning-dashboard-area">
             <div class="ilearning-dashboard-wrapper">
-                <!-- Sidebar -->
+                <!-- Sidebar Start -->
                 <aside id="sidebar" class="sidebar">
-                    <div class="h-100">
+                    <div class="close-btn-box">
+                        <button type="button" class="close-sidebar-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar-menu-box">
                         <div class="sidebar-logo">
-                            <a href="#">
+                            <a href="index.html">
                                 <img src="assets/images/icons/logo.svg" alt="logo">
                             </a>
                         </div>
                         <!-- Sidebar Navigation -->
-                        <ul class="sidebar-nav" id="sidebar">
+                        <ul class="sidebar-nav" id="sidebar-content">
                             <li class="sidebar-header">
                                 Supper Admin Panel
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                                <a href="user-dashboard.html" class="sidebar-link" data-bs-toggle="collapse"
                                     data-bs-target="#user" aria-expanded="false" aria-controls="user">
                                     <i class="fa-solid fa-user-plus pe-2"></i>
                                     User
                                 </a>
-                                <ul id="user" class="sidebar-dropdown list-unstyled collapse show"
-                                    data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                <ul id="user" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="index.html" class="sidebar-sub-link"><span
+                                                class="sub-circle active"></span>User</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="user-group.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Group</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="user-permission.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Permission</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#cms" aria-expanded="false" aria-controls="cms">
+                                <a href="#" class="sidebar-link active" data-bs-toggle="collapse" data-bs-target="#cms"
+                                    aria-expanded="false" aria-controls="cms">
                                     <i class="fa-solid fa-cube pe-2"></i>
                                     CMS
                                 </a>
-                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                <ul id="cms" class="sidebar-dropdown list-unstyled collapse show"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-pages.html" class="sidebar-sub-link sub-link-active"><span
+                                                class="sub-circle"></span>Pages</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-blog.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Blog</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-event.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Event</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Registration List</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-testimonial.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Testimonial</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-menu.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Menu</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-subscriber.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Subscriber</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-contact.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Contact</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Register List</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#config" aria-expanded="false" aria-controls="config">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#config"
+                                    aria-expanded="false" aria-controls="config">
                                     <i class="fa-solid fa-gear pe-2"></i>
                                     Config
                                 </a>
                                 <ul id="config" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-site.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Site</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-social.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Social</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Crypto</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-theme.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Theme</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="config-all.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>All Config</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#dashboard"
+                                    aria-expanded="false" aria-controls="dashboard">
                                     <i class="fa-solid fa-sliders pe-2"></i>
                                     Dashboard
                                 </a>
                                 <ul id="dashboard" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Analytics</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Dashboard Ecommerce</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="dashboard-activity.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Activity</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Profile</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#courses" aria-expanded="false" aria-controls="courses">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#courses"
+                                    aria-expanded="false" aria-controls="courses">
                                     <i class="fa-solid fa-person-chalkboard pe-2"></i>
                                     Courses
                                 </a>
                                 <ul id="courses" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Courses</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-pending.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pending Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-add-new.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Course</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="course-review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Reviews</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#instructor" aria-expanded="false" aria-controls="instructor">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#instructor"
+                                    aria-expanded="false" aria-controls="instructor">
                                     <i class="fa-regular fa-circle-user pe-2"></i>
                                     Instructor
                                 </a>
                                 <ul id="instructor" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-dashboard.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Dashboard</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-courses.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="add-new-course.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add New Courses</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-course-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Course
+                                            Status</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-student.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Students</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-review.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Review</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="instructor-my-account.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>My Account</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#shop" aria-expanded="false" aria-controls="shop">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#shop"
+                                    aria-expanded="false" aria-controls="shop">
                                     <i class="fa-solid fa-bag-shopping pe-2"></i>
                                     Shop
                                 </a>
                                 <ul id="shop" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-product-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Product List</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-add-book.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Book</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="shop-order-status.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Order Status</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#widget" aria-expanded="false" aria-controls="widget">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#widget"
+                                    aria-expanded="false" aria-controls="widget">
                                     <i class="fa-solid fa-gears pe-2"></i>
                                     Widget
                                 </a>
                                 <ul id="widget" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="widget.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Widget</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#pages"
+                                    aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-layer-group pe-2"></i>
                                     Pages
                                 </a>
                                 <ul id="pages" class="sidebar-dropdown list-unstyled collapse"
                                     data-bs-parent="#sidebar">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Login</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="404.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Error</a>
                                     </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Register</a>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-lock-screen.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Lock Screen</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-faq.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>FAQS</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-pricing.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Pricing Plan</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="pages-team.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Teams</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#students"
+                                    aria-expanded="false" aria-controls="students">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Students
+                                </a>
+                                <ul id="students" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-list.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student List</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="student-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Student Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#payments"
+                                    aria-expanded="false" aria-controls="payments">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Payment
+                                </a>
+                                <ul id="payments" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-profile.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Profile</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-add-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Add Money</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-instructor-payment.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Instructor Payment</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="payment-earning.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Earning Analysis</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#sign-in-out"
+                                    aria-expanded="false" aria-controls="sign-in-out">
+                                    <i class="fa-solid fa-layer-group pe-2"></i>
+                                    Login
+                                </a>
+                                <ul id="sign-in-out" class="sidebar-dropdown list-unstyled collapse"
+                                    data-bs-parent="#sidebar">
+                                    <li class="sidebar-sub-item">
+                                        <a href="signin.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Log In</a>
+                                    </li>
+                                    <li class="sidebar-sub-item">
+                                        <a href="signup.html" class="sidebar-sub-link"><span
+                                                class="sub-circle"></span>Sign Up</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </aside>
-                <!-- Main Component -->
+                <!-- Sidebar End -->
+
+
+                <!-- Main Component Start -->
                 <div class="main">
+                    <!-- Header Section Start -->
                     <div id="header" class="header">
                         <div class="header-area">
                             <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <div class="d-flex justify-content-between align-items-center w-100">
                                         <div class="d-flex align-items-center gap-4">
-                                            <button class="btn" type="button">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button>
-                                            <form class="d-flex">
-                                                <input class="form-control me-2" type="search" placeholder="Search"
+                                            <div class="open-sidebar-btn open-sidebar-btn-1">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <div class="open-sidebar-btn open-sidebar-btn-2">
+                                                <span></span><span></span><span></span>
+                                            </div>
+                                            <form class="d-flex position-relative header-search-box">
+                                                <input class="form-control me-2" type="text" placeholder="Search"
                                                     aria-label="Search">
+                                                <button type="submit"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></button>
                                             </form>
-                                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#navbarSupportedContent"
-                                                aria-controls="navbarSupportedContent" aria-expanded="false"
-                                                aria-label="Toggle navigation">
-                                                <span class="navbar-toggler-icon"></span>
-                                            </button>
                                         </div>
-                                        <div class="collapse navbar-collapse justify-content-end"
-                                            id="navbarSupportedContent">
-                                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        Dropdown
-                                                    </a>
-                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                        <li>
-                                                            <hr class="dropdown-divider">
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">Something else here</a>
-                                                        </li>
-                                                    </ul>
+                                        <div class="header-right-menu">
+                                            <ul class="header-right-btn-box">
+                                                <li>
+                                                    <button class="hrb-btn">
+                                                        <img src="assets/images/icons/setting.svg" alt="setting">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle hrb-btn"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                <img src="assets/images/icons/notification.svg"
+                                                                    alt="notification ">
+                                                            </button>
+                                                            <div class="dropdown-menu header-notification-dropdown">
+                                                                <div class="header-notification">
+                                                                    <div class="header-notification-top">
+                                                                        <h3 class="hn-title">notification <span>2
+                                                                                NEW</span></h3>
+                                                                        <button class="mark-as-read-btn"><img
+                                                                                src="assets/images/icons/double-mark.svg"
+                                                                                alt="double tick">
+                                                                            Mark as read</button>
+                                                                    </div>
+                                                                    <div class="header-notification-bottom">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-2.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="single-notification">
+                                                                                    <div
+                                                                                        class="single-notification-content">
+                                                                                        <h4 class="snc-msg">
+                                                                                            Congratulation
+                                                                                            you
+                                                                                            made a sale -
+                                                                                            UX/UI Course</h4>
+                                                                                        <p class="snc-time">Dec 12, 2023
+                                                                                            at
+                                                                                            10:13 AM</p>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <div
+                                                                                            class="single-notification-img">
+                                                                                            <img src="assets/images/notification-img-1.png"
+                                                                                                alt="user">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <a href="#" class="view-all-notification">View
+                                                                            all notifications</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="header-profile">
+                                                        <div class="hp-img">
+                                                            <img src="assets/images/user-profile.png" alt="user">
+                                                        </div>
+                                                        <div class="dropdown">
+                                                            <button class="hp-dropdown dropdown-toggle" type="button"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Mahbub
+                                                            </button>
+                                                            <div class="dropdown-menu header-profile-dropdown">
+                                                                <div class="header-profile-info">
+                                                                    <div class="header-profile-info-top">
+                                                                        <div class="hpi-img">
+                                                                            <img src="assets/images/user-profile.png"
+                                                                                alt="user">
+                                                                        </div>
+                                                                        <div class="hpi-name">
+                                                                            <h5>Mahbub</h5>
+                                                                            <p>example@gmail.com</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="divider"></div>
+                                                                    <div class="header-profile-info-bottom">
+                                                                        <ul class="list-unstyled">
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/dashboard-orange.svg"
+                                                                                            alt="dashboard icon"></span>Dashboard
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/setting-orange.svg"
+                                                                                            alt="my account icon"></span>My
+                                                                                    Account
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/play-orange.svg"
+                                                                                            alt="dashboard icon"></span>My
+                                                                                    Course
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/user-plus-orange.svg"
+                                                                                            alt="dashboard icon"></span>Student
+                                                                                </a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <span><img
+                                                                                            src="assets/images/icons/status-orange.svg"
+                                                                                            alt="dashboard icon"></span>Course
+                                                                                    Status
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <button type="button" class="header-logout-btn"><img
+                                                                            src="assets/images/icons/logout-purple.svg"
+                                                                            alt="logout icon">
+                                                                        Log
+                                                                        out</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -249,14 +593,17 @@
                             </nav>
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- Header Section End -->
+
+
+                    <!--  Page Content Wrapper Start -->
                     <div class="dashboard-content-box">
                         <div class="page-breadcrumb-box">
                             <h2 class="page-breadcrumb-title">LMS Dashboard</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">User</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pages</li>
                                 </ol>
                             </nav>
                         </div>
@@ -268,23 +615,22 @@
                             </div>
                             <div class="dashboard-content-body">
                                 <div class="user-filter-box row align-items-center">
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <input id="filter-title" type="text" class="form-control" placeholder="Title">
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <select class="form-select" aria-label="">
                                             <option selected>Select Status</option>
                                             <option value="active">Active</option>
                                             <option value="deactive">Deactive</option>
                                         </select>
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
-                                        <input id="filter-dob" type="date" class="form-control"
-                                            placeholder="mm/dd/yyyy">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                                        <input id="filter-dob" type="date" class="form-control">
                                     </div>
-                                    <div class="col-lg-3 mb-4 mb-lg-0">
+                                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                                         <div class="dashboard-content-action">
-                                            <button type="button" href="#" class="btn btn-purple"><span><i
+                                            <button class="btn btn-purple"><span><i
                                                         class="fa-solid fa-magnifying-glass"></i></span>Filter</button>
                                             <button type="button" class="btn btn-orange">Clear</button>
                                         </div>
@@ -343,11 +689,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -374,11 +718,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -405,11 +747,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -436,11 +776,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -467,11 +805,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -498,11 +834,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-regular fa-pen-to-square"></i>
+                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button type="button" href="#" class=""><i
-                                                                    class="fa-solid fa-trash"></i>
+                                                            <button class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -515,7 +849,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--  -->
+                    <!--  Page Content Wrapper End -->
                 </div>
             </div>
         </div>
@@ -539,6 +873,23 @@
     <script src="assets/js/fontawesome.min.js"></script>
     <!-- AOS -->
     <script src="assets/js/aos.js"></script>
+    <!-- Chosen -->
+    <script src="assets/js/chosen.jquery.min.js"></script>
+    <!-- Circle Progress -->
+    <script src="assets/js/circle-progress.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/js/chart.js"></script>
+    <!-- Google Chart -->
+    <script src="assets/js/google-chart.js"></script>
+    <!-- Video JS -->
+    <script src="assets/js/video.min.js"></script>
+    <script src="assets/js/videojs-playlist.min.js"></script>
+    <!-- Dropzone -->
+    <script src="assets/js/dropzone.min.js"></script>
+    <!-- Tiny MCE -->
+    <script src="assets/js/tinymce.min.js"></script>
+    <!-- File Upload With Preview -->
+    <script src="assets/js/file-upload-with-preview.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>
