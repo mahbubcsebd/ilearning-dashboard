@@ -110,10 +110,6 @@
                                                 class="sub-circle"></span>Event</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
-                                                class="sub-circle"></span>Registration List</a>
-                                    </li>
-                                    <li class="sidebar-sub-item">
                                         <a href="cms-testimonial.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Testimonial</a>
                                     </li>
@@ -411,9 +407,9 @@
                                         <div class="header-right-menu">
                                             <ul class="header-right-btn-box">
                                                 <li>
-                                                    <button class="hrb-btn">
+                                                    <a href="profile.html" class="hrb-btn">
                                                         <img src="assets/images/icons/setting.svg" alt="setting">
-                                                    </button>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <div class="header-profile">
@@ -612,8 +608,9 @@
                             <div class="dashboard-content-action">
                                 <button type="button" class="btn btn-purple"><span><i
                                             class="fa-solid fa-cart-shopping"></i></span>Add Order</button>
-                                <button type="button" class="btn btn-orange"><span><i
-                                            class="fa-solid fa-plus"></i></span>Add User</button>
+                                <button data-bs-toggle="modal" data-bs-target="#createUserModal" type="button"
+                                    class="btn btn-orange"><span><i class="fa-solid fa-plus"></i></span>Add
+                                    User</button>
                             </div>
                         </div>
                         <div class="dashboard-card-wrapper">
@@ -707,7 +704,7 @@
                                 <div class="row align-items-stretch">
                                     <div class="col-lg-9 mb-4 mb-xl-0">
                                         <div class="yearly-progress-chart single-dashboard-content h-100">
-                                            <canvas id="sales-overview-canvas" class="sales-overview-canvas"></canvas>
+                                            <canvas id="sales-overview-canvas-4" class="sales-overview-canvas"></canvas>
                                             <div class="chart-title-box ctb-sales">
                                                 <h2>Sales Overview</h2>
                                             </div>
@@ -1205,6 +1202,135 @@
     </div>
 
 
+    <!-- Create User Modal Start -->
+    <div class="modal fade dashboard-modal" id="createUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="bc-instructor-header">
+                        <div class="bcih-content">
+                            <h2>New User Form</h2>
+                        </div>
+                        <div class="new-user-profile-pic">
+                            <img src="assets/images/new-user.png" alt="new user">
+                            <label class="upload-area">
+                                <input type="file">
+                                <span class="upload-button">
+                                    <i class="fas fa-arrow-up"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <form id="create-user-form" class="dashboard-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-fname">First Name</label>
+                                    <input type="text" class="form-control" id="instructor-fname"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-lname">Last Name</label>
+                                    <input type="text" class="form-control" id="instructor-lname"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Username</label>
+                                    <input type="text" class="form-control" id="instructor-username"
+                                        placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <select class="form-select">
+                                        <option selected>Moderator</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Manager</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-username">Date of Birth</label>
+                                    <input type="date" class="form-control" id="instructor-dob">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <h2 class="inst-social">
+                                Social Media
+                            </h2>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="mb-3">
+                                <label for="instructor-linkedin" class="form-label">Linkedin URL</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon3">Link to your LinkedIn
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-linkedin"
+                                        placeholder="www.Linkedin.com/">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <label for="instructor-facebook" class="form-label">Facebook URL
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="instructor-addon7">Link to your Facebook
+                                        URL</span>
+                                    <input type="text" class="form-control" id="instructor-facebook"
+                                        placeholder="www.facebook.com/">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-msg">Additional Information</label>
+                                    <textarea rows="5" class="form-control" id="instructor-msg"
+                                        placeholder="Add a cover letter or anything else you want to share"></textarea>
+                                    <small>Maximum 500 characters</small>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-password">New Password</label>
+                                    <input type="password" class="form-control" id="instructor-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="instructor-confirm-password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="instructor-confirm-password"
+                                        placeholder="********">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Discard</button>
+                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Save
+                                Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Create User Modal End -->
+
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.4.min.js"></script>
@@ -1239,6 +1365,8 @@
     <script src="assets/js/tinymce.min.js"></script>
     <!-- File Upload With Preview -->
     <script src="assets/js/file-upload-with-preview.min.js"></script>
+    <!-- Select 2 -->
+    <script src="assets/js/select2.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>

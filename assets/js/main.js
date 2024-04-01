@@ -1,12 +1,9 @@
-
-
-
 $(document).ready(function () {
     // Sidebar toggle behavior
     const toggler = document.querySelector('.open-sidebar-btn-1');
     toggler.addEventListener('click', function () {
         document.querySelector('#sidebar').classList.toggle('collapsed');
-         $('.open-sidebar-btn').toggleClass('active');
+        $('.open-sidebar-btn').toggleClass('active');
     });
 
     $('.open-sidebar-btn-2').on('click', function () {
@@ -17,11 +14,10 @@ $(document).ready(function () {
         $('#sidebar').removeClass('active');
     });
 
-
-        $('.sidebar-link').on('click', function () {
-            $('.sidebar-link').removeClass('active');
-            $(this).addClass('active');
-        });
+    $('.sidebar-link').on('click', function () {
+        $('.sidebar-link').removeClass('active');
+        $(this).addClass('active');
+    });
 
     // Tooltip
     $('.tteb-popup-content').hide();
@@ -35,15 +31,91 @@ $(document).ready(function () {
         }
     });
 
-    // File upload and preview
-    var upload = new FileUploadWithPreview('myUniqueUploadId');
+    if ($('#myUniqueUploadId').length > 0) {
+        new FileUploadWithPreview('myUniqueUploadId');
+    }
 
-    // $('.presentation').innerHTML = <i class="fa-solid fa-angle-down"></i>;
-});
+    if ($('#countries-1').length > 0) {
+        $('#countries-1').select2({
+            templateResult: function (item) {
+                return format(item, false);
+            },
+        });
+    }
+    if ($('#countries-2').length > 0) {
+        $('#countries-2').select2({
+            templateResult: function (item) {
+                return format(item, false);
+            },
+        });
+    }
+    if ($('#countries-3').length > 0) {
+        $('#countries-3').select2({
+            templateResult: function (item) {
+                return format(item, false);
+            },
+        });
+    }
+Dropzone.autoDiscover = false;
+        function dropZone($selector, $preview_image, $text_overlay) {
+        new Dropzone($selector, {
+            url: '#',
+            maxFiles: 1,
+            acceptedFiles: 'image/*',
+            init: function () {
+                this.on('addedfile', function (file) {
+                    // Remove existing preview image and text
+                    $('#preview-image').remove();
+                    $('#text-overlay').remove();
+                });
+            },
+        });
+    }
 
 
-// Select2 for country
-$(document).ready(function () {
+    // if ($('#main-course-drop').length > 0) {
+    //     dropZone('#main-course-drop');
+    // }
+
+    if ($('#introduction-drop').length > 0) {
+        dropZone('#introduction-drop');
+    }
+
+    if ($('#thumbnil-drop').length > 0) {
+        dropZone('#thumbnil-drop');
+    }
+
+    if ($('#perview-img-drop').length > 0) {
+        dropZone('#perview-img-drop');
+    }
+
+    if ($('#main-course-drop-2').length > 0) {
+        dropZone('#main-course-drop-2');
+    }
+
+    if ($('#main-course-drop-two').length > 0) {
+        dropZone('#main-course-drop-two');
+    }
+
+    // Radial Bar Chart
+    function CircleBar(e, color) {
+        $(e)
+            .circleProgress({ fill: { color: color } })
+            .on(
+                'circle-animation-progress',
+                function (_event, _progress, stepValue) {
+                    $(this)
+                        .find('.radial-percent')
+                        .text(String(parseInt(100 * stepValue)) + '%');
+                }
+            );
+    }
+    CircleBar('.revenue-bar', '#7F56D9');
+    CircleBar('.statistics-bar', '#FF5733');
+    CircleBar('.analytics-bar', '#477AFF');
+    CircleBar('.sales-bar', '#00C5C5');
+
+    // Select 2 for Country
     function format(item, state) {
         if (!item.id) {
             return item.text;
@@ -63,54 +135,86 @@ $(document).ready(function () {
         return span;
     }
 
-    $(document).ready(function () {
-        $('#countries').select2({
-            templateResult: function (item) {
-                return format(item, false);
-            },
+    function multiChosen(selector) {
+        $(selector).chosen({
+            width: '100%',
+            no_results_text: 'Oops, nothing found!',
         });
-    });
-
-    // Select2 for keyword
-    $('.chzn-select-keyword').chosen({
-        width: '100%',
-        no_results_text: 'Oops, nothing found!',
-    });
-    $('.chzn-select-meta').chosen({
-        width: '100%',
-        no_results_text: 'Oops, nothing found!',
-    });
-});
-
-$(document).ready(function () {
-    // Radial Bar Chart
-    function CircleBar(e, color) {
-        $(e)
-            .circleProgress({ fill: { color: color } })
-            .on(
-                'circle-animation-progress',
-                function (_event, _progress, stepValue) {
-                    $(this)
-                        .find('.radial-percent')
-                        .text(String(parseInt(100 * stepValue)) + '%');
-                }
-            );
     }
-    CircleBar('.revenue-bar', '#7F56D9');
-    CircleBar('.statistics-bar', '#FF5733');
-    CircleBar('.analytics-bar', '#477AFF');
-    CircleBar('.sales-bar', '#00C5C5');
 
+    multiChosen('.chzn-select-keyword');
+    multiChosen('.chzn-select-meta');
 
+    // Expired
+    // const monthInput = document.querySelector('#month');
+    // const yearInput = document.querySelector('#year');
 
-    // Chart JS for Yearly Progress
-    (function () {
-        const ctx = document
+    // const focusSibling = function (target, direction, callback) {
+    //     const nextTarget = target[direction];
+    //     nextTarget && nextTarget.focus();
+
+    //     callback && callback(nextTarget);
+    // };
+
+    // monthInput.addEventListener('keydown', (event) => {
+    //     const value = event.target.value.toString();
+
+    //     if (value.length === 1 && value > 1) {
+    //         event.target.value = '0' + value;
+    //     }
+    //     // bounds
+    //     if (value === '00') {
+    //         event.target.value = '01';
+    //     } else if (value > 12) {
+    //         event.target.value = '12';
+    //     }
+
+    //     2 <= event.target.value.length &&
+    //         focusSibling(event.target, 'nextElementSibling');
+    //     event.stopImmediatePropagation();
+    // });
+
+    // yearInput.addEventListener('input', (event) => {
+    //     if (event.key === 'Backspace' && event.target.selectionStart === 0) {
+    //         focusSibling(event.target, 'previousElementSibling');
+    //         event.stopImmediatePropagation();
+    //     }
+    // });
+
+    // const inputMatchesPattern = function (e) {
+    //     const { value, selectionStart, selectionEnd, pattern } = e.target;
+
+    //     const character = String.fromCharCode(e.which);
+    //     const proposedEntry =
+    //         value.slice(0, selectionStart) +
+    //         character +
+    //         value.slice(selectionEnd);
+    //     const match = proposedEntry.match(pattern);
+
+    //     return (
+    //         e.metaKey ||
+    //         e.which <= 0 ||
+    //         e.which == 8 ||
+    //         (match && match['0'] === match.input)
+    //     );
+    // };
+
+    // document.querySelectorAll('input[data-pattern-validate]').forEach((el) =>
+    //     el.addEventListener('keypress', (e) => {
+    //         if (!inputMatchesPattern(e)) {
+    //             return e.preventDefault();
+    //         }
+    //     })
+    // );
+
+    if ($('#yearly-progress-canvas').length > 0) {
+        // Chart JS for Yearly Progress
+        const yearChart = document
             .getElementById('yearly-progress-canvas')
             .getContext('2d');
 
         // Replace these with your actual data for visits and sales each month
-        const labels = [
+        const yearlyLabels = [
             'Jan',
             'Feb',
             'Mar',
@@ -132,8 +236,8 @@ $(document).ready(function () {
             400, 2350, 2200, 2900, 900, 4200, 700, 3600, 2700, 2200, 2900, 2500,
         ];
 
-        const data = {
-            labels: labels,
+        const yearData = {
+            labels: yearlyLabels,
             datasets: [
                 {
                     label: 'Course Visit',
@@ -167,9 +271,9 @@ $(document).ready(function () {
             ],
         };
 
-        const config = {
+        const yearlyConfig = {
             type: 'line',
-            data: data,
+            data: yearData,
             options: {
                 plugins: {
                     title: {
@@ -279,17 +383,193 @@ $(document).ready(function () {
             },
         };
 
-        const myChart = new Chart(ctx, config);
-    })();
+        new Chart(yearChart, yearlyConfig);
+    }
 
+    if ($('#yearly-progress-canvas-2').length > 0) {
+        const yearChart2 = document
+            .getElementById('yearly-progress-canvas-2')
+            .getContext('2d');
 
+        // Replace these with your actual data for visits and sales each month
+        const yearlyLabels2 = [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+        ];
+        const visitData2 = [
+            1800, 4300, 3400, 5600, 3200, 5000, 4300, 2200, 2600, 2900, 3300,
+            4200,
+        ];
+        const salesData2 = [
+            400, 2350, 2200, 2900, 900, 4200, 700, 3600, 2700, 2200, 2900, 2500,
+        ];
 
-    // Doughnut Chart for Course Progress
-    (function () {
-        var ctx = document
+        const yearData2 = {
+            labels: yearlyLabels2,
+            datasets: [
+                {
+                    label: 'Course Visit',
+                    data: visitData2,
+                    backgroundColor: '#9C4DF4',
+                    borderColor: '#9C4DF4',
+                    borderWidth: 1,
+                    strokeColor: '#ACC26D',
+                    pointColor: '#fff',
+                    pointStrokeColor: '#9DB86D',
+                    tension: 0.4,
+                    pointHitRadius: 10,
+                    cubicInterpolationMode: 'monotone',
+                    segment: {
+                        lineJoin: 'round',
+                    },
+                },
+                {
+                    label: 'Course Sale',
+                    data: salesData2,
+                    backgroundColor: '#FF6652',
+                    borderColor: '#FF6652',
+                    borderWidth: 1,
+                    tension: 0.4,
+                    pointHitRadius: 10,
+                    cubicInterpolationMode: 'monotone',
+                    segment: {
+                        lineJoin: 'round',
+                    },
+                },
+            ],
+        };
+
+        const yearlyConfig2 = {
+            type: 'line',
+            data: yearData2,
+            options: {
+                plugins: {
+                    title: {
+                        display: false,
+                        text: 'Yearly Progress',
+                        padding: {
+                            top: 10,
+                            bottom: 30,
+                        },
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                        },
+                        color: '#333',
+                    },
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        align: 'center',
+                        fullWidth: true,
+                        reverse: false,
+
+                        labels: {
+                            color: '#333',
+                            usePointStyle: true,
+                            font: {
+                                size: 12,
+                                weight: 'normal',
+                            },
+                        },
+                    },
+                    elements: {
+                        line: {
+                            borderWidth: 2,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Set the fill color for the area under the line
+                            borderRadius: 10,
+                            fill: true, // Set this to true to fill the area under the line
+                        },
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: '#fff',
+                        titleColor: '#333',
+                        bodyColor: '#333',
+                        titleFont: {
+                            size: 16,
+                            weight: 'bold',
+                        },
+                        bodyFont: {
+                            size: 14,
+                            weight: 'bold',
+                        },
+                    },
+                    responsive: true,
+                },
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10,
+                    },
+                },
+                responsive: true, // Makes the chart responsive to screen size
+                animations: {
+                    radius: {
+                        duration: 400,
+                        easing: 'linear',
+                    },
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                        },
+                        ticks: {
+                            // display: false,
+                            // Include a dollar sign in the ticks
+                            callback: function (value, index, values) {
+                                return '$' + value;
+                            },
+                            color: '#333',
+                            font: {
+                                size: 14,
+                                weight: 'bold',
+                            },
+
+                            gridLines: {
+                                display: false,
+                            },
+                        },
+                        grid: {
+                            display: false, // Set this to false to hide the y-axis grid lines
+                        },
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            // text: 'Month'
+                        },
+                        grid: {
+                            display: false, // Set this to false to hide the y-axis grid lines
+                        },
+                    },
+                },
+            },
+        };
+
+        new Chart(yearChart2, yearlyConfig2);
+    }
+
+    if ($('#course-progress-chart').length > 0) {
+        // Doughnut Chart for Course Progress
+        const cpChart = document
             .getElementById('course-progress-chart')
             .getContext('2d');
-        var courseProgressChart = new Chart(ctx, {
+        const cpConfig = {
             type: 'doughnut',
             data: {
                 labels: ['In Progress', 'Not Completed', 'Completed'],
@@ -322,26 +602,33 @@ $(document).ready(function () {
                     },
                 },
             },
-        });
-    })();
-});
+        };
 
+        new Chart(cpChart, cpConfig);
+    }
 
-$(document).ready(function () {
-    // Chart JS for Yearly Progress
-    (function () {
-        const ctx = document
-            .getElementById('sales-overview-canvas')
+    if ($('#sales-overview-canvas-4').length > 0) {
+        // Chart JS for Yearly Progress
+        const salesOverview = document
+            .getElementById('sales-overview-canvas-4')
             .getContext('2d');
 
         // Replace these with your actual data for visits and sales each month
-        const labels = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+        const salesOverviewlabels = [
+            'Sat',
+            'Sun',
+            'Mon',
+            'Tue',
+            'Wed',
+            'Thu',
+            'Fri',
+        ];
         const newVisitorData = [1800, 4300, 3400, 5600, 3200, 5000, 4300];
         const uniqueVisitorData = [400, 2350, 2200, 2900, 900, 4200, 700];
         const prevVisitorData = [600, 2500, 2800, 1800, 700, 1200, 1900];
 
-        const data = {
-            labels: labels,
+        const salesOverviewData = {
+            labels: salesOverviewlabels,
             datasets: [
                 {
                     label: 'Course Visit',
@@ -388,9 +675,9 @@ $(document).ready(function () {
             ],
         };
 
-        const config = {
+        const salesOverviewConfig = {
             type: 'line',
-            data: data,
+            data: salesOverviewData,
             options: {
                 plugins: {
                     title: {
@@ -490,58 +777,53 @@ $(document).ready(function () {
             },
         };
 
-        const myChart = new Chart(ctx, config);
-    })();
+        new Chart(salesOverview, salesOverviewConfig);
+    }
 
     // Doughnut Chart for Course Progress
     if ($('#course-progress-chart-2').length > 0) {
-            (function () {
-                var ctx = document
-                    .getElementById('course-progress-chart-2')
-                    .getContext('2d');
-                var courseProgressChartTwo = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['In Progress', 'Not Completed', 'Completed'],
-                        datasets: [
-                            {
-                                data: [300, 50, 100],
-                                backgroundColor: [
-                                    '#FF6652',
-                                    '#477AFF',
-                                    '#9C4DF4',
-                                ],
-                                hoverOffset: 4,
-                            },
-                        ],
-                    },
-                    options: {
-                        plugins: {
-                            legend: {
-                                display: true,
-                                position: 'bottom',
-                                align: 'center',
-                                fullWidth: true,
-                                reverse: false,
+        (function () {
+            var ctx = document
+                .getElementById('course-progress-chart-2')
+                .getContext('2d');
+            var courseProgressChartTwo = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['In Progress', 'Not Completed', 'Completed'],
+                    datasets: [
+                        {
+                            data: [300, 50, 100],
+                            backgroundColor: ['#FF6652', '#477AFF', '#9C4DF4'],
+                            hoverOffset: 4,
+                        },
+                    ],
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            align: 'center',
+                            fullWidth: true,
+                            reverse: false,
 
-                                labels: {
-                                    color: '#333',
-                                    usePointStyle: true,
-                                    font: {
-                                        size: 12,
-                                        weight: 'normal',
-                                    },
+                            labels: {
+                                color: '#333',
+                                usePointStyle: true,
+                                font: {
+                                    size: 12,
+                                    weight: 'normal',
                                 },
                             },
                         },
                     },
-                });
-            })();
+                },
+            });
+        })();
     }
 
-
     // Storage Details Chart
-    if($('#storage-chart').length > 0) {
+    if ($('#storage-chart').length > 0) {
         (function () {
             var ctx = document.getElementById('storage-chart').getContext('2d');
             var storageDetails = new Chart(ctx, {
@@ -579,10 +861,7 @@ $(document).ready(function () {
             });
         })();
     }
-});
 
-$(document).ready(function () {
-    // Storage Details Chart
     if ($('#storage-chart').length > 0) {
         (function () {
             var ctx = document.getElementById('storage-chart').getContext('2d');
@@ -593,7 +872,7 @@ $(document).ready(function () {
                     datasets: [
                         {
                             data: [54, 74],
-                            backgroundColor: [ '#9C4DF4','#FF6652'],
+                            backgroundColor: ['#9C4DF4', '#FF6652'],
                             hoverOffset: 4,
                         },
                     ],
@@ -621,11 +900,8 @@ $(document).ready(function () {
             });
         })();
     }
-});
 
-
-$(document).ready(function () {
-    (function () {
+    if ($('#yearly-progress-status-canvas').length > 0) {
         const ctx = document
             .getElementById('yearly-progress-status-canvas')
             .getContext('2d');
@@ -792,12 +1068,8 @@ $(document).ready(function () {
         };
 
         const myChart = new Chart(ctx, config);
-    })();
-});
+    }
 
-
-
-$(document).ready(function () {
     // Tiny MCE for additional info
     tinymce.init({
         selector: '#additional-info',
@@ -817,7 +1089,6 @@ $(document).ready(function () {
             ),
     });
 
-
     // Tiny MCE for Meta Description
     tinymce.init({
         selector: '#add-blog-meta-desc',
@@ -836,146 +1107,17 @@ $(document).ready(function () {
                 Promise.reject('See docs to implement AI Assistant')
             ),
     });
-});
 
-
-Dropzone.autoDiscover = false;
-$(document).ready(function () {
-    const mainCourse = new Dropzone('#main-course-drop', {
-        url: '#',
-        maxFiles: 1,
-        acceptedFiles: 'image/*',
-        init: function () {
-            this.on('addedfile', function (file) {
-                // Remove existing preview image and text
-                $('#preview-image').remove();
-                $('#text-overlay').remove();
-            });
-        },
-    });
-
-    const introductionDropzone = new Dropzone('#introduction-drop', {
-        url: '#',
-        maxFiles: 1,
-        acceptedFiles: 'image/*',
-        init: function () {
-            this.on('addedfile', function (file) {
-                // Remove existing preview image and text
-                $('#preview-image').remove();
-                $('#text-overlay').remove();
-            });
-        },
-    });
-
-
-    const thumbnilDropzone = new Dropzone('#thumbnil-drop', {
-        url: '#',
-        maxFiles: 1,
-        acceptedFiles: 'image/*',
-        init: function () {
-            this.on('addedfile', function (file) {
-                // Remove existing preview image and text
-                $('#preview-image').remove();
-                $('#text-overlay').remove();
-            });
-        },
-    });
-});
-
-$(document).ready(function () {
-    $('#schedule-main').change(function () {
+    $(document).on('change', '#schedule-main', function () {
         if ($(this).is(':checked')) {
             $('.schedule-wrapper').addClass('schedule-active');
         } else {
             $('.schedule-wrapper').removeClass('schedule-active');
         }
     });
-
-    const previewDropzone = new Dropzone('#perview-img-drop', {
-        url: '#',
-        maxFiles: 1,
-        acceptedFiles: 'image/*',
-        init: function () {
-            this.on('addedfile', function (file) {
-                // Remove existing preview image and text
-                $('#preview-image').remove();
-                $('#text-overlay').remove();
-            });
-        },
-    });
 });
 
-$(document).ready(function () {
-        const monthInput = document.querySelector('#month');
-        const yearInput = document.querySelector('#year');
-
-        const focusSibling = function (target, direction, callback) {
-            const nextTarget = target[direction];
-            nextTarget && nextTarget.focus();
-
-            callback && callback(nextTarget);
-        };
-
-        monthInput.addEventListener('input', (event) => {
-            const value = event.target.value.toString();
-
-            if (value.length === 1 && value > 1) {
-                event.target.value = '0' + value;
-            }
-            // bounds
-            if (value === '00') {
-                event.target.value = '01';
-            } else if (value > 12) {
-                event.target.value = '12';
-            }
-
-            2 <= event.target.value.length &&
-                focusSibling(event.target, 'nextElementSibling');
-            event.stopImmediatePropagation();
-        });
-
-        yearInput.addEventListener('keydown', (event) => {
-            if (
-                event.key === 'Backspace' &&
-                event.target.selectionStart === 0
-            ) {
-                focusSibling(event.target, 'previousElementSibling');
-                event.stopImmediatePropagation();
-            }
-        });
-
-        const inputMatchesPattern = function (e) {
-            const { value, selectionStart, selectionEnd, pattern } = e.target;
-
-            const character = String.fromCharCode(e.which);
-            const proposedEntry =
-                value.slice(0, selectionStart) +
-                character +
-                value.slice(selectionEnd);
-            const match = proposedEntry.match(pattern);
-
-            return (
-                e.metaKey ||
-                e.which <= 0 ||
-                e.which == 8 ||
-                (match && match['0'] === match.input)
-            );
-        };
-
-        document
-            .querySelectorAll('input[data-pattern-validate]')
-            .forEach((el) =>
-                el.addEventListener('keypress', (e) => {
-                    if (!inputMatchesPattern(e)) {
-                        return e.preventDefault();
-                    }
-                })
-            );
-
-
-            // Earning Chart
-});
-
+Dropzone.autoDiscover = false;
 
 google.charts.load('current', { packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawVisualization);
@@ -1021,123 +1163,159 @@ function drawVisualization() {
     chart.draw(data, options);
 }
 
-    // Student Chart
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawCharts);
+// Student Chart
+google.charts.load('current', { packages: ['corechart'] });
+google.charts.setOnLoadCallback(drawCharts);
 
-        function drawCharts() {
-            drawTotalStudentChart();
-            drawNewStudentChart();
-            drawStudentActivityChart();
-        }
+function drawCharts() {
+    drawTotalStudentChart();
+    drawNewStudentChart();
+    drawStudentActivityChart();
+}
 
-        function drawTotalStudentChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Date');
-            data.addColumn('number', 'Students');
+function drawTotalStudentChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Date');
+    data.addColumn('number', 'Students');
 
-            let startDate = new Date(2024, 0, 1);
+    let startDate = new Date(2024, 0, 1);
 
-            for (let i = 0; i < 30; i++) {
-                let currentDate = new Date(startDate);
-                currentDate.setDate(startDate.getDate() + i);
-                let dateString = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
+    for (let i = 0; i < 30; i++) {
+        let currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + i);
+        let dateString = `${currentDate.getFullYear()}-${
+            currentDate.getMonth() + 1
+        }-${currentDate.getDate()}`;
 
-                data.addRow([dateString, Math.floor(6500 + Math.random() * (7000 - 6500))]);
-            }
+        data.addRow([
+            dateString,
+            Math.floor(6500 + Math.random() * (7000 - 6500)),
+        ]);
+    }
 
-            var options = {
-                curveType: 'function',
-                legend: { position: 'none' },
-                hAxis: {
-                    textPosition: 'none',
-                    gridlines: { count: -1, color: 'transparent' }
-                },
-                vAxis: {
-                    textPosition: 'none',
-                    // gridlines: { count: -1, color: 'transparent' }
-                },
-                colors: ['#A65FF5'],
-                areaOpacity: 0.2,
-                chartArea: { width: '100%', height: '80%', padding: '24' }
-            };
+    var options = {
+        curveType: 'function',
+        legend: { position: 'none' },
+        hAxis: {
+            textPosition: 'none',
+            gridlines: { count: -1, color: 'transparent' },
+        },
+        vAxis: {
+            textPosition: 'none',
+            // gridlines: { count: -1, color: 'transparent' }
+        },
+        colors: ['#A65FF5'],
+        areaOpacity: 0.2,
+        chartArea: { width: '100%', height: '80%', padding: '24' },
+    };
 
-            var totalStudent = new google.visualization.LineChart(document.getElementById('total-student-chart'));
-            totalStudent.draw(data, options);
-        }
+    var totalStudent = new google.visualization.LineChart(
+        document.getElementById('total-student-chart')
+    );
+    totalStudent.draw(data, options);
+}
 
-        function drawNewStudentChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Date');
-            data.addColumn('number', 'Students');
+function drawNewStudentChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Date');
+    data.addColumn('number', 'Students');
 
-            let startDate = new Date(2024, 0, 1);
+    let startDate = new Date(2024, 0, 1);
 
-            for (let i = 0; i < 30; i++) {
-                let currentDate = new Date(startDate);
-                currentDate.setDate(startDate.getDate() + i);
-                let dateString = `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
+    for (let i = 0; i < 30; i++) {
+        let currentDate = new Date(startDate);
+        currentDate.setDate(startDate.getDate() + i);
+        let dateString = `${currentDate.getFullYear()}-${
+            currentDate.getMonth() + 1
+        }-${currentDate.getDate()}`;
 
-                data.addRow([dateString, Math.floor(6500 + Math.random() * (7000 - 6500))]);
-            }
+        data.addRow([
+            dateString,
+            Math.floor(6500 + Math.random() * (7000 - 6500)),
+        ]);
+    }
 
-            var options = {
-                curveType: 'function',
-                legend: { position: 'none' },
-                hAxis: {
-                    textPosition: 'none',
-                    gridlines: { count: -1, color: 'transparent' }
-                },
-                vAxis: {
-                    textPosition: 'none',
-                    // gridlines: { count: -1, color: 'transparent' }
-                },
-                colors: ['#FF6652'],
-                areaOpacity: 0.2,
-                chartArea: { width: '100%', height: '80%', padding: '24' }
-            };
+    var options = {
+        curveType: 'function',
+        legend: { position: 'none' },
+        hAxis: {
+            textPosition: 'none',
+            gridlines: { count: -1, color: 'transparent' },
+        },
+        vAxis: {
+            textPosition: 'none',
+            // gridlines: { count: -1, color: 'transparent' }
+        },
+        colors: ['#FF6652'],
+        areaOpacity: 0.2,
+        chartArea: { width: '100%', height: '80%', padding: '24' },
+    };
 
-            var newStudent = new google.visualization.LineChart(document.getElementById('new-student-chart'));
-            newStudent.draw(data, options);
-        }
+    var newStudent = new google.visualization.LineChart(
+        document.getElementById('new-student-chart')
+    );
+    newStudent.draw(data, options);
+}
 
-        function drawStudentActivityChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Month', 'This Month', 'Last Month'],
-                ['Jan', 1000, 400],
-                ['Feb', 1170, 460],
-                ['Mar', 660, 1120],
-                ['Apr', 1030, 540],
-                ['May', 1000, 400],
-                ['Jun', 1170, 460],
-                ['Jul', 660, 1120],
-                ['Aug', 1030, 540],
-                ['Sep', 1000, 400],
-                ['Oct', 1170, 460],
-                ['Nov', 660, 1120],
-                ['Dec', 1030, 540]
-            ]);
+function drawStudentActivityChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Month', 'This Month', 'Last Month'],
+        ['Jan', 1000, 400],
+        ['Feb', 1170, 460],
+        ['Mar', 660, 1120],
+        ['Apr', 1030, 540],
+        ['May', 1000, 400],
+        ['Jun', 1170, 460],
+        ['Jul', 660, 1120],
+        ['Aug', 1030, 540],
+        ['Sep', 1000, 400],
+        ['Oct', 1170, 460],
+        ['Nov', 660, 1120],
+        ['Dec', 1030, 540],
+    ]);
 
-            var options = {
-                curveType: 'function',
-                legend: {
-                    textStyle: { color: '#6C688A', fontSize: 16 },
-                    position: 'top',
-                    alignment: 'center',
-                },
-                hAxis: {
-                    textPosition: 'none',
-                    gridlines: { count: -1, color: 'transparent' }
-                },
-                vAxis: {
-                    textPosition: 'none',
-                    // gridlines: { count: -1, color: 'transparent' }
-                },
-                colors: ['#7f56d9', '#FF6652'],
-                areaOpacity: 0.2,
-                chartArea: { width: '100%', height: '80%', padding: '24' }
-            };
+    var options = {
+        curveType: 'function',
+        legend: {
+            textStyle: { color: '#6C688A', fontSize: 16 },
+            position: 'top',
+            alignment: 'center',
+        },
+        hAxis: {
+            textPosition: 'none',
+            gridlines: { count: -1, color: 'transparent' },
+        },
+        vAxis: {
+            textPosition: 'none',
+            // gridlines: { count: -1, color: 'transparent' }
+        },
+        colors: ['#7f56d9', '#FF6652'],
+        areaOpacity: 0.2,
+        chartArea: { width: '100%', height: '80%', padding: '24' },
+    };
 
-            var studentActivityChart = new google.visualization.LineChart(document.getElementById('student-activity-chart'));
-            studentActivityChart.draw(data, options);
-        }
+    var studentActivityChart = new google.visualization.LineChart(
+        document.getElementById('student-activity-chart')
+    );
+    studentActivityChart.draw(data, options);
+}
+
+
+
+$(document).ready(function () {
+    const new = new Dropzone($'#main-course-drop', {
+        url: '#',
+        maxFiles: 1,
+        acceptedFiles: 'image/*',
+        init: function () {
+            this.on('addedfile', function (file) {
+                // Remove existing preview image and text
+                $('#preview-image').remove();
+                $('#text-overlay').remove();
+            });
+        },
+    });
+});
+
+
+Dropzone.autoDiscover = false;

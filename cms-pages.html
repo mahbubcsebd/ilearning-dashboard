@@ -111,10 +111,6 @@
                                                 class="sub-circle"></span>Event</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
-                                                class="sub-circle"></span>Registration List</a>
-                                    </li>
-                                    <li class="sidebar-sub-item">
                                         <a href="cms-testimonial.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Testimonial</a>
                                     </li>
@@ -411,9 +407,9 @@
                                         <div class="header-right-menu">
                                             <ul class="header-right-btn-box">
                                                 <li>
-                                                    <button class="hrb-btn">
+                                                    <a href="profile.html" class="hrb-btn">
                                                         <img src="assets/images/icons/setting.svg" alt="setting">
-                                                    </button>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <div class="header-profile">
@@ -644,9 +640,8 @@
                                     <h4>Pages</h4>
                                 </div>
                                 <div class="dashboard-content-action">
-                                    <button type="button" class="btn btn-orange">Delete</button>
-                                    <button type="button" class="btn btn-purple"><span><i
-                                                class="fa-solid fa-plus"></i></span>Add
+                                    <button data-bs-toggle="modal" data-bs-target="#addPageModal" type="button"
+                                        class="btn btn-purple"><span><i class="fa-solid fa-plus"></i></span>Add
                                         Pages</button>
                                 </div>
                             </div>
@@ -689,9 +684,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -718,9 +716,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -747,9 +748,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -776,9 +780,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -805,9 +812,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -834,9 +844,12 @@
                                                     </td>
                                                     <td>
                                                         <div class="user-data-table-action">
-                                                            <button class=""><i class="fa-regular fa-pen-to-square"></i>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#addPageModal" class=""><i
+                                                                    class="fa-regular fa-pen-to-square"></i>
                                                             </button>
-                                                            <button class=""><i class="fa-solid fa-trash"></i>
+                                                            <button data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                                                class=""><i class="fa-solid fa-trash"></i>
                                                             </button>
                                                         </div>
                                                     </td>
@@ -854,6 +867,103 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Add Page Modal Start -->
+    <div class="modal fade dashboard-modal" id="addPageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="bc-instructor-header">
+                        <div class="bcih-content">
+                            <h2>Add Page</h2>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <form id="add-page-form" class=" dashboard-form">
+                        <div class="row">
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="add-page-name">Title</label>
+                                    <input type="text" class="form-control" id="add-page-name"
+                                        placeholder="Type here...">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select class="form-select">
+                                        <option value="published" selected>Published</option>
+                                        <option value="unpublished">Unpublished</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label>Page Visibility</label>
+                                    <select class="form-select">
+                                        <option value="public" selected>Public</option>
+                                        <option value="private">Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="add-page-publish">Published</label>
+                                    <input type="date" class="form-control" id="add-page-publish">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-4">
+                                <div class="form-group">
+                                    <label for="add-page-updated">Updated</label>
+                                    <input type="date" class="form-control" id="add-page-updated">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Discard</button>
+                            <button type="submit" data-bs-dismiss="modal" aria-label="Close" class="btn btn-purple">Add
+                                Page</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Page Modal End -->
+
+
+
+
+    <!-- Delete User Modal Start -->
+    <div class="modal fade dashboard-modal" id="deleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-body delete-user-body">
+                    <div class="delete-user-confirmation-box">
+                        <div class="duc-icon">
+                            <img src="assets/images/icons/delete-info.svg" alt="info">
+                        </div>
+                        <h2 class="duc-title">Are you sure?</h2>
+                        <h2 class="duc-text">You won't be able to revert this!</h2>
+                        <div class="duc-btn-box">
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-orange">Delete</button>
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                                class="btn btn-gray">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete User Modal End -->
 
 
 
@@ -890,6 +1000,8 @@
     <script src="assets/js/tinymce.min.js"></script>
     <!-- File Upload With Preview -->
     <script src="assets/js/file-upload-with-preview.min.js"></script>
+    <!-- Select 2 -->
+    <script src="assets/js/select2.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>

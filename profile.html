@@ -110,10 +110,6 @@
                                                 class="sub-circle"></span>Event</a>
                                     </li>
                                     <li class="sidebar-sub-item">
-                                        <a href="cms-register-list.html" class="sidebar-sub-link"><span
-                                                class="sub-circle"></span>Registration List</a>
-                                    </li>
-                                    <li class="sidebar-sub-item">
                                         <a href="cms-testimonial.html" class="sidebar-sub-link"><span
                                                 class="sub-circle"></span>Testimonial</a>
                                     </li>
@@ -410,9 +406,9 @@
                                         <div class="header-right-menu">
                                             <ul class="header-right-btn-box">
                                                 <li>
-                                                    <button class="hrb-btn">
+                                                    <a href="profile.html" class="hrb-btn">
                                                         <img src="assets/images/icons/setting.svg" alt="setting">
-                                                    </button>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <div class="header-profile">
@@ -624,7 +620,7 @@
                                     <li class="nav-item">
                                         <button class="nav-link" id="payent-method" data-bs-toggle="tab"
                                             data-bs-target="#payent-method-pane" type="button"
-                                            aria-controls="payent-method-pane">Payment Method</button>
+                                            aria-controls="payent-method-pane">Payment Info</button>
                                     </li>
                                     <li class="nav-item">
                                         <button class="nav-link" id="conn-account" data-bs-toggle="tab"
@@ -642,10 +638,11 @@
                                             aria-controls="deactivate-pane">Deactivate Account</button>
                                     </li>
                                 </ul>
-                                <div class="divider"></div>
+
                                 <div class="tab-content" id="productTabContent">
                                     <div class="tab-pane fade show active" id="profile-pane" aria-labelledby="profile"
                                         tabindex="0">
+                                        <div class="divider"></div>
                                         <!-- Profile Box Start -->
                                         <div class="profile-setting-box">
                                             <div class="profile-setting-profile">
@@ -787,7 +784,7 @@
                                                         <h3 class="sbi-title">Country</h3>
                                                         <div class="row sbi-input-box">
                                                             <div class="col-md-12">
-                                                                <select class="form-control" id="countries">
+                                                                <select class="form-control w-100" id="countries-3">
                                                                     <option value="AF" data-capital="Kabul">Afghanistan
                                                                     </option>
                                                                     <option value="AX" data-capital="Mariehamn">Aland
@@ -1344,9 +1341,6 @@
                                                                             Manchester,
                                                                             Kentucky 39495</p>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                                 <div class="single-billing">
                                                                     <div class="single-billing-left">
@@ -1355,9 +1349,6 @@
                                                                             Inglewood,
                                                                             Maine 98380</p>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                                 <div class="single-billing">
                                                                     <div class="single-billing-left">
@@ -1365,12 +1356,11 @@
                                                                         <p class="billing-text">3891 Ranchview Dr.
                                                                             Richardson, California 62639</p>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="pt-4"><button type="button"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#addBillingModal"
                                                                     class="btn btn-purple">Add New
                                                                     Address</button>
                                                             </div>
@@ -1403,9 +1393,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                                 <div class="single-billing">
                                                                     <div class="single-billing-left">
@@ -1424,9 +1411,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                                 <div class="single-billing">
                                                                     <div class="single-billing-left">
@@ -1443,144 +1427,13 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="single-billing-right">
-                                                                        <a href="#" class="btn-edit-orange">Edit</a>
-                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="pt-4"><button type="button"
-                                                                    class="btn btn-purple">Add New
+                                                            <div data-bs-toggle="modal"
+                                                                data-bs-target="#addPaymentModal" class="pt-4"><button
+                                                                    type="button" class="btn btn-purple">Add New
                                                                     Address</button>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6 mb-4">
-                                                        <div class="billing-section section-border">
-                                                            <div class="billing-top">
-                                                                <h2 class="billing-top-title">Add Billing Address</h2>
-                                                                <p class="billing-top-info">Changes your new Billing
-                                                                    Information.</p>
-                                                            </div>
-                                                            <form id="billing-form" class="billing-wrapper">
-                                                                <div class="row">
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">Name</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="billing-name"
-                                                                                placeholder="Enter name">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">Email</label>
-                                                                            <input type="email" class="form-control"
-                                                                                id="billing-email"
-                                                                                placeholder="Enter email">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-12 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">Address</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="billing-address"
-                                                                                placeholder="Enter address">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-12 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">City</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="billing-city"
-                                                                                placeholder="Enter city">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">State</label>
-                                                                            <select class="form-select"
-                                                                                aria-label="Default select example">
-                                                                                <option selected>State</option>
-                                                                                <option value="1">State 1</option>
-                                                                                <option value="2">State 2</option>
-                                                                                <option value="3">State 3</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="billing-name">Zip</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="billing-zip"
-                                                                                placeholder="Enter zip">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pt-4"><button type="submit"
-                                                                        class="btn btn-purple">Add
-                                                                        Address</button>
-                                                                </div>
-                                                            </form>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6 mb-4">
-                                                        <div class="billing-section section-border">
-                                                            <div class="billing-top">
-                                                                <h2 class="billing-top-title">Add Payment Method</h2>
-                                                                <p class="billing-top-info">Change your new payment
-                                                                    method
-                                                                    information</p>
-                                                            </div>
-                                                            <form id="payment-form" class="billing-wrapper">
-                                                                <div class="row">
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label>Card
-                                                                                Brand</label>
-                                                                            <select class="form-select"
-                                                                                aria-label="Mastercard">
-                                                                                <option value="Mastercard" selected>
-                                                                                    Mastercard</option>
-                                                                                <option value="amex">American Express
-                                                                                </option>
-                                                                                <option value="visa">Visa</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="payment-card-number">Card
-                                                                                Number</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="payment-card-number"
-                                                                                placeholder="Type here...">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="payment-card-holder-name">Card
-                                                                                Holder Name</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="payment-card-holder-name"
-                                                                                placeholder="Enter name">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-4">
-                                                                        <div class="form-group">
-                                                                            <label for="payment-card-cvv">CVV</label>
-                                                                            <input type="text" class="form-control"
-                                                                                id="payment-card-cvv"
-                                                                                placeholder="0000">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pt-4"><button type="submit"
-                                                                        class="btn btn-purple">Add
-                                                                        Payment</button>
-                                                                </div>
-                                                            </form>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1905,6 +1758,154 @@
         </div>
     </div>
 
+
+
+    <!-- Add Address Modal Start -->
+    <div class="modal fade dashboard-modal" id="addBillingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="billing-section">
+                        <div class="billing-top">
+                            <h2 class="billing-top-title">Add Billing Address</h2>
+                            <p class="billing-top-info">Changes your new Billing
+                                Information.</p>
+                        </div>
+                        <form id="billing-form" class="billing-wrapper">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">Name</label>
+                                        <input type="text" class="form-control" id="billing-name"
+                                            placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">Email</label>
+                                        <input type="email" class="form-control" id="billing-email"
+                                            placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">Address</label>
+                                        <input type="text" class="form-control" id="billing-address"
+                                            placeholder="Enter address">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">City</label>
+                                        <input type="text" class="form-control" id="billing-city"
+                                            placeholder="Enter city">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">State</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>State</option>
+                                            <option value="1">State 1</option>
+                                            <option value="2">State 2</option>
+                                            <option value="3">State 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="billing-name">Zip</label>
+                                        <input type="text" class="form-control" id="billing-zip"
+                                            placeholder="Enter zip">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <button type="submit" class="btn btn-purple">Add
+                                    Address</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Address Modal End -->
+
+
+
+    <!-- Add Address Modal Start -->
+    <div class="modal fade dashboard-modal" id="addPaymentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="billing-section">
+                        <div class="billing-top">
+                            <h2 class="billing-top-title">Add Payment Method</h2>
+                            <p class="billing-top-info">Change your new payment
+                                method
+                                information</p>
+                        </div>
+                        <form id="payment-form" class="billing-wrapper">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label>Card
+                                            Brand</label>
+                                        <select class="form-select" aria-label="Mastercard">
+                                            <option value="Mastercard" selected>
+                                                Mastercard</option>
+                                            <option value="amex">American Express
+                                            </option>
+                                            <option value="visa">Visa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-number">Card
+                                            Number</label>
+                                        <input type="text" class="form-control" id="payment-card-number"
+                                            placeholder="Type here...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-holder-name">Card
+                                            Holder Name</label>
+                                        <input type="text" class="form-control" id="payment-card-holder-name"
+                                            placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-cvv">CVV</label>
+                                        <input type="text" class="form-control" id="payment-card-cvv"
+                                            placeholder="0000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
+                                    Payment</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Address Modal End -->
+
+
+
     <!-- jQuery -->
     <script src="assets/js/jquery-3.6.4.min.js"></script>
     <!-- Waypoint -->
@@ -1938,6 +1939,8 @@
     <script src="assets/js/tinymce.min.js"></script>
     <!-- File Upload With Preview -->
     <script src="assets/js/file-upload-with-preview.min.js"></script>
+    <!-- Select 2 -->
+    <script src="assets/js/select2.min.js"></script>
     <!-- Main Script -->
     <script src="assets/js/main.js"></script>
 </body>
