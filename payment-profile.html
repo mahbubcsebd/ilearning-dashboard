@@ -613,7 +613,8 @@
                                                 alt="curve arrow"> 3.5%
                                             Increase In This month</p>
 
-                                        <button class="btn btn-purple">Withdraw Balance</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#confirmPayment" type="button"
+                                            class="btn btn-purple">Withdraw Balance</button>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
@@ -661,7 +662,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <button class="btn btn-purple">Add Payment Method</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#addPaymentModal" type="button"
+                                            class="btn btn-purple">Add Payment Method</button>
                                     </div>
                                 </div>
                             </div>
@@ -897,6 +899,132 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Confirm Payment Modal Start -->
+    <div class="modal fade dashboard-modal" id="confirmPayment" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body add-question-body">
+                    <h3 class="add-question-title">Confirm Payment</h3>
+                    <form class="confirm-payment-form">
+                        <div class="mb-4">
+                            <label class="form-label">Select Payment</label>
+                            <select class="form-select" aria-label="USD">
+                                <option selected value="USD">USD</option>
+                                <option value="EURO">EURO</option>
+                                <option value="TAKA">TAKA</option>
+                            </select>
+                        </div>
+                        <div class="pay-box pay-box-modal">
+                            <div class="pay-left">
+                                <div>
+                                    <img src="assets/images/icons/visa-pay.svg" alt="visa">
+                                </div>
+                                <div class="pay-left-content">
+                                    <h3 class="visa-ending">Visa ending in 1234</h3>
+                                    <p class="visa-date">Expiry 06/2024</p>
+                                    <div class="visa-btn-box">
+                                        <button class="visa-btn">Set as Default</button>
+                                        <button class="visa-btn">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="assets/images/icons/circle-tick.svg" alt="circle-tick" class="circle-tick">
+                        </div>
+                        <div class="add-payment-new mb-4">
+                            <button class="add-new-payment-btn"><span><i class="fa-solid fa-plus"></i></span> Add
+                                new payment method</button>
+                        </div>
+                        <div class="mb-4">
+                            <label for="amount-withdraw" class="form-label">Amount to Withdraw</label>
+                            <input type="email" class="form-control" id="amount-withdraw" placeholder="0.00">
+                        </div>
+                        <div class="">
+                            <label for="amount-transaction" class="form-label">Description <span
+                                    class="optional">(optional)</span></label>
+                            <textarea id="amount-transaction" rows="4" class="form-control"
+                                placeholder="This description will appear in Transactions"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-purple mt-5">Add Questions</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Confirm Payment Modal End -->
+
+
+
+    <!-- Add Payment Method Modal Start -->
+    <div class="modal fade dashboard-modal" id="addPaymentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="billing-section">
+                        <div class="billing-top">
+                            <h2 class="billing-top-title">Add Payment Method</h2>
+                            <p class="billing-top-info">Change your new payment
+                                method
+                                information</p>
+                        </div>
+                        <form id="payment-form" class="billing-wrapper">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label>Card
+                                            Brand</label>
+                                        <select class="form-select" aria-label="Mastercard">
+                                            <option value="Mastercard" selected>
+                                                Mastercard</option>
+                                            <option value="amex">American Express
+                                            </option>
+                                            <option value="visa">Visa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-number">Card
+                                            Number</label>
+                                        <input type="text" class="form-control" id="payment-card-number"
+                                            placeholder="Type here...">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-holder-name">Card
+                                            Holder Name</label>
+                                        <input type="text" class="form-control" id="payment-card-holder-name"
+                                            placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="payment-card-cvv">CVV</label>
+                                        <input type="text" class="form-control" id="payment-card-cvv"
+                                            placeholder="0000">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pt-4"><button type="submit" class="btn btn-purple">Add
+                                    Payment</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Payment Method Modal End -->
 
 
 
