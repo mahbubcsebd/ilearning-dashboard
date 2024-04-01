@@ -1,4 +1,12 @@
-Dropzone.autoDiscover = false;
+if (
+    $('#main-course-drop').length > 0 ||
+    $('#introduction-drop').length > 0 ||
+    $('#thumbnil-drop').length > 0 ||
+    $('#perview-img-drop').length > 0
+) {
+    Dropzone.autoDiscover = false;
+}
+
 $(document).ready(function () {
     // -----------------------------------------------------------
     // Sidebar toggle behavior
@@ -797,183 +805,336 @@ $(document).ready(function () {
     // -----------------------------------------------------------
 
     google.charts.load('current', { packages: ['corechart'] });
-google.charts.setOnLoadCallback(drawVisualization);
+    google.charts.setOnLoadCallback(drawVisualization);
 
-function drawVisualization() {
-    // Some raw data (not necessarily accurate)
-    var data = google.visualization.arrayToDataTable([
-        ['Date', 'Course Earning', 'Book Earning'],
-        ['Mar 10', 4000, 9500],
-        ['Mar 11', 7800, 6800],
-        ['Mar 12', 8000, 6000],
-        ['Mar 13', 9000, 7000],
-        ['Mar 14', 10000, 8000],
-        ['Mar 15', 11000, 9000],
-        ['Mar 16', 12000, 10000],
-        ['Mar 17', 13000, 11000],
-        ['Mar 18', 14000, 12000],
-        ['Mar 19', 14500, 13000],
-        ['Mar 20', 13000, 14000],
-    ]);
+    function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        const data = google.visualization.arrayToDataTable([
+            ['Date', 'Course Earning', 'Book Earning'],
+            ['Mar 10', 4000, 9500],
+            ['Mar 11', 7800, 6800],
+            ['Mar 12', 8000, 6000],
+            ['Mar 13', 9000, 7000],
+            ['Mar 14', 10000, 8000],
+            ['Mar 15', 11000, 9000],
+            ['Mar 16', 12000, 10000],
+            ['Mar 17', 13000, 11000],
+            ['Mar 18', 14000, 12000],
+            ['Mar 19', 14500, 13000],
+            ['Mar 20', 13000, 14000],
+        ]);
 
-    var options = {
-        title: null,
-        legend: { position: 'top', alignment: 'center', maxLines: 3 },
-        vAxis: {
+        const options = {
             title: null,
-            ticks: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000],
-        },
-        hAxis: { title: null },
-        seriesType: 'bars',
-        series: {
-            0: { type: 'bars', color: '#9C4DF4' },
-            1: { type: 'bars', color: '#FF6652' },
-        },
-        bar: {
-            groupWidth: 20,
-        },
-    };
+            legend: { position: 'top', alignment: 'center', maxLines: 3 },
+            vAxis: {
+                title: null,
+                ticks: [2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000],
+            },
+            hAxis: { title: null },
+            seriesType: 'bars',
+            series: {
+                0: { type: 'bars', color: '#9C4DF4' },
+                1: { type: 'bars', color: '#FF6652' },
+            },
+            bar: {
+                groupWidth: 20,
+            },
+        };
 
-    var chart = new google.visualization.ComboChart(
-        document.getElementById('earning-analytics-chart')
-    );
-    chart.draw(data, options);
-}
-
-// Student Chart
-google.charts.load('current', { packages: ['corechart'] });
-google.charts.setOnLoadCallback(drawCharts);
-
-function drawCharts() {
-    drawTotalStudentChart();
-    drawNewStudentChart();
-    drawStudentActivityChart();
-}
-
-function drawTotalStudentChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Date');
-    data.addColumn('number', 'Students');
-
-    let startDate = new Date(2024, 0, 1);
-
-    for (let i = 0; i < 30; i++) {
-        let currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + i);
-        let dateString = `${currentDate.getFullYear()}-${
-            currentDate.getMonth() + 1
-        }-${currentDate.getDate()}`;
-
-        data.addRow([
-            dateString,
-            Math.floor(6500 + Math.random() * (7000 - 6500)),
-        ]);
+        const chart = new google.visualization.ComboChart(
+            document.getElementById('earning-analytics-chart')
+        );
+        chart.draw(data, options);
     }
 
-    var options = {
-        curveType: 'function',
-        legend: { position: 'none' },
-        hAxis: {
-            textPosition: 'none',
-            gridlines: { count: -1, color: 'transparent' },
-        },
-        vAxis: {
-            textPosition: 'none',
-            // gridlines: { count: -1, color: 'transparent' }
-        },
-        colors: ['#A65FF5'],
-        areaOpacity: 0.2,
-        chartArea: { width: '100%', height: '80%', padding: '24' },
-    };
+    // Student Chart
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawCharts);
 
-    var totalStudent = new google.visualization.LineChart(
-        document.getElementById('total-student-chart')
-    );
-    totalStudent.draw(data, options);
-}
-
-function drawNewStudentChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Date');
-    data.addColumn('number', 'Students');
-
-    let startDate = new Date(2024, 0, 1);
-
-    for (let i = 0; i < 30; i++) {
-        let currentDate = new Date(startDate);
-        currentDate.setDate(startDate.getDate() + i);
-        let dateString = `${currentDate.getFullYear()}-${
-            currentDate.getMonth() + 1
-        }-${currentDate.getDate()}`;
-
-        data.addRow([
-            dateString,
-            Math.floor(6500 + Math.random() * (7000 - 6500)),
-        ]);
+    function drawCharts() {
+        drawTotalStudentChart();
+        drawNewStudentChart();
+        drawStudentActivityChart();
     }
 
-    var options = {
-        curveType: 'function',
-        legend: { position: 'none' },
-        hAxis: {
-            textPosition: 'none',
-            gridlines: { count: -1, color: 'transparent' },
-        },
-        vAxis: {
-            textPosition: 'none',
-            // gridlines: { count: -1, color: 'transparent' }
-        },
-        colors: ['#FF6652'],
-        areaOpacity: 0.2,
-        chartArea: { width: '100%', height: '80%', padding: '24' },
-    };
+    function drawTotalStudentChart() {
+        const data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Students');
 
-    var newStudent = new google.visualization.LineChart(
-        document.getElementById('new-student-chart')
-    );
-    newStudent.draw(data, options);
-}
+        let startDate = new Date(2024, 0, 1);
 
-function drawStudentActivityChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Month', 'This Month', 'Last Month'],
-        ['Jan', 1000, 400],
-        ['Feb', 1170, 460],
-        ['Mar', 660, 1120],
-        ['Apr', 1030, 540],
-        ['May', 1000, 400],
-        ['Jun', 1170, 460],
-        ['Jul', 660, 1120],
-        ['Aug', 1030, 540],
-        ['Sep', 1000, 400],
-        ['Oct', 1170, 460],
-        ['Nov', 660, 1120],
-        ['Dec', 1030, 540],
-    ]);
+        for (let i = 0; i < 30; i++) {
+            let currentDate = new Date(startDate);
+            currentDate.setDate(startDate.getDate() + i);
+            let dateString = `${currentDate.getFullYear()}-${
+                currentDate.getMonth() + 1
+            }-${currentDate.getDate()}`;
 
-    var options = {
-        curveType: 'function',
-        legend: {
-            textStyle: { color: '#6C688A', fontSize: 16 },
-            position: 'top',
-            alignment: 'center',
-        },
-        hAxis: {
-            textPosition: 'none',
-            gridlines: { count: -1, color: 'transparent' },
-        },
-        vAxis: {
-            textPosition: 'none',
-            // gridlines: { count: -1, color: 'transparent' }
-        },
-        colors: ['#7f56d9', '#FF6652'],
-        areaOpacity: 0.2,
-        chartArea: { width: '100%', height: '80%', padding: '24' },
-    };
+            data.addRow([
+                dateString,
+                Math.floor(6500 + Math.random() * (7000 - 6500)),
+            ]);
+        }
 
-    var studentActivityChart = new google.visualization.LineChart(
-        document.getElementById('student-activity-chart')
-    );
-    studentActivityChart.draw(data, options);
-}
+        const options = {
+            curveType: 'function',
+            legend: { position: 'none' },
+            hAxis: {
+                textPosition: 'none',
+                gridlines: { count: -1, color: 'transparent' },
+            },
+            vAxis: {
+                textPosition: 'none',
+                // gridlines: { count: -1, color: 'transparent' }
+            },
+            colors: ['#A65FF5'],
+            areaOpacity: 0.2,
+            chartArea: { width: '100%', height: '80%', padding: '24' },
+        };
+
+        const totalStudent = new google.visualization.LineChart(
+            document.getElementById('total-student-chart')
+        );
+        totalStudent.draw(data, options);
+    }
+
+    function drawNewStudentChart() {
+        const data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Students');
+
+        let startDate = new Date(2024, 0, 1);
+
+        for (let i = 0; i < 30; i++) {
+            let currentDate = new Date(startDate);
+            currentDate.setDate(startDate.getDate() + i);
+            let dateString = `${currentDate.getFullYear()}-${
+                currentDate.getMonth() + 1
+            }-${currentDate.getDate()}`;
+
+            data.addRow([
+                dateString,
+                Math.floor(6500 + Math.random() * (7000 - 6500)),
+            ]);
+        }
+
+        const options = {
+            curveType: 'function',
+            legend: { position: 'none' },
+            hAxis: {
+                textPosition: 'none',
+                gridlines: { count: -1, color: 'transparent' },
+            },
+            vAxis: {
+                textPosition: 'none',
+                // gridlines: { count: -1, color: 'transparent' }
+            },
+            colors: ['#FF6652'],
+            areaOpacity: 0.2,
+            chartArea: { width: '100%', height: '80%', padding: '24' },
+        };
+
+        const newStudent = new google.visualization.LineChart(
+            document.getElementById('new-student-chart')
+        );
+        newStudent.draw(data, options);
+    }
+
+    function drawStudentActivityChart() {
+        const data = google.visualization.arrayToDataTable([
+            ['Month', 'This Month', 'Last Month'],
+            ['Jan', 1000, 400],
+            ['Feb', 1170, 460],
+            ['Mar', 660, 1120],
+            ['Apr', 1030, 540],
+            ['May', 1000, 400],
+            ['Jun', 1170, 460],
+            ['Jul', 660, 1120],
+            ['Aug', 1030, 540],
+            ['Sep', 1000, 400],
+            ['Oct', 1170, 460],
+            ['Nov', 660, 1120],
+            ['Dec', 1030, 540],
+        ]);
+
+        const options = {
+            curveType: 'function',
+            legend: {
+                textStyle: { color: '#6C688A', fontSize: 16 },
+                position: 'top',
+                alignment: 'center',
+            },
+            hAxis: {
+                textPosition: 'none',
+                gridlines: { count: -1, color: 'transparent' },
+            },
+            vAxis: {
+                textPosition: 'none',
+                // gridlines: { count: -1, color: 'transparent' }
+            },
+            colors: ['#7f56d9', '#FF6652'],
+            areaOpacity: 0.2,
+            chartArea: { width: '100%', height: '80%', padding: '24' },
+        };
+
+        var studentActivityChart = new google.visualization.LineChart(
+            document.getElementById('student-activity-chart')
+        );
+        studentActivityChart.draw(data, options);
+    }
+
+    // -----------------------------------------------------------
 });
+// Video Player
+if ($('#example_video_1').length > 0) {
+    var player = videojs('example_video_1');
+    var upcoming_list = $('#plylst_upcming');
+    var last_video_index = 0;
+    var playlist = [
+        {
+            url: 'https://5b44cf20b0388.streamlock.net:8443/live/ngrp:live_all/playlist.m3u8',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg',
+            isLive: true,
+            title: 'Web Development with PHP & Laravel - Class 01',
+            length: '',
+            playing: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Chromecast – For Bigger Joyrides',
+            length: '0:15',
+            playing: false,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Elephants Dream',
+            length: '10:53',
+            playing: false,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Chromecast – For Bigger Blazes',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Chromecast – For Bigger Escapes',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Sintel',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Chromecast – For Bigger Blazes',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Chromecast – For Bigger Escapes',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+        {
+            url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
+            thumbnail:
+                'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg',
+            isLive: false,
+            linkedProducts: [],
+            title: 'Web Development with PHP & Laravel - Class 01',
+            length: '10:53',
+            playing: false,
+            isLock: true,
+        },
+    ];
+    // player.dimension("width", 100%);
+    player.dimension('height', 420);
+
+    function build_list_item(s) {
+        var isLive = s.isLive.toString();
+        var length = s.isLive ? 'Live' : s.length;
+        var playing = s.playing.toString();
+        var isLock = s.isLive;
+        var e =
+            $(`<div class="single-playlist mb-3" data-playing="${playing}  data-live="${isLive} >
+                                    <div>
+                                        <div class="sp-img-box">
+                                            <img src="${s.thumbnail}" alt="playlist">
+                                        </div>
+                                    </div>
+                                    <div class="sp-desc">
+                                        <h2 class="sp-title">${s.title}</h2>
+                                        <p class="sp-duration">${length}</p>
+                                    </div>
+                                </div>`);
+        var videoTitle = document.getElementById('video-title');
+        videoTitle.innerHTML = s.title;
+
+        e.click((i) => {
+            player.src(s.url);
+            playlist[last_video_index].playing = false;
+            last_video_index = playlist.indexOf(s);
+            playlist[last_video_index].playing = true;
+            populate_playlist();
+            videoTitle.innerHTML = s.title;
+        });
+        return e;
+    }
+    function populate_list(data, elem) {
+        elem.html('');
+        for (var item of data) {
+            elem.append(build_list_item(item));
+        }
+    }
+    function populate_playlist() {
+        populate_list(playlist, $('#plylst_upcming'));
+    }
+
+    populate_playlist();
+}
+
+if ($('#example_video_2').length > 0) {
+    var player = videojs('example_video_2');
+}
