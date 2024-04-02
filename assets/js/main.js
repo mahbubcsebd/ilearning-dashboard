@@ -77,17 +77,26 @@ $(document).ready(function () {
         });
     }
 
+    if ($('#chzn-select-keyword').length > 0) {
+        $('#chzn-select-keyword').select2();
+    }
+
+    if ($('#chzn-select-meta').length > 0) {
+        $('#chzn-select-meta').select2();
+    }
+
     // -----------------------------------------------------------
 
     // Chosen for multiple select
-    $('.chzn-select-keyword').chosen({
-        width: '100%',
-        no_results_text: 'Oops, nothing found!',
-    });
-    $('.chzn-select-meta').chosen({
-        width: '100%',
-        no_results_text: 'Oops, nothing found!',
-    });
+    // $('.chzn-select-keyword').chosen({
+    //     width: '100%',
+    //     no_results_text: 'Oops, nothing found!',
+    // });
+
+    // $('.chzn-select-meta').chosen({
+    //     width: '100%',
+    //     no_results_text: 'Oops, nothing found!',
+    // });
 
     // -----------------------------------------------------------
 
